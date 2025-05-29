@@ -11,9 +11,14 @@ export TURTLEBOT3_MODEL=waffle
 
 
 
-* zainstalowanie i dodanie do ~/.bashrc (zmiana Fast DDS na Cyclone DDS):  
+* Quick FIX zainstalowanie i dodanie do ~/.bashrc (zmiana Fast DDS na Cyclone DDS):  
   apt install ros-humble-rmw-cyclonedds-cpp  
-  export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp  
+  export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp    - można dodać do ~/.bashrc lub do pliku przygotowującego środowisko  
+
+  Należy jeszcze upewnić się czy posiadamy odpowiedni typ robota w pliku konfigurtacyjnym:
+  sudo gedit /opt/ros/humble/share/turtlebot3_navigation2/param/waffle.yaml
+    #robot_model_type: "differential"  
+    robot_model_type: "nav2_amcl::DifferentialMotionModel"  
 
 
 * Sprawdzenie czy działa moduł Nav2:  
