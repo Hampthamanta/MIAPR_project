@@ -11,12 +11,13 @@ export TURTLEBOT3_MODEL=waffle
 
 
 
-* zainstalowanie i dodanie do ~/.bashrc:
+* zainstalowanie i dodanie do ~/.bashrc (zmiana Fast DDS na Cyclone DDS):
   apt install ros-humble-rmw-cyclonedds-cpp
   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 
 * Sprawdzenie czy działa moduł Nav2:
+argument    headless:=False    ?
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True
 
