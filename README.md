@@ -12,6 +12,7 @@ export TURTLEBOT3_MODEL=waffle
 
 
 * zainstalowanie i dodanie do ~/.bashrc (zmiana Fast DDS na Cyclone DDS):
+  
   apt install ros-humble-rmw-cyclonedds-cpp
   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
