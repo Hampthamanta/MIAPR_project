@@ -1,0 +1,6 @@
+{
+  "package_name": "nav2_sms_behavior",
+  "non_idl_tuples": [
+    "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior:action/SendSms.action"
+  ]
+}
