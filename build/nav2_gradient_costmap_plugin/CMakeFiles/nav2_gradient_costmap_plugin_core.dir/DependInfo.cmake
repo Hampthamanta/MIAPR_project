@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin/src/gradient_layer.cpp" "CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o" "gcc" "CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o.d"
+  "/home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin/src/gradient_layer.cpp" "CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o" "gcc" "CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o.d"
   )
 
 # Targets to which this target links.

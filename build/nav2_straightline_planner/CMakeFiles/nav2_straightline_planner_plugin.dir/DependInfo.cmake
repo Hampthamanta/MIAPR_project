@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner/src/straight_line_planner.cpp" "CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o" "gcc" "CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o.d"
+  "/home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner/src/straight_line_planner.cpp" "CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o" "gcc" "CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o.d"
   )
 
 # Targets to which this target links.

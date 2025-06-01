@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior
+CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior
+CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior
 
 # Utility rule file for nav2_sms_behavior.
 
@@ -66,7 +66,7 @@ include CMakeFiles/nav2_sms_behavior.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/nav2_sms_behavior.dir/progress.make
 
-CMakeFiles/nav2_sms_behavior: /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior/action/SendSms.action
+CMakeFiles/nav2_sms_behavior: /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior/action/SendSms.action
 CMakeFiles/nav2_sms_behavior: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 CMakeFiles/nav2_sms_behavior: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 CMakeFiles/nav2_sms_behavior: /opt/ros/humble/share/std_msgs/msg/Bool.idl
@@ -117,6 +117,6 @@ CMakeFiles/nav2_sms_behavior.dir/clean:
 .PHONY : CMakeFiles/nav2_sms_behavior.dir/clean
 
 CMakeFiles/nav2_sms_behavior.dir/depend:
-	cd /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/CMakeFiles/nav2_sms_behavior.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/CMakeFiles/nav2_sms_behavior.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nav2_sms_behavior.dir/depend
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner
+CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner
+CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner
 
 # Utility rule file for nav2_straightline_planner_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/nav2_straightline_planner_uninstall.dir/compiler_depend.make
 include CMakeFiles/nav2_straightline_planner_uninstall.dir/progress.make
 
 CMakeFiles/nav2_straightline_planner_uninstall:
-	/usr/bin/cmake -P /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 nav2_straightline_planner_uninstall: CMakeFiles/nav2_straightline_planner_uninstall
 nav2_straightline_planner_uninstall: CMakeFiles/nav2_straightline_planner_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/nav2_straightline_planner_uninstall.dir/clean:
 .PHONY : CMakeFiles/nav2_straightline_planner_uninstall.dir/clean
 
 CMakeFiles/nav2_straightline_planner_uninstall.dir/depend:
-	cd /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner/CMakeFiles/nav2_straightline_planner_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner/CMakeFiles/nav2_straightline_planner_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nav2_straightline_planner_uninstall.dir/depend
 

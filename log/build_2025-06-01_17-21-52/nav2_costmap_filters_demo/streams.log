@@ -1,0 +1,49 @@
+[0.014s] Invoking command in '/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_costmap_filters_demo -DCMAKE_INSTALL_PREFIX=/home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo
+[0.088s] -- The C compiler identification is GNU 11.4.0
+[0.143s] -- The CXX compiler identification is GNU 11.4.0
+[0.150s] -- Detecting C compiler ABI info
+[0.197s] -- Detecting C compiler ABI info - done
+[0.201s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.201s] -- Detecting C compile features
+[0.201s] -- Detecting C compile features - done
+[0.204s] -- Detecting CXX compiler ABI info
+[0.256s] -- Detecting CXX compiler ABI info - done
+[0.261s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.261s] -- Detecting CXX compile features
+[0.261s] -- Detecting CXX compile features - done
+[0.263s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.755s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.889s] -- Configuring done
+[0.891s] -- Generating done
+[0.892s] -- Build files have been written to: /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo
+[0.895s] Invoked command in '/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_costmap_filters_demo -DCMAKE_INSTALL_PREFIX=/home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo
+[0.897s] Invoking command in '/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo -- -j12 -l12
+[0.927s] Invoked command in '/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo -- -j12 -l12
+[0.933s] Invoking command in '/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo
+[0.939s] -- Install configuration: ""
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/launch
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/launch/costmap_filter_info.launch.py
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/maps
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/maps/speed_mask.pgm
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/maps/speed_mask.yaml
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/maps/keepout_mask.yaml
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/maps/keepout_mask.pgm
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/params
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/params/keepout_params.yaml
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/params/speed_params.yaml
+[0.939s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/ament_index/resource_index/package_run_dependencies/nav2_costmap_filters_demo
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/ament_index/resource_index/parent_prefix_path/nav2_costmap_filters_demo
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/environment/ament_prefix_path.sh
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/environment/ament_prefix_path.dsv
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/environment/path.sh
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/environment/path.dsv
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/local_setup.bash
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/local_setup.sh
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/local_setup.zsh
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/local_setup.dsv
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/package.dsv
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/ament_index/resource_index/packages/nav2_costmap_filters_demo
+[0.940s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/cmake/nav2_costmap_filters_demoConfig.cmake
+[0.941s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/cmake/nav2_costmap_filters_demoConfig-version.cmake
+[0.941s] -- Installing: /home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_costmap_filters_demo/share/nav2_costmap_filters_demo/package.xml
+[0.943s] Invoked command in '/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo

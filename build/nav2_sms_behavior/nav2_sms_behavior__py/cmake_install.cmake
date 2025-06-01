@@ -1,8 +1,8 @@
-# Install script for directory: /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/nav2_sms_behavior__py
+# Install script for directory: /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/nav2_sms_behavior__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/install/nav2_sms_behavior")
+  set(CMAKE_INSTALL_PREFIX "/home/szymon/Documents/MIAPR/MIAPR_project/install/nav2_sms_behavior")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

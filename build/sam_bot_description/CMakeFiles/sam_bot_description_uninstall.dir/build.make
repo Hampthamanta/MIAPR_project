@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/sam_bot_description
+CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/src/sam_bot_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/sam_bot_description
+CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/build/sam_bot_description
 
 # Utility rule file for sam_bot_description_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/sam_bot_description_uninstall.dir/compiler_depend.make
 include CMakeFiles/sam_bot_description_uninstall.dir/progress.make
 
 CMakeFiles/sam_bot_description_uninstall:
-	/usr/bin/cmake -P /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/sam_bot_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/szymon/Documents/MIAPR/MIAPR_project/build/sam_bot_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 sam_bot_description_uninstall: CMakeFiles/sam_bot_description_uninstall
 sam_bot_description_uninstall: CMakeFiles/sam_bot_description_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/sam_bot_description_uninstall.dir/clean:
 .PHONY : CMakeFiles/sam_bot_description_uninstall.dir/clean
 
 CMakeFiles/sam_bot_description_uninstall.dir/depend:
-	cd /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/sam_bot_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/sam_bot_description /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/sam_bot_description /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/sam_bot_description /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/sam_bot_description /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/sam_bot_description/CMakeFiles/sam_bot_description_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szymon/Documents/MIAPR/MIAPR_project/build/sam_bot_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/MIAPR_project/src/sam_bot_description /home/szymon/Documents/MIAPR/MIAPR_project/src/sam_bot_description /home/szymon/Documents/MIAPR/MIAPR_project/build/sam_bot_description /home/szymon/Documents/MIAPR/MIAPR_project/build/sam_bot_description /home/szymon/Documents/MIAPR/MIAPR_project/build/sam_bot_description/CMakeFiles/sam_bot_description_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sam_bot_description_uninstall.dir/depend
 

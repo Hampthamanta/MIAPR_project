@@ -1,9 +1,9 @@
 {
   "package_name": "nav2_sms_behavior",
-  "output_dir": "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_generator_py/nav2_sms_behavior",
+  "output_dir": "/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_generator_py/nav2_sms_behavior",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
-    "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_adapter/nav2_sms_behavior:action/SendSms.idl"
+    "/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_adapter/nav2_sms_behavior:action/SendSms.idl"
   ],
   "ros_interface_dependencies": [
     "builtin_interfaces:/opt/ros/humble/share/builtin_interfaces/msg/Duration.idl",
@@ -58,7 +58,7 @@
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
-    "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_adapter/nav2_sms_behavior/action/SendSms.idl",
+    "/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_adapter/nav2_sms_behavior/action/SendSms.idl",
     "/opt/ros/humble/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/humble/share/builtin_interfaces/msg/Time.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",

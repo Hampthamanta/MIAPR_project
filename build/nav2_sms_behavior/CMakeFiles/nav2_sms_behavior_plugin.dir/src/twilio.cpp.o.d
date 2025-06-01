@@ -1,5 +1,5 @@
 CMakeFiles/nav2_sms_behavior_plugin.dir/src/twilio.cpp.o: \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior/src/twilio.cpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior/src/twilio.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/istream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd \
@@ -181,8 +181,8 @@ CMakeFiles/nav2_sms_behavior_plugin.dir/src/twilio.cpp.o: \
  /usr/include/x86_64-linux-gnu/curl/curl.h \
  /usr/include/x86_64-linux-gnu/curl/urlapi.h \
  /usr/include/x86_64-linux-gnu/curl/options.h \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior/include/nav2_sms_behavior/twilio.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior/include/nav2_sms_behavior/type_conversion.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior/include/nav2_sms_behavior/twilio.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior/include/nav2_sms_behavior/type_conversion.hpp \
  /usr/include/c++/11/locale \
  /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \

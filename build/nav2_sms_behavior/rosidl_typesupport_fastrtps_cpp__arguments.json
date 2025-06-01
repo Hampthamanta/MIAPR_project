@@ -1,9 +1,9 @@
 {
   "package_name": "nav2_sms_behavior",
-  "output_dir": "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_typesupport_fastrtps_cpp/nav2_sms_behavior",
+  "output_dir": "/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_typesupport_fastrtps_cpp/nav2_sms_behavior",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource",
   "idl_tuples": [
-    "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_adapter/nav2_sms_behavior:action/SendSms.idl"
+    "/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_adapter/nav2_sms_behavior:action/SendSms.idl"
   ],
   "ros_interface_dependencies": [
     "builtin_interfaces:/opt/ros/humble/share/builtin_interfaces/msg/Duration.idl",
@@ -53,7 +53,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
-    "/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_adapter/nav2_sms_behavior/action/SendSms.idl",
+    "/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_adapter/nav2_sms_behavior/action/SendSms.idl",
     "/opt/ros/humble/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/humble/share/builtin_interfaces/msg/Time.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",

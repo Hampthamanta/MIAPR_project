@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_costmap_filters_demo
+CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_costmap_filters_demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_costmap_filters_demo
+CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_costmap_filters_demo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_costmap_filters_demo /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_costmap_filters_demo /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_costmap_filters_demo /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_costmap_filters_demo /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_costmap_filters_demo/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_costmap_filters_demo /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_costmap_filters_demo /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

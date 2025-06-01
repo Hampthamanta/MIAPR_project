@@ -1,0 +1,4 @@
+[01m[K/home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner/src/straight_line_planner.cpp:[m[K In member function ‘[01m[Kvirtual nav_msgs::msg::Path nav2_straightline_planner::StraightLine::createPlan(const PoseStamped&, const PoseStamped&)[m[K’:
+[01m[K/home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner/src/straight_line_planner.cpp:473:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  473 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K

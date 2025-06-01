@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior
+CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior
+CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior
 
 # Utility rule file for nav2_sms_behavior_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/nav2_sms_behavior_uninstall.dir/compiler_depend.make
 include CMakeFiles/nav2_sms_behavior_uninstall.dir/progress.make
 
 CMakeFiles/nav2_sms_behavior_uninstall:
-	/usr/bin/cmake -P /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 nav2_sms_behavior_uninstall: CMakeFiles/nav2_sms_behavior_uninstall
 nav2_sms_behavior_uninstall: CMakeFiles/nav2_sms_behavior_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/nav2_sms_behavior_uninstall.dir/clean:
 .PHONY : CMakeFiles/nav2_sms_behavior_uninstall.dir/clean
 
 CMakeFiles/nav2_sms_behavior_uninstall.dir/depend:
-	cd /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/CMakeFiles/nav2_sms_behavior_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/CMakeFiles/nav2_sms_behavior_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nav2_sms_behavior_uninstall.dir/depend
 

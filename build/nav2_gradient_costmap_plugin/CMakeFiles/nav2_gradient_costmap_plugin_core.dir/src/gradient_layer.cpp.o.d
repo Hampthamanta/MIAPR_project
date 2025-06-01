@@ -1,7 +1,7 @@
 CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o: \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin/src/gradient_layer.cpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin/src/gradient_layer.cpp \
  /usr/include/stdc-predef.h \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin/include/nav2_gradient_costmap_plugin/gradient_layer.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin/include/nav2_gradient_costmap_plugin/gradient_layer.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

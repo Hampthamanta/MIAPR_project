@@ -1,5 +1,5 @@
 CMakeFiles/nav2_sms_behavior_plugin.dir/src/send_sms.cpp.o: \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior/src/send_sms.cpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior/src/send_sms.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/cmath \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -151,7 +151,7 @@ CMakeFiles/nav2_sms_behavior_plugin.dir/src/send_sms.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior/include/nav2_sms_behavior/send_sms.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior/include/nav2_sms_behavior/send_sms.hpp \
  /usr/include/c++/11/string /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
@@ -906,8 +906,8 @@ CMakeFiles/nav2_sms_behavior_plugin.dir/src/send_sms.cpp.o: \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/quaternion.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__builder.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__type_support.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/send_sms.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/detail/send_sms__struct.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/send_sms.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/detail/send_sms__struct.hpp \
  /opt/ros/humble/include/action_msgs/action_msgs/srv/cancel_goal.hpp \
  /opt/ros/humble/include/action_msgs/action_msgs/srv/detail/cancel_goal__struct.hpp \
  /opt/ros/humble/include/action_msgs/action_msgs/srv/detail/cancel_goal__builder.hpp \
@@ -918,12 +918,12 @@ CMakeFiles/nav2_sms_behavior_plugin.dir/src/send_sms.cpp.o: \
  /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__builder.hpp \
  /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__traits.hpp \
  /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__type_support.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/detail/send_sms__builder.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/detail/send_sms__traits.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/detail/send_sms__type_support.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/msg/rosidl_generator_cpp__visibility_control.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior/include/nav2_sms_behavior/twilio.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_sms_behavior/include/nav2_sms_behavior/type_conversion.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/detail/send_sms__builder.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/detail/send_sms__traits.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/action/detail/send_sms__type_support.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/rosidl_generator_cpp/nav2_sms_behavior/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior/include/nav2_sms_behavior/twilio.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_sms_behavior/include/nav2_sms_behavior/type_conversion.hpp \
  /opt/ros/humble/include/pluginlib/pluginlib/class_list_macros.hpp \
  /opt/ros/humble/include/class_loader/class_loader/class_loader.hpp \
  /usr/include/c++/11/cstddef /usr/include/console_bridge/console.h \

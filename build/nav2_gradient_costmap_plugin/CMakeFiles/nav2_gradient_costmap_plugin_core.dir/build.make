@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin
+CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin
+CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin
 
 # Include any dependencies generated for this target.
 include CMakeFiles/nav2_gradient_costmap_plugin_core.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/nav2_gradient_costmap_plugin_core.dir/progress.make
 include CMakeFiles/nav2_gradient_costmap_plugin_core.dir/flags.make
 
 CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o: CMakeFiles/nav2_gradient_costmap_plugin_core.dir/flags.make
-CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o: /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin/src/gradient_layer.cpp
+CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o: /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin/src/gradient_layer.cpp
 CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o: CMakeFiles/nav2_gradient_costmap_plugin_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o -MF CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o.d -o CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o -c /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin/src/gradient_layer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o -MF CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o.d -o CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.o -c /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin/src/gradient_layer.cpp
 
 CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin/src/gradient_layer.cpp > CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin/src/gradient_layer.cpp > CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.i
 
 CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin/src/gradient_layer.cpp -o CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin/src/gradient_layer.cpp -o CMakeFiles/nav2_gradient_costmap_plugin_core.dir/src/gradient_layer.cpp.s
 
 # Object files for target nav2_gradient_costmap_plugin_core
 nav2_gradient_costmap_plugin_core_OBJECTS = \
@@ -378,7 +378,7 @@ libnav2_gradient_costmap_plugin_core.so: /opt/ros/humble/lib/libunique_identifie
 libnav2_gradient_costmap_plugin_core.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libnav2_gradient_costmap_plugin_core.so: /opt/ros/humble/lib/librcutils.so
 libnav2_gradient_costmap_plugin_core.so: CMakeFiles/nav2_gradient_costmap_plugin_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libnav2_gradient_costmap_plugin_core.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libnav2_gradient_costmap_plugin_core.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nav2_gradient_costmap_plugin_core.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -390,6 +390,6 @@ CMakeFiles/nav2_gradient_costmap_plugin_core.dir/clean:
 .PHONY : CMakeFiles/nav2_gradient_costmap_plugin_core.dir/clean
 
 CMakeFiles/nav2_gradient_costmap_plugin_core.dir/depend:
-	cd /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin/CMakeFiles/nav2_gradient_costmap_plugin_core.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin/CMakeFiles/nav2_gradient_costmap_plugin_core.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nav2_gradient_costmap_plugin_core.dir/depend
 

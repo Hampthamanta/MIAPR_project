@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin
+CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin
+CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin
 
 # Utility rule file for nav2_gradient_costmap_plugin_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/nav2_gradient_costmap_plugin_uninstall.dir/compiler_depend.ma
 include CMakeFiles/nav2_gradient_costmap_plugin_uninstall.dir/progress.make
 
 CMakeFiles/nav2_gradient_costmap_plugin_uninstall:
-	/usr/bin/cmake -P /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 nav2_gradient_costmap_plugin_uninstall: CMakeFiles/nav2_gradient_costmap_plugin_uninstall
 nav2_gradient_costmap_plugin_uninstall: CMakeFiles/nav2_gradient_costmap_plugin_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/nav2_gradient_costmap_plugin_uninstall.dir/clean:
 .PHONY : CMakeFiles/nav2_gradient_costmap_plugin_uninstall.dir/clean
 
 CMakeFiles/nav2_gradient_costmap_plugin_uninstall.dir/depend:
-	cd /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_gradient_costmap_plugin/CMakeFiles/nav2_gradient_costmap_plugin_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_gradient_costmap_plugin/CMakeFiles/nav2_gradient_costmap_plugin_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nav2_gradient_costmap_plugin_uninstall.dir/depend
 

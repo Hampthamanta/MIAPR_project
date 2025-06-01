@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "nav2_sms_behavior__py",
+		"source" : "/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_sms_behavior/nav2_sms_behavior__py"
+	}
+}

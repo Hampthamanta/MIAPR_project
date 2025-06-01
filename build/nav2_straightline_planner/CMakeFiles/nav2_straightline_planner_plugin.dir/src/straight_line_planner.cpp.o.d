@@ -1,5 +1,5 @@
 CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o: \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner/src/straight_line_planner.cpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner/src/straight_line_planner.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/tuple \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -625,7 +625,7 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
- /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner/include/nav2_straightline_planner/straight_line_planner.hpp \
+ /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner/include/nav2_straightline_planner/straight_line_planner.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp \

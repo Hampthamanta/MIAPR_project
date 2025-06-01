@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner
+CMAKE_SOURCE_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner
+CMAKE_BINARY_DIR = /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner
 
 # Include any dependencies generated for this target.
 include CMakeFiles/nav2_straightline_planner_plugin.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/nav2_straightline_planner_plugin.dir/progress.make
 include CMakeFiles/nav2_straightline_planner_plugin.dir/flags.make
 
 CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o: CMakeFiles/nav2_straightline_planner_plugin.dir/flags.make
-CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o: /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner/src/straight_line_planner.cpp
+CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o: /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner/src/straight_line_planner.cpp
 CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o: CMakeFiles/nav2_straightline_planner_plugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o -MF CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o.d -o CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o -c /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner/src/straight_line_planner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o -MF CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o.d -o CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o -c /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner/src/straight_line_planner.cpp
 
 CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner/src/straight_line_planner.cpp > CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner/src/straight_line_planner.cpp > CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.i
 
 CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner/src/straight_line_planner.cpp -o CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner/src/straight_line_planner.cpp -o CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.s
 
 # Object files for target nav2_straightline_planner_plugin
 nav2_straightline_planner_plugin_OBJECTS = \
@@ -502,7 +502,7 @@ libnav2_straightline_planner_plugin.so: /usr/lib/x86_64-linux-gnu/libpython3.10.
 libnav2_straightline_planner_plugin.so: /opt/ros/humble/lib/libtf2_ros.so
 libnav2_straightline_planner_plugin.so: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
 libnav2_straightline_planner_plugin.so: CMakeFiles/nav2_straightline_planner_plugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libnav2_straightline_planner_plugin.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libnav2_straightline_planner_plugin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nav2_straightline_planner_plugin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -514,6 +514,6 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/clean:
 .PHONY : CMakeFiles/nav2_straightline_planner_plugin.dir/clean
 
 CMakeFiles/nav2_straightline_planner_plugin.dir/depend:
-	cd /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/navigation2_tutorials/nav2_straightline_planner /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner /home/szymon/Documents/MIAPR/Project_NAV2_przyklad/build/nav2_straightline_planner/CMakeFiles/nav2_straightline_planner_plugin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner /home/szymon/Documents/MIAPR/MIAPR_project/src/nav2_straightline_planner /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner /home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_straightline_planner/CMakeFiles/nav2_straightline_planner_plugin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nav2_straightline_planner_plugin.dir/depend
 
