@@ -1,9 +1,0 @@
-/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/uninstall.dir
-/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/nav2_costmap_filters_demo_uninstall.dir
-/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/test.dir
-/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/edit_cache.dir
-/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/rebuild_cache.dir
-/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/list_install_components.dir
-/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/install.dir
-/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/install/local.dir
-/home/szymon/Documents/MIAPR/MIAPR_project/build/nav2_costmap_filters_demo/CMakeFiles/install/strip.dir
