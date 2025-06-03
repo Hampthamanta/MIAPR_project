@@ -1,0 +1,1 @@
+Invoking command in '/root/Shared/src/TurtleRRT-Connect/MIAPR_project/build/nav2_sms_behavior': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2_sms_behavior -DCMAKE_INSTALL_PREFIX=/root/Shared/src/TurtleRRT-Connect/MIAPR_project/install/nav2_sms_behavior

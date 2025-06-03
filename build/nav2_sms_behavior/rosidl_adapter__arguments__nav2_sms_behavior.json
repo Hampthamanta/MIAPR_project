@@ -1,0 +1,6 @@
+{
+  "package_name": "nav2_sms_behavior",
+  "non_idl_tuples": [
+    "/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2_sms_behavior:action/SendSms.action"
+  ]
+}
