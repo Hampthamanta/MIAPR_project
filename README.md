@@ -51,10 +51,10 @@ cd ~/Shared/src/MIAPR_project & ./build_env.sh
 
 
 > [!NOTE]
-> The `turtlebot_ws` directory is shared between the host and container. In the result files inside of it might require sudo privileges to save any changes.
+> Folder `turtlebot_ws` jest udostepniony z konteneru do hosta.
 
 > [!NOTE]
-> Dockerfile and script for running container are based on [Rafał Staszak's repository](https://github.com/RafalStaszak/NIMPRA_Docker/)
+> Dockerfile i skrypty włącząjące kontenery bazują na [Rafał Staszak's repository](https://github.com/RafalStaszak/NIMPRA_Docker/)
 
 
 
