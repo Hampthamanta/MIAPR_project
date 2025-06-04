@@ -24,19 +24,19 @@ bash start_container.sh
 ```
 ## 2. Konfiguracja i uruchomienie środowiska
 
-#### 2. Podmiana pliku .yaml - wybór plugin plannera
+#### 1. Podmiana pliku .yaml - wybór plugin plannera
 
 ```
 cp ~/Shared/src/MIAPR_project/nav2_params.yaml /opt/ros/humble/share/nav2_bringup/params/nav2_params.yaml
 ```
 
-#### 3. Budowa środowiska w Dockerze
+#### 2. Budowa środowiska w Dockerze
 
 ```
 cd ~/Shared/src/MIAPR_project & ./build_env.sh
 ```
 
-#### 4. Uruchomienie plannera w RVIZ
+#### 3. Uruchomienie plannera w RVIZ
 
 ```
 ./run_navi.sh
