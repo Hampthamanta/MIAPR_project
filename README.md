@@ -22,6 +22,14 @@ cd MIAPR_project && docker build -t nav2_rrt_connect .
 ```
 bash start_container.sh 
 ```
+
+> [!NOTE]
+> Folder `turtlebot_ws` jest udostepniony z konteneru do hosta.
+
+> [!NOTE]
+> Dockerfile i skrypty włącząjące kontenery bazują na [Rafał Staszak's repository](https://github.com/RafalStaszak/NIMPRA_Docker/)
+
+
 ## 2. Konfiguracja i uruchomienie środowiska
 
 #### 1. Podmiana pliku .yaml - wybór plugin plannera
@@ -46,15 +54,6 @@ cd ~/Shared/src/MIAPR_project & ./build_env.sh
 
 ![image](https://github.com/user-attachments/assets/2bf54f19-0fb6-48a2-bb3b-e90bb6979d0d)
 
-
-
-
-
-> [!NOTE]
-> Folder `turtlebot_ws` jest udostepniony z konteneru do hosta.
-
-> [!NOTE]
-> Dockerfile i skrypty włącząjące kontenery bazują na [Rafał Staszak's repository](https://github.com/RafalStaszak/NIMPRA_Docker/)
 
 
 
