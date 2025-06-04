@@ -42,6 +42,11 @@ cd ~/Shared/src/MIAPR_project & ./build_env.sh
 ./run_navi.sh
 ```
 
+## 3. Algorytm RRT-connect w pseudokodzie
+
+![image](https://github.com/user-attachments/assets/2bf54f19-0fb6-48a2-bb3b-e90bb6979d0d)
+
+
 
 
 
