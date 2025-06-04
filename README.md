@@ -1,4 +1,4 @@
-# TurtleBot with RRT-Connect path planning algorithm
+# Algorytm planowania ścieżki RRT-Connect dla TurtleBot
 
 ## 1. Instalacja środowiska z Dockerem
 
