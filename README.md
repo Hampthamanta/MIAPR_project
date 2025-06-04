@@ -1,6 +1,73 @@
 # MIAPR_project
 
+## 1. Instalacja środowiska z Dockerem
 
+#### 1. Tworzenie środowiska i klonowanie repozytorium
+
+```
+mkdir -p ~/turtlebot_ws/src/ && cd ~/turtlebot_ws/src/
+```
+```
+git clone https://github.com/Hampthamanta/MIAPR_project/
+```
+
+#### 2. Budowa kontenera
+
+```
+cd MIAPR_project && docker build -t nav2_rrt_connect .
+```
+
+#### 3. Włączenie kontenera
+
+```
+bash start_container.sh 
+```
+
+## 2. Budowa środowiska
+
+```
+bash start_container.sh 
+```
+
+
+
+> [!NOTE]
+> The `turtlebot_ws` directory is shared between the host and container. In the result files inside of it might require sudo privileges to save any changes.
+
+> [!NOTE]
+> Dockerfile and script for running container are based on [Rafał Staszak's repository](https://github.com/RafalStaszak/NIMPRA_Docker/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------
 Przygotowanie środowiska:  
 * Projekt został wykonany w kontenerze dockera z systemem ubuntu 22 i ROS2 Humlbe  
 * Należy zainstalować moduł Nav2 z oficjalnego poradnika:  
