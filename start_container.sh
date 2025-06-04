@@ -18,8 +18,8 @@ then
     fi
     chmod a+r $XAUTH
 fi
-docker run -it --rm \
-	--name=rrt_star_tb3 \
+docker run -it \
+	--name=nav2_rrt_connect \
 	--shm-size=1g \
 	--ulimit memlock=-1 \
 	--env="DISPLAY" \
@@ -34,5 +34,5 @@ docker run -it --rm \
 	--env="NVIDIA_VISIBLE_DEVICES=all" \
 	--env="NVIDIA_DRIVER_CAPABILITIES=all" \
         --network=host \
-	rrt_star_tb3 \
+	nav2_rrt_connect \
 	bash

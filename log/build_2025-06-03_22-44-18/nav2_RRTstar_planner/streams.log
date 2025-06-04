@@ -1,0 +1,33 @@
+[0.008s] Invoking command in '/root/Shared/src/TurtleRRT-Connect/MIAPR_project/build/nav2_RRTstar_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Shared/src/TurtleRRT-Connect/MIAPR_project/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/TurtleRRT-Connect/MIAPR_project/build/nav2_RRTstar_planner -- -j12 -l12
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target nav2_RRTstar_planner_plugin[0m
+[0.065s] [ 50%] [32mBuilding CXX object CMakeFiles/nav2_RRTstar_planner_plugin.dir/src/RRT_star_planner.cpp.o[0m
+[1.942s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:[m[K In member function ‘[01m[Kvirtual void nav2_RRTstar_planner::RRTstar::configure(const WeakPtr&, std::string, std::shared_ptr<tf2_ros::Buffer>, std::shared_ptr<nav2_costmap_2d::Costmap2DROS>)[m[K’:
+[1.942s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:29:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree_start_[m[K’ was not declared in this scope
+[1.942s]    29 |     [01;31m[Ktree_start_[m[K.clear();
+[1.942s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.947s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:30:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree_goal_[m[K’ was not declared in this scope
+[1.947s]    30 |     [01;31m[Ktree_goal_[m[K.clear();
+[1.947s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.952s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:[m[K In member function ‘[01m[Kvirtual nav_msgs::msg::Path nav2_RRTstar_planner::RRTstar::createPlan(const PoseStamped&, const PoseStamped&)[m[K’:
+[1.952s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:62:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree_start_[m[K’ was not declared in this scope
+[1.952s]    62 |     [01;31m[Ktree_start_[m[K.clear();
+[1.953s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.957s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:63:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree_goal_[m[K’ was not declared in this scope
+[1.957s]    63 |     [01;31m[Ktree_goal_[m[K.clear();
+[1.957s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.964s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:74:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kfind_closest_in_tree[m[K’ was not declared in this scope
+[1.964s]    74 |         Point near_start = [01;31m[Kfind_closest_in_tree[m[K(rand_pt, tree_start_);
+[1.964s]       |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[1.969s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:[m[K At global scope:
+[1.969s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:147:7:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[KPoint nav2_RRTstar_planner::RRTstar::find_closest_in_tree(Point, const std::unordered_map<Point, std::shared_ptr<Point> >&)[m[K’
+[1.969s]   147 | Point [01;31m[KRRTstar[m[K::find_closest_in_tree(Point pos, const std::unordered_map<Point, std::shared_ptr<Point>> & tree) {
+[1.969s]       |       [01;31m[K^~~~~~~[m[K
+[1.969s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:147:7:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[KPoint nav2_RRTstar_planner::RRTstar::find_closest_in_tree(Point, const std::unordered_map<Point, std::shared_ptr<Point> >&)[m[K’
+[1.969s] In file included from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[1.969s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:47:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass nav2_RRTstar_planner::RRTstar[m[K’ defined here
+[1.970s]    47 | class [01;36m[KRRTstar[m[K : public nav2_core::GlobalPlanner {
+[1.970s]       |       [01;36m[K^~~~~~~[m[K
+[2.816s] gmake[2]: *** [CMakeFiles/nav2_RRTstar_planner_plugin.dir/build.make:76: CMakeFiles/nav2_RRTstar_planner_plugin.dir/src/RRT_star_planner.cpp.o] Error 1
+[2.816s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/nav2_RRTstar_planner_plugin.dir/all] Error 2
+[2.817s] gmake: *** [Makefile:146: all] Error 2
+[2.818s] Invoked command in '/root/Shared/src/TurtleRRT-Connect/MIAPR_project/build/nav2_RRTstar_planner' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Shared/src/TurtleRRT-Connect/MIAPR_project/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/TurtleRRT-Connect/MIAPR_project/build/nav2_RRTstar_planner -- -j12 -l12

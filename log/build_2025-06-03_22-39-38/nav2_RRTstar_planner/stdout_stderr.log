@@ -1,0 +1,193 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/nav2_RRTstar_planner_plugin.dir/src/RRT_star_planner.cpp.o[0m
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:12:66:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+   12 |     std::unordered_map<Point, std::shared_ptr<Point>> tree_start_[01;31m[K;[m[K
+      |                                                                  [01;31m[K^[m[K
+      |                                                                  [32m[K)[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:10:24:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   10 | void RRTstar::configure[01;36m[K([m[K
+      |                        [01;36m[K^[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:10:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid nav2_RRTstar_planner::RRTstar::configure(const WeakPtr&, std::unordered_map<Point, std::shared_ptr<Point> >)[m[K’
+   10 | void [01;31m[KRRTstar[m[K::configure(
+      |      [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:53:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvirtual void nav2_RRTstar_planner::RRTstar::configure(const WeakPtr&, std::string, std::shared_ptr<tf2_ros::Buffer>, std::shared_ptr<nav2_costmap_2d::Costmap2DROS>)[m[K’
+   53 |     void [01;36m[Kconfigure[m[K(
+      |          [01;36m[K^~~~~~~~~[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:47:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass nav2_RRTstar_planner::RRTstar[m[K’ defined here
+   47 | class [01;36m[KRRTstar[m[K : public nav2_core::GlobalPlanner {
+      |       [01;36m[K^~~~~~~[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:13:55:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::unordered_map() [with _Key = Point; _Tp = std::shared_ptr<Point>; _Hash = std::hash<Point>; _Pred = std::equal_to<Point>; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >][m[K’
+   13 |     std::unordered_map<Point, std::shared_ptr<Point>> [01;31m[Ktree_goal_[m[K;
+      |                                                       [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/unordered_map:47[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/unordered_map.h:141:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::unordered_map() [with _Key = Point; _Tp = std::shared_ptr<Point>; _Hash = std::hash<Point>; _Pred = std::equal_to<Point>; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >][m[K’ is implicitly deleted because the default definition would be ill-formed:
+  141 |       [01;36m[Kunordered_map[m[K() = default;
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unordered_map.h:141:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::_Hashtable() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’
+In file included from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/hashtable.h:528:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::_Hashtable() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’ is implicitly deleted because the default definition would be ill-formed:
+  528 |       [01;36m[K_Hashtable[m[K() = default;
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/hashtable.h:528:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_base<_Key, _Value, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _Traits>::_Hashtable_base() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’
+In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:35[m[K,
+                 from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1604:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hashtable_base<_Key, _Value, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _Traits>::_Hashtable_base() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’ is implicitly deleted because the default definition would be ill-formed:
+ 1604 |       [01;36m[K_Hashtable_base[m[K() = default;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1604:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hash_code_base<_Key, _Value, _ExtractKey, _Hash, _RangeHash, _Unused, __cache_hash_code>::_Hash_code_base() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; bool __cache_hash_code = true][m[K’
+/usr/include/c++/11/bits/hashtable_policy.h: In instantiation of ‘[01m[Kstd::__detail::_Hashtable_ebo_helper<_Nm, _Tp, true>::_Hashtable_ebo_helper() [with int _Nm = 1; _Tp = std::hash<Point>][m[K’:
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1210:7:[m[K   required from here
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1127:49:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::hash<Point>::hash()[m[K’
+ 1127 |       _Hashtable_ebo_helper() noexcept(noexcept([01;31m[K_Tp()[m[K)) : _Tp() { }
+      |                                                 [01;31m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:39[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::hash<Point>::hash()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+  102 |     struct [01;36m[Khash[m[K : __hash_enum<_Tp>
+      |            [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::__hash_enum<Point, false>::__hash_enum()[m[K’
+[01m[K/usr/include/c++/11/bits/functional_hash.h:83:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__hash_enum<_Tp, <anonymous> >::__hash_enum(std::__hash_enum<_Tp, <anonymous> >&&) [with _Tp = Point; bool <anonymous> = false][m[K’
+   83 |       [01;36m[K__hash_enum[m[K(__hash_enum&&);
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/functional_hash.h:83:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::__hash_enum<_Tp, <anonymous> >::~__hash_enum() [with _Tp = Point; bool <anonymous> = false][m[K’ is private within this context
+  102 |     struct [01;31m[Khash[m[K : __hash_enum<_Tp>
+      |            [01;31m[K^~~~[m[K
+[01m[K/usr/include/c++/11/bits/functional_hash.h:84:7:[m[K [01;36m[Knote: [m[Kdeclared private here
+   84 |       [01;36m[K~[m[K__hash_enum();
+      |       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:35[m[K,
+                 from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1210:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hash_code_base<_Key, _Value, _ExtractKey, _Hash, _RangeHash, _Unused, __cache_hash_code>::_Hash_code_base() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; bool __cache_hash_code = true][m[K’ is implicitly deleted because the default definition would be ill-formed:
+ 1210 |       [01;36m[K_Hash_code_base[m[K() = default;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1210:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_ebo_helper<1, std::hash<Point>, true>::~_Hashtable_ebo_helper()[m[K’
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1124:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hashtable_ebo_helper<1, std::hash<Point>, true>::~_Hashtable_ebo_helper()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+ 1124 |     struct [01;36m[K_Hashtable_ebo_helper<_Nm, _Tp, true>[m[K
+      |            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1124:12:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::hash<Point>::~hash()[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:39[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::hash<Point>::~hash()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+  102 |     struct [01;36m[Khash[m[K : __hash_enum<_Tp>
+      |            [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::__hash_enum<_Tp, <anonymous> >::~__hash_enum() [with _Tp = Point; bool <anonymous> = false][m[K’ is private within this context
+[01m[K/usr/include/c++/11/bits/functional_hash.h:84:7:[m[K [01;36m[Knote: [m[Kdeclared private here
+   84 |       [01;36m[K~[m[K__hash_enum();
+      |       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:35[m[K,
+                 from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1604:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hash_code_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, true>::~_Hash_code_base()[m[K’
+ 1604 |       [01;31m[K_Hashtable_base[m[K() = default;
+      |       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1188:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hash_code_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, true>::~_Hash_code_base()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+ 1188 |     struct [01;36m[K_Hash_code_base[m[K
+      |            [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1188:12:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_ebo_helper<1, std::hash<Point>, true>::~_Hashtable_ebo_helper()[m[K’
+In file included from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/hashtable.h:528:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::equal_to<Point>, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Hashtable_traits<true, false, true> >::~_Hashtable_base()[m[K’
+  528 |       [01;31m[K_Hashtable[m[K() = default;
+      |       [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:35[m[K,
+                 from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1561:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hashtable_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::equal_to<Point>, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Hashtable_traits<true, false, true> >::~_Hashtable_base()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+ 1561 |     struct [01;36m[K_Hashtable_base[m[K
+      |            [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/hashtable_policy.h:1561:12:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hash_code_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, true>::~_Hash_code_base()[m[K’
+In file included from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/hashtable.h:528:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kconstexpr std::_Enable_default_constructor<false, _Tag>::_Enable_default_constructor() [with _Tag = std::__detail::_Hash_node_base][m[K’
+  528 |       [01;31m[K_Hashtable[m[K() = default;
+      |       [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/enable_special_members.h:113:15:[m[K [01;36m[Knote: [m[Kdeclared here
+  113 |     constexpr [01;36m[K_Enable_default_constructor[m[K() noexcept = delete;
+      |               [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:16:38:[m[K [01;31m[Kerror: [m[Kinvalid declarator before ‘[01m[Ktf[m[K’
+   16 |     std::shared_ptr<tf2_ros::Buffer> [01;31m[Ktf[m[K,
+      |                                      [01;31m[K^~[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:[m[K In member function ‘[01m[Kvirtual nav_msgs::msg::Path nav2_RRTstar_planner::RRTstar::createPlan(const PoseStamped&, const PoseStamped&)[m[K’:
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:68:5:[m[K [01;31m[Kerror: [m[K‘[01m[KTree[m[K’ was not declared in this scope; did you mean ‘[01m[Kfree[m[K’?
+   68 |     [01;31m[KTree[m[K start_tree, goal_tree;
+      |     [01;31m[K^~~~[m[K
+      |     [32m[Kfree[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:69:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_tree[m[K’ was not declared in this scope; did you mean ‘[01m[Kstart_pt[m[K’?
+   69 |     [01;31m[Kstart_tree[m[K[start_pt] = nullptr;
+      |     [01;31m[K^~~~~~~~~~[m[K
+      |     [32m[Kstart_pt[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:70:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal_tree[m[K’ was not declared in this scope
+   70 |     [01;31m[Kgoal_tree[m[K[goal_pt] = nullptr;
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:79:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kfind_closest_in_tree[m[K’ was not declared in this scope
+   79 |         Point nearest_start = [01;31m[Kfind_closest_in_tree[m[K(start_tree, rand_pt);
+      |                               [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:[m[K At global scope:
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:179:7:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[KPoint nav2_RRTstar_planner::RRTstar::find_closest_in_tree(Point, const std::unordered_map<Point, std::shared_ptr<Point> >&)[m[K’
+  179 | Point [01;31m[KRRTstar[m[K::find_closest_in_tree(Point pos, const std::unordered_map<Point, std::shared_ptr<Point>>& tree) {
+      |       [01;31m[K^~~~~~~[m[K
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:179:7:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[KPoint nav2_RRTstar_planner::RRTstar::find_closest_in_tree(Point, const std::unordered_map<Point, std::shared_ptr<Point> >&)[m[K’
+In file included from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:47:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass nav2_RRTstar_planner::RRTstar[m[K’ defined here
+   47 | class [01;36m[KRRTstar[m[K : public nav2_core::GlobalPlanner {
+      |       [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+                 from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+/usr/include/c++/11/bits/hashtable.h: In instantiation of ‘[01m[Kstd::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::~_Hashtable() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’:
+[01m[K/usr/include/c++/11/bits/unordered_map.h:102:11:[m[K   required from here
+[01m[K/usr/include/c++/11/bits/hashtable.h:1534:5:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::equal_to<Point>, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Hashtable_traits<true, false, true> >::~_Hashtable_base()[m[K’
+ 1534 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/nav2_RRTstar_planner_plugin.dir/build.make:76: CMakeFiles/nav2_RRTstar_planner_plugin.dir/src/RRT_star_planner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/nav2_RRTstar_planner_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

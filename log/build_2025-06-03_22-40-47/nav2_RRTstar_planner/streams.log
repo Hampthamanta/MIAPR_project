@@ -1,0 +1,1211 @@
+[0.009s] Invoking command in '/root/Shared/src/TurtleRRT-Connect/MIAPR_project/build/nav2_RRTstar_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Shared/src/TurtleRRT-Connect/MIAPR_project/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/TurtleRRT-Connect/MIAPR_project/build/nav2_RRTstar_planner -- -j12 -l12
+[0.042s] [35m[1mConsolidate compiler generated dependencies of target nav2_RRTstar_planner_plugin[0m
+[0.057s] [ 50%] [32mBuilding CXX object CMakeFiles/nav2_RRTstar_planner_plugin.dir/src/RRT_star_planner.cpp.o[0m
+[1.914s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:12:66:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+[1.914s]    12 |     std::unordered_map<Point, std::shared_ptr<Point>> tree_start_[01;31m[K;[m[K
+[1.914s]       |                                                                  [01;31m[K^[m[K
+[1.914s]       |                                                                  [32m[K)[m[K
+[1.914s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:10:24:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.914s]    10 | void RRTstar::configure[01;36m[K([m[K
+[1.914s]       |                        [01;36m[K^[m[K
+[1.914s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:10:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid nav2_RRTstar_planner::RRTstar::configure(const WeakPtr&, std::unordered_map<Point, std::shared_ptr<Point> >)[m[K’
+[1.914s]    10 | void [01;31m[KRRTstar[m[K::configure(
+[1.914s]       |      [01;31m[K^~~~~~~[m[K
+[1.914s] In file included from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[1.914s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:53:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvirtual void nav2_RRTstar_planner::RRTstar::configure(const WeakPtr&, std::string, std::shared_ptr<tf2_ros::Buffer>, std::shared_ptr<nav2_costmap_2d::Costmap2DROS>)[m[K’
+[1.914s]    53 |     void [01;36m[Kconfigure[m[K(
+[1.914s]       |          [01;36m[K^~~~~~~~~[m[K
+[1.914s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:47:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass nav2_RRTstar_planner::RRTstar[m[K’ defined here
+[1.915s]    47 | class [01;36m[KRRTstar[m[K : public nav2_core::GlobalPlanner {
+[1.915s]       |       [01;36m[K^~~~~~~[m[K
+[1.920s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:13:55:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::unordered_map() [with _Key = Point; _Tp = std::shared_ptr<Point>; _Hash = std::hash<Point>; _Pred = std::equal_to<Point>; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >][m[K’
+[1.920s]    13 |     std::unordered_map<Point, std::shared_ptr<Point>> [01;31m[Ktree_goal_[m[K;
+[1.920s]       |                                                       [01;31m[K^~~~~~~~~~[m[K
+[1.920s] In file included from [01m[K/usr/include/c++/11/unordered_map:47[m[K,
+[1.920s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[1.921s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.921s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.921s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.921s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.921s] [01m[K/usr/include/c++/11/bits/unordered_map.h:141:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::unordered_map() [with _Key = Point; _Tp = std::shared_ptr<Point>; _Hash = std::hash<Point>; _Pred = std::equal_to<Point>; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >][m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.921s]   141 |       [01;36m[Kunordered_map[m[K() = default;
+[1.921s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.921s] [01m[K/usr/include/c++/11/bits/unordered_map.h:141:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::_Hashtable() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’
+[1.921s] In file included from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[1.921s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[1.921s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.921s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.921s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.921s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.921s] [01m[K/usr/include/c++/11/bits/hashtable.h:528:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::_Hashtable() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.921s]   528 |       [01;36m[K_Hashtable[m[K() = default;
+[1.921s]       |       [01;36m[K^~~~~~~~~~[m[K
+[1.921s] [01m[K/usr/include/c++/11/bits/hashtable.h:528:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_base<_Key, _Value, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _Traits>::_Hashtable_base() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’
+[1.921s] In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:35[m[K,
+[1.921s]                  from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[1.921s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[1.922s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.922s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.922s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.922s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.922s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1604:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hashtable_base<_Key, _Value, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _Traits>::_Hashtable_base() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.922s]  1604 |       [01;36m[K_Hashtable_base[m[K() = default;
+[1.922s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.922s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1604:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hash_code_base<_Key, _Value, _ExtractKey, _Hash, _RangeHash, _Unused, __cache_hash_code>::_Hash_code_base() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; bool __cache_hash_code = true][m[K’
+[1.922s] /usr/include/c++/11/bits/hashtable_policy.h: In instantiation of ‘[01m[Kstd::__detail::_Hashtable_ebo_helper<_Nm, _Tp, true>::_Hashtable_ebo_helper() [with int _Nm = 1; _Tp = std::hash<Point>][m[K’:
+[1.922s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1210:7:[m[K   required from here
+[1.922s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1127:49:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::hash<Point>::hash()[m[K’
+[1.922s]  1127 |       _Hashtable_ebo_helper() noexcept(noexcept([01;31m[K_Tp()[m[K)) : _Tp() { }
+[1.922s]       |                                                 [01;31m[K^~~~~[m[K
+[1.922s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:39[m[K,
+[1.922s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[1.922s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[1.922s] [01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::hash<Point>::hash()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.922s]   102 |     struct [01;36m[Khash[m[K : __hash_enum<_Tp>
+[1.922s]       |            [01;36m[K^~~~[m[K
+[1.922s] [01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::__hash_enum<Point, false>::__hash_enum()[m[K’
+[1.922s] [01m[K/usr/include/c++/11/bits/functional_hash.h:83:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__hash_enum<_Tp, <anonymous> >::__hash_enum(std::__hash_enum<_Tp, <anonymous> >&&) [with _Tp = Point; bool <anonymous> = false][m[K’
+[1.922s]    83 |       [01;36m[K__hash_enum[m[K(__hash_enum&&);
+[1.922s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[1.922s] [01m[K/usr/include/c++/11/bits/functional_hash.h:83:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[1.922s] [01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::__hash_enum<_Tp, <anonymous> >::~__hash_enum() [with _Tp = Point; bool <anonymous> = false][m[K’ is private within this context
+[1.922s]   102 |     struct [01;31m[Khash[m[K : __hash_enum<_Tp>
+[1.922s]       |            [01;31m[K^~~~[m[K
+[1.922s] [01m[K/usr/include/c++/11/bits/functional_hash.h:84:7:[m[K [01;36m[Knote: [m[Kdeclared private here
+[1.922s]    84 |       [01;36m[K~[m[K__hash_enum();
+[1.922s]       |       [01;36m[K^[m[K
+[1.922s] In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:35[m[K,
+[1.922s]                  from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[1.922s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[1.922s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.922s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.922s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.923s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.923s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1210:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hash_code_base<_Key, _Value, _ExtractKey, _Hash, _RangeHash, _Unused, __cache_hash_code>::_Hash_code_base() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; bool __cache_hash_code = true][m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.923s]  1210 |       [01;36m[K_Hash_code_base[m[K() = default;
+[1.923s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.923s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1210:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_ebo_helper<1, std::hash<Point>, true>::~_Hashtable_ebo_helper()[m[K’
+[1.923s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1124:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hashtable_ebo_helper<1, std::hash<Point>, true>::~_Hashtable_ebo_helper()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.923s]  1124 |     struct [01;36m[K_Hashtable_ebo_helper<_Nm, _Tp, true>[m[K
+[1.923s]       |            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.923s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1124:12:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::hash<Point>::~hash()[m[K’
+[1.923s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:39[m[K,
+[1.923s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[1.923s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[1.923s] [01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::hash<Point>::~hash()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.923s]   102 |     struct [01;36m[Khash[m[K : __hash_enum<_Tp>
+[1.923s]       |            [01;36m[K^~~~[m[K
+[1.923s] [01m[K/usr/include/c++/11/bits/functional_hash.h:102:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::__hash_enum<_Tp, <anonymous> >::~__hash_enum() [with _Tp = Point; bool <anonymous> = false][m[K’ is private within this context
+[1.923s] [01m[K/usr/include/c++/11/bits/functional_hash.h:84:7:[m[K [01;36m[Knote: [m[Kdeclared private here
+[1.923s]    84 |       [01;36m[K~[m[K__hash_enum();
+[1.923s]       |       [01;36m[K^[m[K
+[1.923s] In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:35[m[K,
+[1.923s]                  from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[1.923s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[1.923s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.923s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.923s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.923s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.923s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1604:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hash_code_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, true>::~_Hash_code_base()[m[K’
+[1.923s]  1604 |       [01;31m[K_Hashtable_base[m[K() = default;
+[1.923s]       |       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.923s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1188:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hash_code_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, true>::~_Hash_code_base()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.923s]  1188 |     struct [01;36m[K_Hash_code_base[m[K
+[1.923s]       |            [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.923s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1188:12:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_ebo_helper<1, std::hash<Point>, true>::~_Hashtable_ebo_helper()[m[K’
+[1.923s] In file included from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[1.923s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[1.923s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.923s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.923s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.923s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.924s] [01m[K/usr/include/c++/11/bits/hashtable.h:528:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::equal_to<Point>, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Hashtable_traits<true, false, true> >::~_Hashtable_base()[m[K’
+[1.924s]   528 |       [01;31m[K_Hashtable[m[K() = default;
+[1.924s]       |       [01;31m[K^~~~~~~~~~[m[K
+[1.924s] In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:35[m[K,
+[1.924s]                  from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.924s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.924s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1561:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__detail::_Hashtable_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::equal_to<Point>, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Hashtable_traits<true, false, true> >::~_Hashtable_base()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.924s]  1561 |     struct [01;36m[K_Hashtable_base[m[K
+[1.924s]       |            [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.924s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1561:12:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hash_code_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, true>::~_Hash_code_base()[m[K’
+[1.924s] In file included from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.924s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.924s] [01m[K/usr/include/c++/11/bits/hashtable.h:528:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kconstexpr std::_Enable_default_constructor<false, _Tag>::_Enable_default_constructor() [with _Tag = std::__detail::_Hash_node_base][m[K’
+[1.924s]   528 |       [01;31m[K_Hashtable[m[K() = default;
+[1.924s]       |       [01;31m[K^~~~~~~~~~[m[K
+[1.924s] In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:36[m[K,
+[1.924s]                  from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.924s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.924s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.924s] [01m[K/usr/include/c++/11/bits/enable_special_members.h:113:15:[m[K [01;36m[Knote: [m[Kdeclared here
+[1.924s]   113 |     constexpr [01;36m[K_Enable_default_constructor[m[K() noexcept = delete;
+[1.924s]       |               [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.924s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:16:38:[m[K [01;31m[Kerror: [m[Kinvalid declarator before ‘[01m[Ktf[m[K’
+[1.924s]    16 |     std::shared_ptr<tf2_ros::Buffer> [01;31m[Ktf[m[K,
+[1.924s]       |                                      [01;31m[K^~[m[K
+[1.924s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:51:21:[m[K [01;31m[Kerror: [m[K‘[01m[KRRTConnect[m[K’ has not been declared
+[1.924s]    51 | nav_msgs::msg::Path [01;31m[KRRTConnect[m[K::createPlan(
+[1.925s]       |                     [01;31m[K^~~~~~~~~~[m[K
+[1.925s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:[m[K In function ‘[01m[Knav_msgs::msg::Path nav2_RRTstar_planner::createPlan(const PoseStamped&, const PoseStamped&)[m[K’:
+[1.925s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:56:32:[m[K [01;31m[Kerror: [m[K‘[01m[Knode_[m[K’ was not declared in this scope; did you mean ‘[01m[Kmode_t[m[K’?
+[1.925s]    56 |     global_path.header.stamp = [01;31m[Knode_[m[K->now();
+[1.925s]       |                                [01;31m[K^~~~~[m[K
+[1.925s]       |                                [32m[Kmode_t[m[K
+[1.928s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:57:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_frame_[m[K’ was not declared in this scope; did you mean ‘[01m[Kglobal_path[m[K’?
+[1.928s]    57 |     global_path.header.frame_id = [01;31m[Kglobal_frame_[m[K;
+[1.928s]       |                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[1.928s]       |                                   [32m[Kglobal_path[m[K
+[1.930s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:62:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree_start_[m[K’ was not declared in this scope
+[1.930s]    62 |     [01;31m[Ktree_start_[m[K[start_pt] = nullptr;
+[1.930s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.935s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:69:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_random_point[m[K’ was not declared in this scope
+[1.935s]    69 |         Point rand_pt = [01;31m[Kget_random_point[m[K();
+[1.935s]       |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[1.940s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:71:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kfind_closest_in_tree[m[K’ was not declared in this scope
+[1.940s]    71 |         Point near_start = [01;31m[Kfind_closest_in_tree[m[K(rand_pt, tree_start_);
+[1.940s]       |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[1.943s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:72:27:[m[K [01;31m[Kerror: [m[K‘[01m[Knew_point[m[K’ was not declared in this scope
+[1.943s]    72 |         Point new_start = [01;31m[Knew_point[m[K(rand_pt, near_start);
+[1.943s]       |                           [01;31m[K^~~~~~~~~[m[K
+[1.945s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:74:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kis_valid[m[K’ was not declared in this scope
+[1.945s]    74 |         if (![01;31m[Kis_valid[m[K(near_start, new_start)) continue;
+[1.945s]       |              [01;31m[K^~~~~~~~[m[K
+[1.948s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:80:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kis_valid[m[K’ was not declared in this scope
+[1.948s]    80 |         if (![01;31m[Kis_valid[m[K(near_goal, new_goal)) continue;
+[1.948s]       |              [01;31m[K^~~~~~~~[m[K
+[1.950s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:83:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kis_valid[m[K’ was not declared in this scope
+[1.951s]    83 |         if ([01;31m[Kis_valid[m[K(new_start, new_goal)) {
+[1.951s]       |             [01;31m[K^~~~~~~~[m[K
+[1.951s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.951s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[1.951s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[1.951s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:94:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.952s]    94 |         [01;31m[KRCLCPP_WARN[m[K(node_->get_logger(), "RRT-Connect failed to find a path.");
+[1.952s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[1.952s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:94:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.952s]    94 |         [01;31m[KRCLCPP_WARN[m[K(node_->get_logger(), "RRT-Connect failed to find a path.");
+[1.952s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[1.952s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:94:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.952s]    94 |         [01;31m[KRCLCPP_WARN[m[K(node_->get_logger(), "RRT-Connect failed to find a path.");
+[1.952s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[1.954s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:[m[K At global scope:
+[1.954s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:169:7:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[KPoint nav2_RRTstar_planner::RRTstar::find_closest_in_tree(Point, const std::unordered_map<Point, std::shared_ptr<Point> >&)[m[K’
+[1.954s]   169 | Point [01;31m[KRRTstar[m[K::find_closest_in_tree(Point pos, const std::unordered_map<Point, std::shared_ptr<Point>>& tree) {
+[1.954s]       |       [01;31m[K^~~~~~~[m[K
+[1.954s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:169:7:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[KPoint nav2_RRTstar_planner::RRTstar::find_closest_in_tree(Point, const std::unordered_map<Point, std::shared_ptr<Point> >&)[m[K’
+[1.955s] In file included from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[1.955s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:47:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass nav2_RRTstar_planner::RRTstar[m[K’ defined here
+[1.955s]    47 | class [01;36m[KRRTstar[m[K : public nav2_core::GlobalPlanner {
+[1.955s]       |       [01;36m[K^~~~~~~[m[K
+[2.227s] In file included from [01m[K/usr/include/c++/11/bits/hashtable.h:35[m[K,
+[2.227s]                  from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[2.227s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[2.227s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.227s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.227s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.227s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.227s] /usr/include/c++/11/bits/hashtable_policy.h: In instantiation of ‘[01m[Kstd::__detail::_Hash_code_base<_Key, _Value, _ExtractKey, _Hash, _RangeHash, _Unused, __cache_hash_code>::__hash_code std::__detail::_Hash_code_base<_Key, _Value, _ExtractKey, _Hash, _RangeHash, _Unused, __cache_hash_code>::_M_hash_code(const _Key&) const [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; bool __cache_hash_code = true; std::__detail::_Hash_code_base<_Key, _Value, _ExtractKey, _Hash, _RangeHash, _Unused, __cache_hash_code>::__hash_code = long unsigned int][m[K’:
+[2.227s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:702:45:[m[K   required from ‘[01m[Kstd::__detail::_Map_base<_Key, _Pair, _Alloc, std::__detail::_Select1st, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::mapped_type& std::__detail::_Map_base<_Key, _Pair, _Alloc, std::__detail::_Select1st, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::operator[](const key_type&) [with _Key = Point; _Pair = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>; std::__detail::_Map_base<_Key, _Pair, _Alloc, std::__detail::_Select1st, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::mapped_type = std::shared_ptr<Point>; std::__detail::_Map_base<_Key, _Pair, _Alloc, std::__detail::_Select1st, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::key_type = Point][m[K’
+[2.227s] [01m[K/usr/include/c++/11/bits/unordered_map.h:980:20:[m[K   required from ‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type& std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::operator[](const key_type&) [with _Key = Point; _Tp = std::shared_ptr<Point>; _Hash = std::hash<Point>; _Pred = std::equal_to<Point>; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type = std::shared_ptr<Point>; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type = Point][m[K’
+[2.228s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:63:23:[m[K   required from here
+[2.228s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1217:23:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: hash function must be invocable with an argument of key type
+[2.228s]  1217 |         static_assert([01;31m[K__is_invocable<const _Hash&, const _Key&>{}[m[K,
+[2.228s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.228s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1217:23:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__is_invocable<const std::hash<Point>&, const Point&>{}[m[K’ evaluates to false
+[2.228s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1219:25:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(const std::hash<Point>) (const Point&)[m[K’
+[2.228s]  1219 |         return [01;31m[K_M_hash()(__k)[m[K;
+[2.228s]       |                [01;31m[K~~~~~~~~~^~~~~[m[K
+[2.550s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.550s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.550s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.550s] /usr/include/c++/11/bits/stl_function.h: In instantiation of ‘[01m[Kconstexpr bool std::equal_to<_Tp>::operator()(const _Tp&, const _Tp&) const [with _Tp = Point][m[K’:
+[2.551s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:1617:39:[m[K   required from ‘[01m[Kbool std::__detail::_Hashtable_base<_Key, _Value, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _Traits>::_M_equals(const _Key&, std::__detail::_Hashtable_base<_Key, _Value, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _Traits>::__hash_code, const std::__detail::_Hash_node_value<_Value, typename _Traits::__hash_cached::value>&) const [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _Traits = std::__detail::_Hashtable_traits<true, false, true>; std::__detail::_Hashtable_base<_Key, _Value, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _Traits>::__hash_code = long unsigned int; typename _Traits::__hash_cached = std::__detail::_Hashtable_traits<true, false, true>::__hash_cached][m[K’
+[2.551s] [01m[K/usr/include/c++/11/bits/hashtable.h:1840:23:[m[K   required from ‘[01m[Kstd::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::__node_base_ptr std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::_M_find_before_node(std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::size_type, const key_type&, std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::__hash_code) const [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>; std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::__node_base_ptr = std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<const Point, std::shared_ptr<Point> >, true> > >::__node_base*; std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::size_type = long unsigned int; std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::key_type = Point; std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::__hash_code = long unsigned int][m[K’
+[2.558s] [01m[K/usr/include/c++/11/bits/hashtable.h:810:31:[m[K   required from ‘[01m[Kstd::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::__node_ptr std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::_M_find_node(std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::size_type, const key_type&, std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::__hash_code) const [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>; std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::__node_ptr = std::allocator<std::__detail::_Hash_node<std::pair<const Point, std::shared_ptr<Point> >, true> >::value_type*; std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::size_type = long unsigned int; std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::key_type = Point; std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::__hash_code = long unsigned int][m[K’
+[2.558s] [01m[K/usr/include/c++/11/bits/hashtable_policy.h:704:42:[m[K   required from ‘[01m[Kstd::__detail::_Map_base<_Key, _Pair, _Alloc, std::__detail::_Select1st, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::mapped_type& std::__detail::_Map_base<_Key, _Pair, _Alloc, std::__detail::_Select1st, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::operator[](const key_type&) [with _Key = Point; _Pair = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>; std::__detail::_Map_base<_Key, _Pair, _Alloc, std::__detail::_Select1st, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::mapped_type = std::shared_ptr<Point>; std::__detail::_Map_base<_Key, _Pair, _Alloc, std::__detail::_Select1st, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::key_type = Point][m[K’
+[2.558s] [01m[K/usr/include/c++/11/bits/unordered_map.h:980:20:[m[K   required from ‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type& std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::operator[](const key_type&) [with _Key = Point; _Tp = std::shared_ptr<Point>; _Hash = std::hash<Point>; _Pred = std::equal_to<Point>; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type = std::shared_ptr<Point>; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type = Point][m[K’
+[2.559s] [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:63:23:[m[K   required from here
+[2.559s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator==[m[K’ (operand types are ‘[01m[Kconst Point[m[K’ and ‘[01m[Kconst Point[m[K’)
+[2.559s]   370 |       { return [01;31m[K__x == __y[m[K; }
+[2.559s]       |                [01;31m[K~~~~^~~~~~[m[K
+[2.559s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[2.559s]                  from [01m[K/usr/include/c++/11/bits/specfun.h:45[m[K,
+[2.559s]                  from [01m[K/usr/include/c++/11/cmath:1935[m[K,
+[2.559s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:1[m[K:
+[2.559s] [01m[K/usr/include/c++/11/bits/stl_pair.h:466:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)[m[K’
+[2.559s]   466 |     [01;36m[Koperator[m[K==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+[2.559s]       |     [01;36m[K^~~~~~~~[m[K
+[2.559s] [01m[K/usr/include/c++/11/bits/stl_pair.h:466:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.559s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.559s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.559s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.559s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::pair<_T1, _T2>[m[K’
+[2.559s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.559s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.560s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/11/bits/specfun.h:45[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/11/cmath:1935[m[K,
+[2.560s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:1[m[K:
+[2.560s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:420:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> constexpr bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)[m[K’
+[2.560s]   420 |     [01;36m[Koperator[m[K==(const reverse_iterator<_Iterator>& __x,
+[2.560s]       |     [01;36m[K^~~~~~~~[m[K
+[2.560s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:420:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.560s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.560s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.560s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+[2.560s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.560s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.560s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/11/bits/specfun.h:45[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/11/cmath:1935[m[K,
+[2.560s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:1[m[K:
+[2.560s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:459:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+[2.560s]   459 |     [01;36m[Koperator[m[K==(const reverse_iterator<_IteratorL>& __x,
+[2.560s]       |     [01;36m[K^~~~~~~~[m[K
+[2.560s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:459:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.560s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.560s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.560s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+[2.560s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.560s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.560s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/11/bits/specfun.h:45[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/11/cmath:1935[m[K,
+[2.560s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:1[m[K:
+[2.560s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1585:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+[2.560s]  1585 |     [01;36m[Koperator[m[K==(const move_iterator<_IteratorL>& __x,
+[2.560s]       |     [01;36m[K^~~~~~~~[m[K
+[2.560s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1585:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.560s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.561s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.561s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+[2.561s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.561s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.561s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[2.561s]                  from [01m[K/usr/include/c++/11/bits/specfun.h:45[m[K,
+[2.561s]                  from [01m[K/usr/include/c++/11/cmath:1935[m[K,
+[2.561s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:1[m[K:
+[2.561s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1648:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> constexpr bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)[m[K’
+[2.561s]  1648 |     [01;36m[Koperator[m[K==(const move_iterator<_Iterator>& __x,
+[2.561s]       |     [01;36m[K^~~~~~~~[m[K
+[2.561s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1648:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.561s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.561s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.561s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.561s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+[2.561s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.561s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.561s] In file included from [01m[K/usr/include/c++/11/memory:64[m[K,
+[2.561s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.561s] [01m[K/usr/include/c++/11/bits/allocator.h:218:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_T2>&)[m[K’
+[2.561s]   218 |     [01;36m[Koperator[m[K==(const allocator<_T1>&, const allocator<_T2>&)
+[2.561s]       |     [01;36m[K^~~~~~~~[m[K
+[2.561s] [01m[K/usr/include/c++/11/bits/allocator.h:218:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.561s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.561s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.561s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.561s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::allocator<_Tp1>[m[K’
+[2.561s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.561s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.561s] In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+[2.561s]                  from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+[2.561s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.561s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.561s] [01m[K/usr/include/c++/11/array:276:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, long unsigned int _Nm> bool std::operator==(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)[m[K’
+[2.561s]   276 |     [01;36m[Koperator[m[K==(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+[2.561s]       |     [01;36m[K^~~~~~~~[m[K
+[2.561s] [01m[K/usr/include/c++/11/array:276:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.561s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.561s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.561s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.562s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’
+[2.562s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.562s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.562s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+[2.562s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.562s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.562s] [01m[K/usr/include/c++/11/tuple:1524:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _TElements, class ... _UElements> constexpr bool std::operator==(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)[m[K’
+[2.562s]  1524 |     [01;36m[Koperator[m[K==(const tuple<_TElements...>& __t,
+[2.562s]       |     [01;36m[K^~~~~~~~[m[K
+[2.562s] [01m[K/usr/include/c++/11/tuple:1524:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.562s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.562s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.562s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.562s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::tuple<_Tps ...>[m[K’
+[2.562s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.562s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.562s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.562s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.562s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:753:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)[m[K’
+[2.562s]   753 |     [01;36m[Koperator[m[K==(const unique_ptr<_Tp, _Dp>& __x,
+[2.562s]       |     [01;36m[K^~~~~~~~[m[K
+[2.562s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:753:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.562s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.562s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.562s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.562s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+[2.562s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.562s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.562s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.562s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.562s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:760:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)[m[K’
+[2.562s]   760 |     [01;36m[Koperator[m[K==(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+[2.562s]       |     [01;36m[K^~~~~~~~[m[K
+[2.562s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:760:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.562s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.562s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.562s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.562s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+[2.563s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.563s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.563s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.563s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.563s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:767:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator==(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)[m[K’
+[2.563s]   767 |     [01;36m[Koperator[m[K==(nullptr_t, const unique_ptr<_Tp, _Dp>& __x) noexcept
+[2.563s]       |     [01;36m[K^~~~~~~~[m[K
+[2.563s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:767:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.563s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.563s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.563s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.563s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+[2.563s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.563s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.563s] In file included from [01m[K/usr/include/c++/11/iosfwd:40[m[K,
+[2.563s]                  from [01m[K/usr/include/c++/11/bits/shared_ptr.h:52[m[K,
+[2.563s]                  from [01m[K/usr/include/c++/11/memory:77[m[K,
+[2.563s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.563s] [01m[K/usr/include/c++/11/bits/postypes.h:222:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)[m[K’
+[2.563s]   222 |     [01;36m[Koperator[m[K==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+[2.563s]       |     [01;36m[K^~~~~~~~[m[K
+[2.563s] [01m[K/usr/include/c++/11/bits/postypes.h:222:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.563s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.563s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.563s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.563s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::fpos<_StateT>[m[K’
+[2.563s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.563s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.563s] In file included from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+[2.563s]                  from [01m[K/usr/include/c++/11/memory:77[m[K,
+[2.563s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.563s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1410:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator==(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)[m[K’
+[2.563s]  1410 |     [01;36m[Koperator[m[K==(const __shared_ptr<_Tp1, _Lp>& __a,
+[2.563s]       |     [01;36m[K^~~~~~~~[m[K
+[2.563s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1410:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.563s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.563s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.563s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.564s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp1, _Lp>[m[K’
+[2.564s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.564s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.564s] In file included from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+[2.564s]                  from [01m[K/usr/include/c++/11/memory:77[m[K,
+[2.564s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.564s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1416:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator==(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)[m[K’
+[2.564s]  1416 |     [01;36m[Koperator[m[K==(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+[2.564s]       |     [01;36m[K^~~~~~~~[m[K
+[2.564s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1416:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.564s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.564s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.564s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.564s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+[2.564s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.564s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.564s] In file included from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+[2.564s]                  from [01m[K/usr/include/c++/11/memory:77[m[K,
+[2.564s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.564s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1436:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator==(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+[2.564s]  1436 |     [01;36m[Koperator[m[K==(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+[2.564s]       |     [01;36m[K^~~~~~~~[m[K
+[2.564s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1436:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.564s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.564s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.564s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.564s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+[2.564s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.564s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.564s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[2.564s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.564s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:437:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> bool std::operator==(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)[m[K’
+[2.564s]   437 |     [01;36m[Koperator[m[K==(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+[2.564s]       |     [01;36m[K^~~~~~~~[m[K
+[2.564s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:437:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.564s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.564s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.564s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.565s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+[2.565s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.565s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.565s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[2.565s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.565s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:443:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator==(const std::shared_ptr<_Tp>&, std::nullptr_t)[m[K’
+[2.565s]   443 |     [01;36m[Koperator[m[K==(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+[2.565s]       |     [01;36m[K^~~~~~~~[m[K
+[2.565s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:443:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.565s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.565s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.565s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.565s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+[2.565s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.565s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.565s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[2.565s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.565s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:464:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator==(std::nullptr_t, const std::shared_ptr<_Tp>&)[m[K’
+[2.565s]   464 |     [01;36m[Koperator[m[K==(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+[2.565s]       |     [01;36m[K^~~~~~~~[m[K
+[2.565s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:464:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.565s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.565s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.565s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.565s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+[2.565s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.565s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.565s] In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+[2.565s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:18[m[K,
+[2.565s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.565s] [01m[K/usr/include/c++/11/bits/stl_vector.h:1892:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)[m[K’
+[2.565s]  1892 |     [01;36m[Koperator[m[K==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+[2.565s]       |     [01;36m[K^~~~~~~~[m[K
+[2.565s] [01m[K/usr/include/c++/11/bits/stl_vector.h:1892:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.565s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.565s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.565s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.565s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::vector<_Tp, _Alloc>[m[K’
+[2.565s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.566s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.566s] In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+[2.566s]                  from [01m[K/usr/include/c++/11/string:55[m[K,
+[2.566s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:19[m[K,
+[2.566s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.566s] [01m[K/usr/include/c++/11/string_view:535:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator==(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)[m[K’
+[2.566s]   535 |     [01;36m[Koperator[m[K==(basic_string_view<_CharT, _Traits> __x,
+[2.566s]       |     [01;36m[K^~~~~~~~[m[K
+[2.566s] [01m[K/usr/include/c++/11/string_view:535:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.566s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.566s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.566s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.566s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[KPoint[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+[2.566s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.566s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.566s] In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+[2.566s]                  from [01m[K/usr/include/c++/11/string:55[m[K,
+[2.566s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:19[m[K,
+[2.566s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.566s] [01m[K/usr/include/c++/11/string_view:541:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator==(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)[m[K’
+[2.566s]   541 |     [01;36m[Koperator[m[K==(basic_string_view<_CharT, _Traits> __x,
+[2.566s]       |     [01;36m[K^~~~~~~~[m[K
+[2.566s] [01m[K/usr/include/c++/11/string_view:541:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.566s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.566s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.566s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.566s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[KPoint[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+[2.566s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.566s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.566s] In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+[2.566s]                  from [01m[K/usr/include/c++/11/string:55[m[K,
+[2.566s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:19[m[K,
+[2.566s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.566s] [01m[K/usr/include/c++/11/string_view:564:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator==(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)[m[K’
+[2.566s]   564 |     [01;36m[Koperator[m[K==(__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+[2.566s]       |     [01;36m[K^~~~~~~~[m[K
+[2.566s] [01m[K/usr/include/c++/11/string_view:564:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.566s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.566s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.566s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.566s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[KPoint[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+[2.566s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.567s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.567s] In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+[2.567s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:19[m[K,
+[2.567s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.567s] [01m[K/usr/include/c++/11/bits/basic_string.h:6226:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+[2.567s]  6226 |     [01;36m[Koperator[m[K==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+[2.567s]       |     [01;36m[K^~~~~~~~[m[K
+[2.567s] [01m[K/usr/include/c++/11/bits/basic_string.h:6226:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.567s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.567s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.567s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.567s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+[2.567s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.567s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.567s] In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+[2.567s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:19[m[K,
+[2.567s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.567s] [01m[K/usr/include/c++/11/bits/basic_string.h:6234:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)[m[K’
+[2.567s]  6234 |     [01;36m[Koperator[m[K==(const basic_string<_CharT>& __lhs,
+[2.567s]       |     [01;36m[K^~~~~~~~[m[K
+[2.567s] [01m[K/usr/include/c++/11/bits/basic_string.h:6234:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.567s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.567s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.567s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.567s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT>[m[K’
+[2.567s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.567s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.567s] In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+[2.567s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:19[m[K,
+[2.567s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.567s] [01m[K/usr/include/c++/11/bits/basic_string.h:6248:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)[m[K’
+[2.567s]  6248 |     [01;36m[Koperator[m[K==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+[2.567s]       |     [01;36m[K^~~~~~~~[m[K
+[2.567s] [01m[K/usr/include/c++/11/bits/basic_string.h:6248:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.567s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.567s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.567s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.567s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+[2.567s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.567s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.568s] In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+[2.568s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:19[m[K,
+[2.568s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.568s] [01m[K/usr/include/c++/11/bits/basic_string.h:6289:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+[2.568s]  6289 |     [01;36m[Koperator[m[K==(const _CharT* __lhs,
+[2.568s]       |     [01;36m[K^~~~~~~~[m[K
+[2.568s] [01m[K/usr/include/c++/11/bits/basic_string.h:6289:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.568s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.568s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.568s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.568s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[KPoint[m[K’
+[2.568s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.568s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.568s] In file included from [01m[K/usr/include/c++/11/future:47[m[K,
+[2.568s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[2.568s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.568s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.568s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.568s] [01m[K/usr/include/c++/11/bits/std_function.h:718:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Res, class ... _Args> bool std::operator==(const std::function<_Res(_ArgTypes ...)>&, std::nullptr_t)[m[K’
+[2.568s]   718 |     [01;36m[Koperator[m[K==(const function<_Res(_Args...)>& __f, nullptr_t) noexcept
+[2.568s]       |     [01;36m[K^~~~~~~~[m[K
+[2.568s] [01m[K/usr/include/c++/11/bits/std_function.h:718:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.568s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.568s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.568s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.568s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::function<_Res(_ArgTypes ...)>[m[K’
+[2.568s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.568s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.568s] In file included from [01m[K/usr/include/c++/11/future:47[m[K,
+[2.568s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[2.568s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.568s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.568s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.568s] [01m[K/usr/include/c++/11/bits/std_function.h:725:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Res, class ... _Args> bool std::operator==(std::nullptr_t, const std::function<_Res(_ArgTypes ...)>&)[m[K’
+[2.568s]   725 |     [01;36m[Koperator[m[K==(nullptr_t, const function<_Res(_Args...)>& __f) noexcept
+[2.568s]       |     [01;36m[K^~~~~~~~[m[K
+[2.568s] [01m[K/usr/include/c++/11/bits/std_function.h:725:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.568s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.568s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.569s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.569s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::function<_Res(_ArgTypes ...)>[m[K’
+[2.569s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.569s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.569s] In file included from [01m[K/usr/include/c++/11/set:61[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.569s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.569s] [01m[K/usr/include/c++/11/bits/stl_set.h:985:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::set<_Key, _Compare, _Allocator>&, const std::set<_Key, _Compare, _Allocator>&)[m[K’
+[2.569s]   985 |     [01;36m[Koperator[m[K==(const set<_Key, _Compare, _Alloc>& __x,
+[2.569s]       |     [01;36m[K^~~~~~~~[m[K
+[2.569s] [01m[K/usr/include/c++/11/bits/stl_set.h:985:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.569s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.569s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.569s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.569s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::set<_Key, _Compare, _Allocator>[m[K’
+[2.569s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.569s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.569s] In file included from [01m[K/usr/include/c++/11/set:62[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.569s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.569s] [01m[K/usr/include/c++/11/bits/stl_multiset.h:971:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::multiset<_Key, _Compare, _Allocator>&, const std::multiset<_Key, _Compare, _Allocator>&)[m[K’
+[2.569s]   971 |     [01;36m[Koperator[m[K==(const multiset<_Key, _Compare, _Alloc>& __x,
+[2.569s]       |     [01;36m[K^~~~~~~~[m[K
+[2.569s] [01m[K/usr/include/c++/11/bits/stl_multiset.h:971:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.569s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.569s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.569s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.569s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::multiset<_Key, _Compare, _Allocator>[m[K’
+[2.569s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.569s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.569s] In file included from [01m[K/usr/include/c++/11/unordered_map:47[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[2.569s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.570s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.570s] [01m[K/usr/include/c++/11/bits/unordered_map.h:2134:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key1, class _Tp1, class _Hash1, class _Pred1, class _Alloc1> bool std::operator==(const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)[m[K’
+[2.570s]  2134 |     [01;36m[Koperator[m[K==(const unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+[2.570s]       |     [01;36m[K^~~~~~~~[m[K
+[2.570s] [01m[K/usr/include/c++/11/bits/unordered_map.h:2134:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.570s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.570s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.570s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.570s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>[m[K’
+[2.570s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.570s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.570s] In file included from [01m[K/usr/include/c++/11/unordered_map:47[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.570s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.570s] [01m[K/usr/include/c++/11/bits/unordered_map.h:2148:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key1, class _Tp1, class _Hash1, class _Pred1, class _Alloc1> bool std::operator==(const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)[m[K’
+[2.570s]  2148 |     [01;36m[Koperator[m[K==(const unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+[2.570s]       |     [01;36m[K^~~~~~~~[m[K
+[2.570s] [01m[K/usr/include/c++/11/bits/unordered_map.h:2148:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.570s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.570s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.570s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.570s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>[m[K’
+[2.570s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.570s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.570s] In file included from [01m[K/usr/include/c++/11/bits/locale_facets.h:48[m[K,
+[2.570s]                  from [01m[K/usr/include/c++/11/bits/basic_ios.h:37[m[K,
+[2.570s]                  from [01m[K/usr/include/c++/11/ios:44[m[K,
+[2.570s]                  from [01m[K/usr/include/c++/11/ostream:38[m[K,
+[2.570s]                  from [01m[K/usr/include/c++/11/iostream:39[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:22[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.570s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.570s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.571s] [01m[K/usr/include/c++/11/bits/streambuf_iterator.h:226:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)[m[K’
+[2.571s]   226 |     [01;36m[Koperator[m[K==(const istreambuf_iterator<_CharT, _Traits>& __a,
+[2.571s]       |     [01;36m[K^~~~~~~~[m[K
+[2.571s] [01m[K/usr/include/c++/11/bits/streambuf_iterator.h:226:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.571s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.571s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.571s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.571s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::istreambuf_iterator<_CharT, _Traits>[m[K’
+[2.571s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.571s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.571s] In file included from [01m[K/usr/include/c++/11/list:63[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:23[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.571s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.571s] [01m[K/usr/include/c++/11/bits/stl_list.h:2030:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator==(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)[m[K’
+[2.571s]  2030 |     [01;36m[Koperator[m[K==(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+[2.571s]       |     [01;36m[K^~~~~~~~[m[K
+[2.571s] [01m[K/usr/include/c++/11/bits/stl_list.h:2030:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.571s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.571s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.571s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.571s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::list<_Tp, _Alloc>[m[K’
+[2.571s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.571s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.571s] In file included from [01m[K/usr/include/c++/11/map:61[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.571s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.571s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.571s] [01m[K/usr/include/c++/11/bits/stl_map.h:1463:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const std::map<_Key, _Tp, _Compare, _Allocator>&, const std::map<_Key, _Tp, _Compare, _Allocator>&)[m[K’
+[2.571s]  1463 |     [01;36m[Koperator[m[K==(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+[2.571s]       |     [01;36m[K^~~~~~~~[m[K
+[2.571s] [01m[K/usr/include/c++/11/bits/stl_map.h:1463:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.572s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.572s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.572s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.572s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::map<_Key, _Tp, _Compare, _Allocator>[m[K’
+[2.572s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.572s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.572s] In file included from [01m[K/usr/include/c++/11/map:62[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.572s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.572s] [01m[K/usr/include/c++/11/bits/stl_multimap.h:1128:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const std::multimap<_Key, _Tp, _Compare, _Allocator>&, const std::multimap<_Key, _Tp, _Compare, _Allocator>&)[m[K’
+[2.572s]  1128 |     [01;36m[Koperator[m[K==(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+[2.572s]       |     [01;36m[K^~~~~~~~[m[K
+[2.572s] [01m[K/usr/include/c++/11/bits/stl_multimap.h:1128:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.572s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.572s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.572s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.572s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::multimap<_Key, _Tp, _Compare, _Allocator>[m[K’
+[2.572s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.572s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.572s] In file included from [01m[K/usr/include/c++/11/unordered_set:47[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/context.hpp:26[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:34[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.572s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.572s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.572s] [01m[K/usr/include/c++/11/bits/unordered_set.h:1804:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Value1, class _Hash1, class _Pred1, class _Alloc1> bool std::operator==(const std::unordered_set<_Value1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_set<_Value1, _Hash1, _Pred1, _Alloc1>&)[m[K’
+[2.572s]  1804 |     [01;36m[Koperator[m[K==(const unordered_set<_Value, _Hash, _Pred, _Alloc>& __x,
+[2.572s]       |     [01;36m[K^~~~~~~~[m[K
+[2.572s] [01m[K/usr/include/c++/11/bits/unordered_set.h:1804:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.572s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.572s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.572s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.572s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::unordered_set<_Value1, _Hash1, _Pred1, _Alloc1>[m[K’
+[2.572s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.572s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.573s] In file included from [01m[K/usr/include/c++/11/unordered_set:47[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/context.hpp:26[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:34[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.573s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.573s] [01m[K/usr/include/c++/11/bits/unordered_set.h:1818:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Value1, class _Hash1, class _Pred1, class _Alloc1> bool std::operator==(const std::unordered_multiset<_Value1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_multiset<_Value1, _Hash1, _Pred1, _Alloc1>&)[m[K’
+[2.573s]  1818 |     [01;36m[Koperator[m[K==(const unordered_multiset<_Value, _Hash, _Pred, _Alloc>& __x,
+[2.573s]       |     [01;36m[K^~~~~~~~[m[K
+[2.573s] [01m[K/usr/include/c++/11/bits/unordered_set.h:1818:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.573s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.573s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.573s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.573s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::unordered_multiset<_Value1, _Hash1, _Pred1, _Alloc1>[m[K’
+[2.573s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.573s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.573s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.573s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.573s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.573s] [01m[K/usr/include/c++/11/optional:1045:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_eq_t<_Tp, _Up> std::operator==(const std::optional<_Tp>&, const std::optional<_Up>&)[m[K’
+[2.573s]  1045 |     [01;36m[Koperator[m[K==(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
+[2.573s]       |     [01;36m[K^~~~~~~~[m[K
+[2.573s] [01m[K/usr/include/c++/11/optional:1045:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.573s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.573s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.573s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.573s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+[2.573s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.573s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.574s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.574s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.574s] [01m[K/usr/include/c++/11/optional:1105:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr bool std::operator==(const std::optional<_Tp>&, std::nullopt_t)[m[K’
+[2.574s]  1105 |     [01;36m[Koperator[m[K==(const optional<_Tp>& __lhs, nullopt_t) noexcept
+[2.574s]       |     [01;36m[K^~~~~~~~[m[K
+[2.574s] [01m[K/usr/include/c++/11/optional:1105:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.574s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.574s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.574s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.574s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+[2.574s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.574s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.574s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.574s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.574s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.574s] [01m[K/usr/include/c++/11/optional:1116:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr bool std::operator==(std::nullopt_t, const std::optional<_Tp>&)[m[K’
+[2.574s]  1116 |     [01;36m[Koperator[m[K==(nullopt_t, const optional<_Tp>& __rhs) noexcept
+[2.574s]       |     [01;36m[K^~~~~~~~[m[K
+[2.574s] [01m[K/usr/include/c++/11/optional:1116:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.574s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.574s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.575s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.575s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+[2.575s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.575s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.575s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.575s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.575s] [01m[K/usr/include/c++/11/optional:1173:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_eq_t<_Tp, _Up> std::operator==(const std::optional<_Tp>&, const _Up&)[m[K’
+[2.575s]  1173 |     [01;36m[Koperator[m[K==(const optional<_Tp>& __lhs, const _Up& __rhs)
+[2.575s]       |     [01;36m[K^~~~~~~~[m[K
+[2.575s] [01m[K/usr/include/c++/11/optional:1173:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.575s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.575s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.575s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.575s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+[2.575s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.575s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.575s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.575s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.575s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.575s] [01m[K/usr/include/c++/11/optional:1179:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_eq_t<_Up, _Tp> std::operator==(const _Up&, const std::optional<_Tp>&)[m[K’
+[2.575s]  1179 |     [01;36m[Koperator[m[K==(const _Up& __lhs, const optional<_Tp>& __rhs)
+[2.576s]       |     [01;36m[K^~~~~~~~[m[K
+[2.576s] [01m[K/usr/include/c++/11/optional:1179:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.576s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.576s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.576s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.576s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+[2.576s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.576s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.576s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:28[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.576s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.576s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.576s] [01m[K/usr/include/c++/11/variant:1232:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Types> constexpr bool std::operator==(const std::variant<_Types ...>&, const std::variant<_Types ...>&)[m[K’
+[2.576s]  1232 |   [01;36m[K_VARIANT_RELATION_FUNCTION_TEMPLATE[m[K(==, equal)
+[2.576s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.576s] [01m[K/usr/include/c++/11/variant:1232:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.576s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.576s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.576s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.576s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::variant<_Types ...>[m[K’
+[2.576s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.576s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.576s] In file included from [01m[K/usr/include/c++/11/random:51[m[K,
+[2.576s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:7[m[K,
+[2.576s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.576s] [01m[K/usr/include/c++/11/bits/random.tcc:1899:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType1> bool std::operator==(const std::normal_distribution<_RealType>&, const std::normal_distribution<_RealType>&)[m[K’
+[2.576s]  1899 |     [01;36m[Koperator[m[K==(const std::normal_distribution<_RealType>& __d1,
+[2.576s]       |     [01;36m[K^~~~~~~~[m[K
+[2.576s] [01m[K/usr/include/c++/11/bits/random.tcc:1899:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.576s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.576s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.576s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.577s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::normal_distribution<_RealType>[m[K’
+[2.577s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.577s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.577s] In file included from [01m[K/usr/include/c++/11/deque:67[m[K,
+[2.577s]                  from [01m[K/usr/include/c++/11/queue:60[m[K,
+[2.577s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d.hpp:48[m[K,
+[2.577s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_publisher.hpp:47[m[K,
+[2.577s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:48[m[K,
+[2.577s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.577s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.577s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.577s] [01m[K/usr/include/c++/11/bits/stl_deque.h:2247:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator==(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)[m[K’
+[2.577s]  2247 |     [01;36m[Koperator[m[K==(const deque<_Tp, _Alloc>& __x, const deque<_Tp, _Alloc>& __y)
+[2.577s]       |     [01;36m[K^~~~~~~~[m[K
+[2.577s] [01m[K/usr/include/c++/11/bits/stl_deque.h:2247:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.577s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.577s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.577s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.577s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::deque<_Tp, _Alloc>[m[K’
+[2.577s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.577s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.577s] In file included from [01m[K/usr/include/c++/11/queue:64[m[K,
+[2.577s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d.hpp:48[m[K,
+[2.577s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_publisher.hpp:47[m[K,
+[2.577s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:48[m[K,
+[2.577s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.577s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.577s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.577s] [01m[K/usr/include/c++/11/bits/stl_queue.h:344:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Seq> bool std::operator==(const std::queue<_Tp, _Seq>&, const std::queue<_Tp, _Seq>&)[m[K’
+[2.577s]   344 |     [01;36m[Koperator[m[K==(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+[2.577s]       |     [01;36m[K^~~~~~~~[m[K
+[2.577s] [01m[K/usr/include/c++/11/bits/stl_queue.h:344:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.577s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.577s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.577s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.577s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::queue<_Tp, _Seq>[m[K’
+[2.577s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.577s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.577s] In file included from [01m[K/usr/include/c++/11/stack:61[m[K,
+[2.577s]                  from [01m[K/usr/include/c++/11/regex:47[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.578s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.578s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.578s] [01m[K/usr/include/c++/11/bits/stl_stack.h:319:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Seq> bool std::operator==(const std::stack<_Tp, _Seq>&, const std::stack<_Tp, _Seq>&)[m[K’
+[2.578s]   319 |     [01;36m[Koperator[m[K==(const stack<_Tp, _Seq>& __x, const stack<_Tp, _Seq>& __y)
+[2.578s]       |     [01;36m[K^~~~~~~~[m[K
+[2.578s] [01m[K/usr/include/c++/11/bits/stl_stack.h:319:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.578s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.578s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.578s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.578s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::stack<_Tp, _Seq>[m[K’
+[2.578s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.578s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.578s] In file included from [01m[K/usr/include/c++/11/regex:63[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.578s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.578s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.578s] [01m[K/usr/include/c++/11/bits/regex.h:1059:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _BiIter> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, const std::__cxx11::sub_match<_BiIter>&)[m[K’
+[2.578s]  1059 |     [01;36m[Koperator[m[K==(const sub_match<_BiIter>& __lhs, const sub_match<_BiIter>& __rhs)
+[2.578s]       |     [01;36m[K^~~~~~~~[m[K
+[2.578s] [01m[K/usr/include/c++/11/bits/regex.h:1059:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.578s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.578s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.578s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.578s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+[2.578s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.578s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.578s] In file included from [01m[K/usr/include/c++/11/regex:63[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[2.578s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.579s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.579s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.579s] [01m[K/usr/include/c++/11/bits/regex.h:1155:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator==(std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&, const std::__cxx11::sub_match<_BiIter>&)[m[K’
+[2.579s]  1155 |     [01;36m[Koperator[m[K==(const __sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>& __lhs,
+[2.579s]       |     [01;36m[K^~~~~~~~[m[K
+[2.579s] [01m[K/usr/include/c++/11/bits/regex.h:1155:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.579s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.579s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.579s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.579s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kstd::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>[m[K’
+[2.579s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.579s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.579s] In file included from [01m[K/usr/include/c++/11/regex:63[m[K,
+[2.579s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+[2.579s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+[2.579s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+[2.579s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[2.579s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.579s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.579s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.579s] [01m[K/usr/include/c++/11/bits/regex.h:1230:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&)[m[K’
+[2.579s]  1230 |     [01;36m[Koperator[m[K==(const sub_match<_Bi_iter>& __lhs,
+[2.579s]       |     [01;36m[K^~~~~~~~[m[K
+[2.579s] [01m[K/usr/include/c++/11/bits/regex.h:1230:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.579s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.579s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.579s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.579s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+[2.579s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.579s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.579s] In file included from [01m[K/usr/include/c++/11/regex:63[m[K,
+[2.579s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+[2.579s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+[2.579s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+[2.580s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[2.580s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.580s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.580s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.580s] [01m[K/usr/include/c++/11/bits/regex.h:1322:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter> bool std::__cxx11::operator==(const typename std::iterator_traits<_Iter>::value_type*, const std::__cxx11::sub_match<_BiIter>&)[m[K’
+[2.580s]  1322 |     [01;36m[Koperator[m[K==(typename iterator_traits<_Bi_iter>::value_type const* __lhs,
+[2.580s]       |     [01;36m[K^~~~~~~~[m[K
+[2.580s] [01m[K/usr/include/c++/11/bits/regex.h:1322:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.580s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.580s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.580s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.580s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+[2.580s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.580s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.580s] In file included from [01m[K/usr/include/c++/11/regex:63[m[K,
+[2.580s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+[2.580s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+[2.580s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+[2.580s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[2.580s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.580s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.580s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.580s] [01m[K/usr/include/c++/11/bits/regex.h:1397:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type*)[m[K’
+[2.580s]  1397 |     [01;36m[Koperator[m[K==(const sub_match<_Bi_iter>& __lhs,
+[2.580s]       |     [01;36m[K^~~~~~~~[m[K
+[2.580s] [01m[K/usr/include/c++/11/bits/regex.h:1397:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.580s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.580s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.580s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.580s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+[2.580s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.580s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.580s] In file included from [01m[K/usr/include/c++/11/regex:63[m[K,
+[2.580s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.581s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.581s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.581s] [01m[K/usr/include/c++/11/bits/regex.h:1490:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter> bool std::__cxx11::operator==(const typename std::iterator_traits<_Iter>::value_type&, const std::__cxx11::sub_match<_BiIter>&)[m[K’
+[2.581s]  1490 |     [01;36m[Koperator[m[K==(typename iterator_traits<_Bi_iter>::value_type const& __lhs,
+[2.581s]       |     [01;36m[K^~~~~~~~[m[K
+[2.581s] [01m[K/usr/include/c++/11/bits/regex.h:1490:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.581s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.581s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.581s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.581s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+[2.581s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.581s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.581s] In file included from [01m[K/usr/include/c++/11/regex:63[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.581s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.581s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.581s] [01m[K/usr/include/c++/11/bits/regex.h:1569:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type&)[m[K’
+[2.581s]  1569 |     [01;36m[Koperator[m[K==(const sub_match<_Bi_iter>& __lhs,
+[2.581s]       |     [01;36m[K^~~~~~~~[m[K
+[2.581s] [01m[K/usr/include/c++/11/bits/regex.h:1569:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.581s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.581s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.581s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.581s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+[2.581s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.581s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.581s] In file included from [01m[K/usr/include/c++/11/regex:63[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[2.581s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.581s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.581s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:6[m[K:
+[2.581s] [01m[K/usr/include/c++/11/bits/regex.h:2125:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter, class _Alloc> bool std::__cxx11::operator==(const std::__cxx11::match_results<_BiIter, _Alloc>&, const std::__cxx11::match_results<_BiIter, _Alloc>&)[m[K’
+[2.582s]  2125 |     [01;36m[Koperator[m[K==(const match_results<_Bi_iter, _Alloc>& __m1,
+[2.582s]       |     [01;36m[K^~~~~~~~[m[K
+[2.582s] [01m[K/usr/include/c++/11/bits/regex.h:2125:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.582s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:38[m[K,
+[2.582s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.582s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:3[m[K:
+[2.582s] [01m[K/usr/include/c++/11/bits/stl_function.h:370:20:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Point[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::match_results<_BiIter, _Alloc>[m[K’
+[2.582s]   370 |       { return [01;36m[K__x == __y[m[K; }
+[2.582s]       |                [01;36m[K~~~~^~~~~~[m[K
+[2.582s] In file included from [01m[K/usr/include/c++/11/mutex:42[m[K,
+[2.582s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[2.582s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[2.582s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.582s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.582s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.582s] [01m[K/usr/include/c++/11/system_error:362:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator==(const std::error_code&, const std::error_code&)[m[K’
+[2.582s]   362 |   [01;36m[Koperator[m[K==(const error_code& __lhs, const error_code& __rhs) noexcept
+[2.582s]       |   [01;36m[K^~~~~~~~[m[K
+[2.582s] [01m[K/usr/include/c++/11/system_error:362:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Point[m[K’ to ‘[01m[Kconst std::error_code&[m[K’
+[2.582s]   362 |   operator==([01;36m[Kconst error_code& __lhs[m[K, const error_code& __rhs) noexcept
+[2.582s]       |              [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[2.582s] [01m[K/usr/include/c++/11/system_error:368:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator==(const std::error_code&, const std::error_condition&)[m[K’
+[2.582s]   368 |   [01;36m[Koperator[m[K==(const error_code& __lhs, const error_condition& __rhs) noexcept
+[2.582s]       |   [01;36m[K^~~~~~~~[m[K
+[2.582s] [01m[K/usr/include/c++/11/system_error:368:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Point[m[K’ to ‘[01m[Kconst std::error_code&[m[K’
+[2.582s]   368 |   operator==([01;36m[Kconst error_code& __lhs[m[K, const error_condition& __rhs) noexcept
+[2.582s]       |              [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[2.582s] [01m[K/usr/include/c++/11/system_error:376:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator==(const std::error_condition&, const std::error_condition&)[m[K’
+[2.582s]   376 |   [01;36m[Koperator[m[K==(const error_condition& __lhs,
+[2.582s]       |   [01;36m[K^~~~~~~~[m[K
+[2.582s] [01m[K/usr/include/c++/11/system_error:376:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Point[m[K’ to ‘[01m[Kconst std::error_condition&[m[K’
+[2.582s]   376 |   operator==([01;36m[Kconst error_condition& __lhs[m[K,
+[2.582s]       |              [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[2.582s] [01m[K/usr/include/c++/11/system_error:408:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator==(const std::error_condition&, const std::error_code&)[m[K’
+[2.582s]   408 |   [01;36m[Koperator[m[K==(const error_condition& __lhs, const error_code& __rhs) noexcept
+[2.582s]       |   [01;36m[K^~~~~~~~[m[K
+[2.582s] [01m[K/usr/include/c++/11/system_error:408:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Point[m[K’ to ‘[01m[Kconst std::error_condition&[m[K’
+[2.582s]   408 |   operator==([01;36m[Kconst error_condition& __lhs[m[K, const error_code& __rhs) noexcept
+[2.582s]       |              [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[2.582s] In file included from [01m[K/usr/include/c++/11/future:48[m[K,
+[2.582s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[2.582s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.582s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.582s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.582s] [01m[K/usr/include/c++/11/bits/std_thread.h:287:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator==(std::thread::id, std::thread::id)[m[K’
+[2.583s]   287 |   [01;36m[Koperator[m[K==(thread::id __x, thread::id __y) noexcept
+[2.583s]       |   [01;36m[K^~~~~~~~[m[K
+[2.583s] [01m[K/usr/include/c++/11/bits/std_thread.h:287:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Point[m[K’ to ‘[01m[Kstd::thread::id[m[K’
+[2.583s]   287 |   operator==([01;36m[Kthread::id __x[m[K, thread::id __y) noexcept
+[2.583s]       |              [01;36m[K~~~~~~~~~~~^~~[m[K
+[2.583s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:28[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.583s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.583s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.583s] [01m[K/usr/include/c++/11/variant:1239:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr bool std::operator==(std::monostate, std::monostate)[m[K’
+[2.583s]  1239 |   constexpr bool [01;36m[Koperator[m[K==(monostate, monostate) noexcept { return true; }
+[2.583s]       |                  [01;36m[K^~~~~~~~[m[K
+[2.583s] [01m[K/usr/include/c++/11/variant:1239:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Point[m[K’ to ‘[01m[Kstd::monostate[m[K’
+[2.583s]  1239 |   constexpr bool operator==([01;36m[Kmonostate[m[K, monostate) noexcept { return true; }
+[2.583s]       |                             [01;36m[K^~~~~~~~~[m[K
+[2.729s] In file included from [01m[K/usr/include/c++/11/unordered_map:46[m[K,
+[2.729s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[2.729s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.729s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.729s]                  from [01m[K/opt/ros/humble/include/nav2_util/node_utils.hpp:20[m[K,
+[2.729s]                  from [01m[K/root/Shared/src/TurtleRRT-Connect/MIAPR_project/src/nav2-rrt-connect/src/RRT_star_planner.cpp:4[m[K:
+[2.730s] /usr/include/c++/11/bits/hashtable.h: In instantiation of ‘[01m[Kstd::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::~_Hashtable() [with _Key = Point; _Value = std::pair<const Point, std::shared_ptr<Point> >; _Alloc = std::allocator<std::pair<const Point, std::shared_ptr<Point> > >; _ExtractKey = std::__detail::_Select1st; _Equal = std::equal_to<Point>; _Hash = std::hash<Point>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, false, true>][m[K’:
+[2.730s] [01m[K/usr/include/c++/11/bits/unordered_map.h:102:11:[m[K   required from here
+[2.730s] [01m[K/usr/include/c++/11/bits/hashtable.h:1534:5:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::__detail::_Hashtable_base<Point, std::pair<const Point, std::shared_ptr<Point> >, std::__detail::_Select1st, std::equal_to<Point>, std::hash<Point>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Hashtable_traits<true, false, true> >::~_Hashtable_base()[m[K’
+[2.730s]  1534 |     [01;31m[K}[m[K
+[2.730s]       |     [01;31m[K^[m[K
+[2.811s] gmake[2]: *** [CMakeFiles/nav2_RRTstar_planner_plugin.dir/build.make:76: CMakeFiles/nav2_RRTstar_planner_plugin.dir/src/RRT_star_planner.cpp.o] Error 1
+[2.812s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/nav2_RRTstar_planner_plugin.dir/all] Error 2
+[2.812s] gmake: *** [Makefile:146: all] Error 2
+[2.813s] Invoked command in '/root/Shared/src/TurtleRRT-Connect/MIAPR_project/build/nav2_RRTstar_planner' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Shared/src/TurtleRRT-Connect/MIAPR_project/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/TurtleRRT-Connect/MIAPR_project/build/nav2_RRTstar_planner -- -j12 -l12
