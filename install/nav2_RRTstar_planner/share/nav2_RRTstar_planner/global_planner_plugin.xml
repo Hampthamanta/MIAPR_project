@@ -1,5 +1,0 @@
-<library path="nav2_RRTstar_planner_plugin">
-	<class name="nav2_RRTstar_planner/RRTstar" type="nav2_RRTstar_planner::RRTstar" base_class_type="nav2_core::GlobalPlanner">
-	  <description>This is an example plugin which produces straight path.</description>
-	</class>
-</library>
