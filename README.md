@@ -1,4 +1,4 @@
-# MIAPR_project
+# TurtleBot with RRT-Connect path planning algorithm - PROJECT MIAPR
 
 ## 1. Instalacja środowiska z Dockerem
 
