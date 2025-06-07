@@ -103,6 +103,8 @@ private:
     double interpolation_resolution_;
 
     double calc_cost(Point start_pt, Point point);
+
+    rclcpp_lifecycle::LifecyclePublisher<nav_msgs::msg::Path>::SharedPtr plan_pub_;
 };
 
 }  // namespace nav2_RRTstar_planner

@@ -25,6 +25,9 @@ void RRTstar::configure(
     nav2_util::declare_parameter_if_not_declared(
         node_, name_ + ".interpolation_resolution", rclcpp::ParameterValue(0.1));
     node_->get_parameter(name_ + ".interpolation_resolution", interpolation_resolution_);
+
+    // Inicjalizacja publikacji
+    plan_pub_ = node_->create_publisher<nav_msgs::msg::Path>("~/global_plan", 1);
 }
 
 void RRTstar::cleanup() {
@@ -37,12 +40,16 @@ void RRTstar::activate() {
     RCLCPP_INFO(
         node_->get_logger(), "Activating plugin %s of type NavfnPlanner",
         name_.c_str());
+    plan_pub_->on_activate();
+    RCLCPP_INFO(node_->get_logger(), "Activating plugin %s", name_.c_str());
 }
 
 void RRTstar::deactivate() {
     RCLCPP_INFO(
         node_->get_logger(), "Deactivating plugin %s of type NavfnPlanner",
         name_.c_str());
+    plan_pub_->on_deactivate();
+    RCLCPP_INFO(node_->get_logger(), "Deactivating plugin %s", name_.c_str());
 }
 
 nav_msgs::msg::Path RRTstar::createPlan(
@@ -195,6 +202,8 @@ nav_msgs::msg::Path RRTstar::createPlan(
     goal_pose.header.stamp = node_->now();
     goal_pose.header.frame_id = global_frame_;
     global_path.poses.push_back(goal_pose);
+
+    plan_pub_->publish(global_path);
 
     return global_path;
 }
