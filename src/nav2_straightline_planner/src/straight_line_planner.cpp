@@ -1,0 +1,441 @@
+/*********************************************************************
+ *
+ * Software License Agreement (BSD License)
+ *
+ *  Copyright (c) 2020 Shivang Patel
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions
+ *  are met:
+ *
+ *   * Redistributions of source code must retain the above copyright
+ *     notice, this list of conditions and the following disclaimer.
+ *   * Redistributions in binary form must reproduce the above
+ *     copyright notice, this list of conditions and the following
+ *     disclaimer in the documentation and/or other materials provided
+ *     with the distribution.
+ *   * Neither the name of Willow Garage, Inc. nor the names of its
+ *     contributors may be used to endorse or promote products derived
+ *     from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGE.
+ *
+ * Author: Shivang Patel
+ *
+ * Reference tutorial:
+ * https://navigation.ros.org/tutorials/docs/writing_new_nav2planner_plugin.html
+ *********************************************************************/
+
+#include <cmath>
+#include <string>
+#include <memory>
+#include <cstdlib>
+#include "nav2_util/node_utils.hpp"
+#include "nav2_straightline_planner/straight_line_planner.hpp"
+
+namespace nav2_straightline_planner
+{
+
+  void StraightLine::configure(
+      const rclcpp_lifecycle::LifecycleNode::WeakPtr &parent,
+      std::string name, std::shared_ptr<tf2_ros::Buffer> tf,
+      std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros)
+  {
+    node_ = parent.lock();
+    name_ = name;
+    tf_ = tf;
+    costmap_ = costmap_ros->getCostmap();
+    global_frame_ = costmap_ros->getGlobalFrameID();
+
+    // Parameter initialization
+    nav2_util::declare_parameter_if_not_declared(
+        node_, name_ + ".interpolation_resolution", rclcpp::ParameterValue(0.1));
+    node_->get_parameter(name_ + ".interpolation_resolution", interpolation_resolution_);
+  }
+
+  void StraightLine::cleanup()
+  {
+    RCLCPP_INFO(
+        node_->get_logger(), "CleaningUp plugin %s of type NavfnPlanner",
+        name_.c_str());
+  }
+
+  void StraightLine::activate()
+  {
+    RCLCPP_INFO(
+        node_->get_logger(), "Activating plugin %s of type NavfnPlanner",
+        name_.c_str());
+  }
+
+  void StraightLine::deactivate()
+  {
+    RCLCPP_INFO(
+        node_->get_logger(), "Deactivating plugin %s of type NavfnPlanner",
+        name_.c_str());
+  }
+
+  nav_msgs::msg::Path StraightLine::createPlan(
+      const geometry_msgs::msg::PoseStamped &start,
+      const geometry_msgs::msg::PoseStamped &goal)
+  {
+    nav_msgs::msg::Path global_path;
+
+    // Checking if the goal and start state is in the global frame
+    if (start.header.frame_id != global_frame_)
+    {
+      RCLCPP_ERROR(
+          node_->get_logger(), "Planner will only except start position from %s frame",
+          global_frame_.c_str());
+      return global_path;
+    }
+
+    if (goal.header.frame_id != global_frame_)
+    {
+      RCLCPP_INFO(
+          node_->get_logger(), "Planner will only except goal position from %s frame",
+          global_frame_.c_str());
+      return global_path;
+    }
+
+    global_path.poses.clear();
+    global_path.header.stamp = node_->now();
+    global_path.header.frame_id = global_frame_;
+
+    // KOMENTARZ
+    // RCLCPP_INFO(
+    //       node_->get_logger(), "-------------------------> Path size: %ld",
+    //       parent_.size());
+
+    //----------------------------- RRT - CONNECT ---------------------------------
+
+    // wyciągnięcie punktów: startowy i końcowy
+    auto start_pt = Point{start.pose.position.x, start.pose.position.y};
+    auto goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
+
+    RCLCPP_INFO(node_->get_logger(), "============INIT PLANNING=============");
+    RCLCPP_INFO(node_->get_logger(), "Point start: %f %f", start_pt.x, start_pt.y);
+    RCLCPP_INFO(node_->get_logger(), "Point goal: %f %f", goal_pt.x, goal_pt.y);
+
+    // inicjalizacja drzew
+    parent_start.clear();
+    parent_goal.clear();
+    parent_start[start_pt] = Point();
+    parent_goal[goal_pt] = Point();
+
+    int swaps = 2;
+    int max_iterations = 100;
+    int i = 0;
+    auto new_pt = Point();
+    auto closest_in_tree = Point();
+
+    for (i = 0; i < max_iterations; i++)
+    {
+
+      auto rand_pt = get_random_point();
+
+      auto closest_pt = find_closest(rand_pt, parent_start);
+
+      new_pt = new_point(rand_pt, closest_pt);
+
+      if (!check_if_valid(closest_pt, new_pt))
+      {
+        continue; // pomiń punkt, jeżeli nie można połaczyć
+        // RCLCPP_INFO(node_->get_logger(), "Point skipped");
+      }
+
+      parent_start[new_pt] = closest_pt;
+
+      // wyswietlanie ------------------------!!!
+      // RCLCPP_INFO(node_->get_logger(), "Closest point: %f %f", closest_pt.x,closest_pt.y);
+      // RCLCPP_INFO(node_->get_logger(), "Random point: %f %f", rand_pt.x,rand_pt.y);
+      // RCLCPP_INFO(node_->get_logger(), "New point: %f %f", new_pt.x,new_pt.y);
+      RCLCPP_INFO(node_->get_logger(), "\n");
+      if (swaps % 2 == 0)
+      {
+        RCLCPP_INFO(node_->get_logger(), "Start tree: start");
+      }
+      else
+      {
+        RCLCPP_INFO(node_->get_logger(), "Start tree: goal");
+      }
+      RCLCPP_INFO(node_->get_logger(), "Tree size: %ld", parent_start.size());
+      for (const auto &[child, parent] : parent_start)
+      {
+        RCLCPP_INFO(node_->get_logger(), "Child: (%f ,%f) Parent: (%f ,%f)", child.x, child.y, parent.x, parent.y);
+      }
+      RCLCPP_INFO(node_->get_logger(), "\n");
+      // wyswietlanie ------------------------!!!
+
+      // szukająca najbliższego wierzchołka z nowego punktu przeciwnego drzewa (czyli tu drzewo: parent_goal)
+      closest_in_tree = find_closest(new_pt, parent_goal);
+      if (check_if_valid(new_pt, closest_in_tree))
+      {
+        RCLCPP_INFO(node_->get_logger(), "===========PLANNING ENDED SUCCESFULLY===========");
+        if (swaps % 2 == 1)
+        {
+          std::swap(new_pt, closest_in_tree);
+          std::swap(parent_start, parent_goal);
+        }
+
+        break;
+      }
+
+      // podmień drzewa
+      std::swap(parent_start, parent_goal);
+      swaps++;
+    }
+
+    //----------------------------- END - RRT - CONNECT ---------------------------------
+
+    std::vector<Point> path;
+    std::vector<Point> path_from_start;
+    std::vector<Point> path_from_end;
+    Point current;
+
+    RCLCPP_INFO(node_->get_logger(), "Point start: %f %f", start_pt.x, start_pt.y);
+    RCLCPP_INFO(node_->get_logger(), "Point goal: %f %f", goal_pt.x, goal_pt.y);
+    RCLCPP_INFO(node_->get_logger(), "Connection Point in Start Tree: (%f ,%f)", new_pt.x, new_pt.y);
+    RCLCPP_INFO(node_->get_logger(), "Connection Point in End Tree: (%f ,%f)", closest_in_tree.x, closest_in_tree.y);
+
+    // // ścieżka od closest do goal
+    current = closest_in_tree;
+    path_from_end.push_back(current);
+    while (current != goal_pt)
+    {
+      current = parent_goal[current];
+      if (current.x == 0.0 && current.y == 0.0)
+        break; // pomiń sztucznego rodzica
+      if (parent_goal.find(current) == parent_goal.end())
+      {
+        // RCLCPP_ERROR(node_->get_logger(), "Brak rodzica dla punktu (%f, %f)", current.x, current.y);
+        break;
+      }
+
+      // RCLCPP_INFO(node_->get_logger(), "Dodano punkt do ścieżki: (%f, %f)", current.x, current.y);
+      path_from_end.push_back(current);
+    }
+
+    // ścieżka od new_pt do start (wymaga odwrócenia)
+    current = new_pt;
+    path_from_start.push_back(current);
+    while (current != start_pt)
+    {
+      current = parent_start[current];
+      if (current.x == 0.0 && current.y == 0.0)
+        break; // pomiń sztucznego rodzica
+      if (parent_start.find(current) == parent_start.end())
+      {
+        // RCLCPP_ERROR(node_->get_logger(), "Brak rodzica dla punktu (%f, %f)", current.x, current.y);
+        break;
+      }
+
+      // RCLCPP_INFO(node_->get_logger(), "Dodano punkt do ścieżki: (%f, %f)", current.x, current.y);
+      path_from_start.push_back(current);
+    }
+    std::reverse(path_from_start.begin(), path_from_start.end());
+
+    // // łaczenie ścieżek
+    path = path_from_start;
+    path.insert(path.end(), path_from_end.begin(), path_from_end.end());
+    if (!path.empty())
+    {
+      // path.erase(path.begin());
+      path.pop_back();
+    }
+    RCLCPP_INFO(node_->get_logger(), "Zrekonstruowana ścieżka do punktu goal:");
+    for (const auto &pt : path)
+    {
+      RCLCPP_INFO(node_->get_logger(), "Point: (%f, %f)", pt.x, pt.y);
+    }
+
+    // INTERPOLCJA ŚCIEŻKI (zagęszczenie)
+    //---------------------------------------------------
+    // double step_size = 0.05;  // co ile metrów dodać punkt
+
+    // for (size_t i = 0; i + 1 < path.size(); ++i)
+    // {
+    // Point p1 = path[i];
+    // Point p2 = path[i + 1];
+
+    // double dx = p2.x - p1.x;
+    // double dy = p2.y - p1.y;
+    // double dist = std::hypot(dx, dy);
+    // int steps = std::max(1, static_cast<int>(dist / step_size));
+
+    // for (int j = 0; j <= steps; ++j)
+    // {
+    // double t = static_cast<double>(j) / steps;
+    // double x = p1.x + t * dx;
+    // double y = p1.y + t * dy;
+
+    // geometry_msgs::msg::PoseStamped pose;
+    // pose.pose.position.x = x;
+    // pose.pose.position.y = y;
+    // pose.pose.position.z = 0.0;
+    // pose.pose.orientation.x = 0.0;
+    // pose.pose.orientation.y = 0.0;
+    // pose.pose.orientation.z = 0.0;
+    // pose.pose.orientation.w = 1.0;
+    // pose.header.stamp = node_->now();
+    // pose.header.frame_id = global_frame_;
+    // global_path.poses.push_back(pose);
+    // }
+    // }
+    //---------------------------------------------------
+
+
+
+
+    // dodawanie punktów z listy path do global path
+    for (auto &point : path)
+    {
+      geometry_msgs::msg::PoseStamped pose;
+      pose.pose.position.x = point.x;
+      pose.pose.position.y = point.y;
+      pose.pose.position.z = 0.0;
+      pose.pose.orientation.x = 0.0;
+      pose.pose.orientation.y = 0.0;
+      pose.pose.orientation.z = 0.0;
+      pose.pose.orientation.w = 1.0;
+      pose.header.stamp = node_->now();
+      pose.header.frame_id = global_frame_;
+      global_path.poses.push_back(pose);
+    }
+
+
+
+    dodawanie końcowej pozycji
+    geometry_msgs::msg::PoseStamped goal_pose = goal;
+    goal_pose.header.stamp = node_->now();
+    goal_pose.header.frame_id = global_frame_;
+    global_path.poses.push_back(goal_pose);
+
+    return global_path;
+  }
+  //---------FUNKCJE---------
+
+  Point StraightLine::get_random_point()
+  {
+    float x = (((std::rand() / (float)RAND_MAX) * 2) - 1) * costmap_->getSizeInMetersX() / 7.f;
+    float y = (((std::rand() / (float)RAND_MAX) * 2) - 1) * costmap_->getSizeInMetersY() / 7.f;
+
+    // RCLCPP_INFO(
+    //   node_->get_logger(), "COSTMAP size: %f %f",
+    //   costmap_->getSizeInMetersX()/ 7f,costmap_->getSizeInMetersY()/ 7f);
+    // +-2.739285714 i +-2.739285714
+    return {x, y};
+  }
+
+  Point StraightLine::find_closest(Point pos, const std::map<Point, Point> parents)
+  {
+    double min_dist = 1000000.0;
+    Point closest;
+
+    for (auto &[key, value] : parents)
+    {
+      // pomiń parenta sztucznego
+      if (key.x == 0.0 && key.y == 0.0)
+      {
+        continue;
+      }
+
+      double dist = std::hypot(pos.x - key.x, pos.y - key.y);
+
+      if (dist < min_dist)
+      {
+        min_dist = dist;
+        closest = key;
+      }
+    }
+
+    return closest;
+  }
+
+  Point StraightLine::new_point(Point pt, Point closest)
+  {
+    double step = 0.1;
+    double norm = std::hypot(pt.x - closest.x, pt.y - closest.y);
+    double new_x = ((pt.x - closest.x) / norm) * step;
+    double new_y = ((pt.y - closest.y) / norm) * step;
+
+    Point point = Point(closest.x + new_x, closest.y + new_y);
+
+    return point;
+  }
+
+  bool StraightLine::check_if_valid(Point a, Point b)
+  {
+    auto x_points = linspace(a.x, b.x, 100);
+    auto y_points = linspace(a.y, b.y, 100);
+
+    std::vector<Point> points{};
+
+    for (int i = 0; i < x_points.size(); i++)
+    {
+      points.emplace_back(x_points[i], y_points[i]);
+    }
+
+    for (const auto &point : points)
+    {
+      unsigned mx{};
+      unsigned my{};
+
+      // jest poza granicami mapy
+      if (!costmap_->worldToMap(point.x, point.y, mx, my))
+      {
+        return false;
+      }
+
+      // jest przeszkoda
+       RCLCPP_INFO(node_->get_logger(), "Cost: %d", costmap_->getCost(mx, my));
+      if (costmap_->getCost(mx, my) >= 230) // 251
+      {
+        return false;
+      }
+    }
+
+    return true;
+  }
+  // gotowa funkcja linspace (w c++ nie ma) - https://stackoverflow.com/questions/27028226/python-linspace-in-c
+  std::vector<float> StraightLine::linspace(float start, float stop, std::size_t num_of_points)
+  {
+    std::vector<float> linspaced{};
+    linspaced.reserve(num_of_points);
+
+    if (num_of_points == 0)
+    {
+      return linspaced;
+    }
+    else if (num_of_points == 1)
+    {
+      linspaced.push_back(start);
+      return linspaced;
+    }
+
+    auto delta = (stop - start) / (num_of_points - 1);
+
+    for (int i = 0; i < num_of_points - 1; ++i)
+    {
+      linspaced.push_back(start + delta * i);
+    }
+    linspaced.push_back(stop);
+
+    return linspaced;
+  }
+
+} // namespace nav2_straightline_planner
+
+#include "pluginlib/class_list_macros.hpp"
+PLUGINLIB_EXPORT_CLASS(nav2_straightline_planner::StraightLine, nav2_core::GlobalPlanner)

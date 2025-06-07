@@ -69,7 +69,7 @@ nav_msgs::msg::Path RRTstar::createPlan(
     global_path.header.stamp = node_->now();
     global_path.header.frame_id = global_frame_;
 
-    //----------------------------------------- Path planning algorithm implementation ----------------------------------------------------
+    //----------------------------------------- Implementacja algorytmu RRT - Connect ----------------------------------------------------
 
     // Plan path
     parent_.clear();
@@ -223,10 +223,6 @@ bool RRTstar::is_valid(Point a, Point b) {
         //     point.x, point.y, costmap_->getCost(mx, my));
 
         if (costmap_->getCost(mx, my) >= 250) {
-            // TODO Add last point before collision
-            //  RCLCPP_INFO(
-            //  node_->get_logger(), "x:%f y:%f cost: %d ",
-            //  point.x, point.y, costmap_->getCost(mx, my));
             return false;
         }
     }
