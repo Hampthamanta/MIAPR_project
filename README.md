@@ -1,5 +1,9 @@
 # Algorytm planowania ścieżki RRT-Connect dla TurtleBot
 
+
+![animiertes-gif-von-online-umwandeln-de](https://github.com/user-attachments/assets/6dafc032-8cc8-4407-b606-a7caca9b72e2)
+
+
 ## 1. Instalacja środowiska z Dockerem
 
 #### 1. Tworzenie środowiska i klonowanie repozytorium
