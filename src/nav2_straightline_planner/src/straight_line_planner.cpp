@@ -113,214 +113,243 @@ namespace nav2_straightline_planner
     global_path.header.stamp = node_->now();
     global_path.header.frame_id = global_frame_;
 
-    // KOMENTARZ
-    // RCLCPP_INFO(
-    //       node_->get_logger(), "-------------------------> Path size: %ld",
-    //       parent_.size());
-
     //----------------------------- RRT - CONNECT ---------------------------------
+    auto new_goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
 
-    // wyciągnięcie punktów: startowy i końcowy
-    auto start_pt = Point{start.pose.position.x, start.pose.position.y};
-    auto goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
-
-    RCLCPP_INFO(node_->get_logger(), "============INIT PLANNING=============");
-    RCLCPP_INFO(node_->get_logger(), "Point start: %f %f", start_pt.x, start_pt.y);
-    RCLCPP_INFO(node_->get_logger(), "Point goal: %f %f", goal_pt.x, goal_pt.y);
-
-    // inicjalizacja drzew
-    parent_start.clear();
-    parent_goal.clear();
-    parent_start[start_pt] = Point();
-    parent_goal[goal_pt] = Point();
-
-    int swaps = 2;
-    int max_iterations = 100;
-    int i = 0;
-    auto new_pt = Point();
-    auto closest_in_tree = Point();
-
-    for (i = 0; i < max_iterations; i++)
+    if(new_goal_pt != goal_pt)
     {
+      goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
+      is_planned = false;
+    }
+    
 
-      auto rand_pt = get_random_point();
+    if (!is_planned)
+    {
+      // wyciągnięcie punktów: startowy i końcowy
+      auto start_pt = Point{start.pose.position.x, start.pose.position.y};
+      goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
 
-      auto closest_pt = find_closest(rand_pt, parent_start);
 
-      new_pt = new_point(rand_pt, closest_pt);
 
-      if (!check_if_valid(closest_pt, new_pt))
+      RCLCPP_INFO(node_->get_logger(), "============INIT PLANNING=============");
+      RCLCPP_INFO(node_->get_logger(), "Point start: %f %f", start_pt.x, start_pt.y);
+      RCLCPP_INFO(node_->get_logger(), "Point goal: %f %f", goal_pt.x, goal_pt.y);
+
+      // inicjalizacja drzew
+      parent_start.clear();
+      parent_goal.clear();
+      parent_start[start_pt] = Point(10.0,10.0);
+      parent_goal[goal_pt] = Point(10.0,10.0);
+
+      int swaps = 2;
+      int max_iterations = 100000;
+      int i = 0;
+      auto new_pt = Point();
+      auto closest_in_tree = Point();
+
+      for (i = 0; i < max_iterations; i++)
       {
-        continue; // pomiń punkt, jeżeli nie można połaczyć
-        // RCLCPP_INFO(node_->get_logger(), "Point skipped");
-      }
 
-      parent_start[new_pt] = closest_pt;
+        auto rand_pt = get_random_point();
 
-      // wyswietlanie ------------------------!!!
-      // RCLCPP_INFO(node_->get_logger(), "Closest point: %f %f", closest_pt.x,closest_pt.y);
-      // RCLCPP_INFO(node_->get_logger(), "Random point: %f %f", rand_pt.x,rand_pt.y);
-      // RCLCPP_INFO(node_->get_logger(), "New point: %f %f", new_pt.x,new_pt.y);
-      RCLCPP_INFO(node_->get_logger(), "\n");
-      if (swaps % 2 == 0)
-      {
-        RCLCPP_INFO(node_->get_logger(), "Start tree: start");
-      }
-      else
-      {
-        RCLCPP_INFO(node_->get_logger(), "Start tree: goal");
-      }
-      RCLCPP_INFO(node_->get_logger(), "Tree size: %ld", parent_start.size());
-      for (const auto &[child, parent] : parent_start)
-      {
-        RCLCPP_INFO(node_->get_logger(), "Child: (%f ,%f) Parent: (%f ,%f)", child.x, child.y, parent.x, parent.y);
-      }
-      RCLCPP_INFO(node_->get_logger(), "\n");
-      // wyswietlanie ------------------------!!!
+        auto closest_pt = find_closest(rand_pt, parent_start);
 
-      // szukająca najbliższego wierzchołka z nowego punktu przeciwnego drzewa (czyli tu drzewo: parent_goal)
-      closest_in_tree = find_closest(new_pt, parent_goal);
-      if (check_if_valid(new_pt, closest_in_tree))
-      {
-        RCLCPP_INFO(node_->get_logger(), "===========PLANNING ENDED SUCCESFULLY===========");
-        if (swaps % 2 == 1)
+        new_pt = new_point(rand_pt, closest_pt);
+
+        if (!check_if_valid(closest_pt, new_pt))
         {
-          std::swap(new_pt, closest_in_tree);
-          std::swap(parent_start, parent_goal);
+          continue; // pomiń punkt, jeżeli nie można połaczyć
+          // RCLCPP_INFO(node_->get_logger(), "Point skipped");
         }
 
-        break;
+        parent_start[new_pt] = closest_pt;
+
+        // wyswietlanie ------------------------!!!
+        // RCLCPP_INFO(node_->get_logger(), "Closest point: %f %f", closest_pt.x,closest_pt.y);
+        // RCLCPP_INFO(node_->get_logger(), "Random point: %f %f", rand_pt.x,rand_pt.y);
+        // RCLCPP_INFO(node_->get_logger(), "New point: %f %f", new_pt.x,new_pt.y);
+        RCLCPP_INFO(node_->get_logger(), "\n");
+        if (swaps % 2 == 0)
+        {
+          RCLCPP_INFO(node_->get_logger(), "Start tree: start");
+        }
+        else
+        {
+          RCLCPP_INFO(node_->get_logger(), "Start tree: goal");
+        }
+        RCLCPP_INFO(node_->get_logger(), "Tree size: %ld", parent_start.size());
+        for (const auto &[child, parent] : parent_start)
+        {
+          RCLCPP_INFO(node_->get_logger(), "Child: (%f ,%f) Parent: (%f ,%f)", child.x, child.y, parent.x, parent.y);
+        }
+        RCLCPP_INFO(node_->get_logger(), "\n");
+        // wyswietlanie ------------------------!!!
+
+        // szukająca najbliższego wierzchołka z nowego punktu przeciwnego drzewa (czyli tu drzewo: parent_goal)
+        closest_in_tree = find_closest(new_pt, parent_goal);
+        if (check_if_valid(new_pt, closest_in_tree))
+        {
+          RCLCPP_INFO(node_->get_logger(), "\n===========PLANNING ENDED SUCCESFULLY===========\n");
+          if (swaps % 2 == 1)
+          {
+            std::swap(new_pt, closest_in_tree);
+            std::swap(parent_start, parent_goal);
+          }
+
+          break;
+        }
+
+        // podmień drzewa
+        std::swap(new_pt, closest_in_tree);
+        std::swap(parent_start, parent_goal);
+        swaps++;
       }
 
-      // podmień drzewa
-      std::swap(parent_start, parent_goal);
-      swaps++;
-    }
+      //----------------------------- END - RRT - CONNECT ---------------------------------
+      std::vector<Point> path_from_start;
+      std::vector<Point> path_from_end;
+      Point current = Point();
 
-    //----------------------------- END - RRT - CONNECT ---------------------------------
+      path_from_start.clear();
+      path_from_end.clear();
 
-    std::vector<Point> path;
-    std::vector<Point> path_from_start;
-    std::vector<Point> path_from_end;
-    Point current;
+      RCLCPP_INFO(node_->get_logger(), "Point start: %f %f", start_pt.x, start_pt.y);
+      RCLCPP_INFO(node_->get_logger(), "Point goal: %f %f", goal_pt.x, goal_pt.y);
+      RCLCPP_INFO(node_->get_logger(), "Connection Point in Start Tree: (%f ,%f)", new_pt.x, new_pt.y);
+      RCLCPP_INFO(node_->get_logger(), "Connection Point in End Tree: (%f ,%f)", closest_in_tree.x, closest_in_tree.y);
 
-    RCLCPP_INFO(node_->get_logger(), "Point start: %f %f", start_pt.x, start_pt.y);
-    RCLCPP_INFO(node_->get_logger(), "Point goal: %f %f", goal_pt.x, goal_pt.y);
-    RCLCPP_INFO(node_->get_logger(), "Connection Point in Start Tree: (%f ,%f)", new_pt.x, new_pt.y);
-    RCLCPP_INFO(node_->get_logger(), "Connection Point in End Tree: (%f ,%f)", closest_in_tree.x, closest_in_tree.y);
-
-    // // ścieżka od closest do goal
-    current = closest_in_tree;
-    path_from_end.push_back(current);
-    while (current != goal_pt)
-    {
-      current = parent_goal[current];
-      if (current.x == 0.0 && current.y == 0.0)
-        break; // pomiń sztucznego rodzica
-      if (parent_goal.find(current) == parent_goal.end())
-      {
-        // RCLCPP_ERROR(node_->get_logger(), "Brak rodzica dla punktu (%f, %f)", current.x, current.y);
-        break;
-      }
-
-      // RCLCPP_INFO(node_->get_logger(), "Dodano punkt do ścieżki: (%f, %f)", current.x, current.y);
+      // // ścieżka od closest do goal
+      current = closest_in_tree;
       path_from_end.push_back(current);
-    }
-
-    // ścieżka od new_pt do start (wymaga odwrócenia)
-    current = new_pt;
-    path_from_start.push_back(current);
-    while (current != start_pt)
-    {
-      current = parent_start[current];
-      if (current.x == 0.0 && current.y == 0.0)
-        break; // pomiń sztucznego rodzica
-      if (parent_start.find(current) == parent_start.end())
+      while (current != goal_pt)
       {
-        // RCLCPP_ERROR(node_->get_logger(), "Brak rodzica dla punktu (%f, %f)", current.x, current.y);
-        break;
+        RCLCPP_INFO(node_->get_logger(), "Child: (%f ,%f)", current.x, current.y);
+        current = parent_goal[current];
+        RCLCPP_INFO(node_->get_logger(), "Parent: (%f ,%f)", current.x, current.y);
+        if (current.x == 10.0 && current.y == 10.0)
+        {
+          RCLCPP_INFO(node_->get_logger(), "Skipped 10,10");
+          break; // pomiń sztucznego rodzica
+        }
+          if (parent_goal.find(current) == parent_goal.end())
+        {
+          RCLCPP_ERROR(node_->get_logger(), "Brak rodzica dla punktu (%f, %f)", current.x, current.y);
+          break;
+        }
+
+        RCLCPP_INFO(node_->get_logger(), "Dodano punkt do ścieżki: (%f, %f)", current.x, current.y);
+        path_from_end.push_back(current);
+      }
+      RCLCPP_INFO(node_->get_logger(), "Zrekonstruowana ścieżka do punktu goal");
+      for (const auto &pt : path_from_end)
+      {
+        RCLCPP_INFO(node_->get_logger(), "Point: (%f, %f)", pt.x, pt.y);
       }
 
-      // RCLCPP_INFO(node_->get_logger(), "Dodano punkt do ścieżki: (%f, %f)", current.x, current.y);
+
+
+      // ścieżka od new_pt do start (wymaga odwrócenia)
+      current = new_pt;
       path_from_start.push_back(current);
-    }
-    std::reverse(path_from_start.begin(), path_from_start.end());
+      while (current != start_pt)
+      {
+        current = parent_start[current];
+        if (current.x == 10.0 && current.y == 10.0)
+          break; // pomiń sztucznego rodzica
+        if (parent_start.find(current) == parent_start.end())
+        {
+          // RCLCPP_ERROR(node_->get_logger(), "Brak rodzica dla punktu (%f, %f)", current.x, current.y);
+          break;
+        }
 
-    // // łaczenie ścieżek
-    path = path_from_start;
-    path.insert(path.end(), path_from_end.begin(), path_from_end.end());
-    if (!path.empty())
-    {
-      // path.erase(path.begin());
-      path.pop_back();
-    }
-    RCLCPP_INFO(node_->get_logger(), "Zrekonstruowana ścieżka do punktu goal:");
-    for (const auto &pt : path)
-    {
-      RCLCPP_INFO(node_->get_logger(), "Point: (%f, %f)", pt.x, pt.y);
-    }
+        // RCLCPP_INFO(node_->get_logger(), "Dodano punkt do ścieżki: (%f, %f)", current.x, current.y);
+        path_from_start.push_back(current);
+      }
+      std::reverse(path_from_start.begin(), path_from_start.end());
+      
+      RCLCPP_INFO(node_->get_logger(), "Zrekonstruowana ścieżka do punktu start");
+      for (const auto &pt : path_from_start)
+      {
+        RCLCPP_INFO(node_->get_logger(), "Point: (%f, %f)", pt.x, pt.y);
+      }
 
+
+      // // łaczenie ścieżek
+      path = path_from_start;
+      path.insert(path.end(), path_from_end.begin(), path_from_end.end());
+      if (!path.empty())
+      {
+        // path.erase(path.begin());
+        path.pop_back();
+      }
+      RCLCPP_INFO(node_->get_logger(), "Zrekonstruowana cała ścieżka:");
+      for (const auto &pt : path)
+      {
+        RCLCPP_INFO(node_->get_logger(), "Point: (%f, %f)", pt.x, pt.y);
+      }
+
+// dodanie goal do ścieżki
+      path.push_back(goal_pt);
+      is_planned = true;
+    }
     // INTERPOLCJA ŚCIEŻKI (zagęszczenie)
     //---------------------------------------------------
-    // double step_size = 0.05;  // co ile metrów dodać punkt
+    double step_size = 0.05; // co ile metrów dodać punkt
 
-    // for (size_t i = 0; i + 1 < path.size(); ++i)
-    // {
-    // Point p1 = path[i];
-    // Point p2 = path[i + 1];
+    for (size_t i = 0; i + 1 < path.size(); ++i)
+    {
+      Point p1 = path[i];
+      Point p2 = path[i + 1];
 
-    // double dx = p2.x - p1.x;
-    // double dy = p2.y - p1.y;
-    // double dist = std::hypot(dx, dy);
-    // int steps = std::max(1, static_cast<int>(dist / step_size));
+      double dx = p2.x - p1.x;
+      double dy = p2.y - p1.y;
+      double dist = std::hypot(dx, dy);
+      int steps = std::max(1, static_cast<int>(dist / step_size));
 
-    // for (int j = 0; j <= steps; ++j)
-    // {
-    // double t = static_cast<double>(j) / steps;
-    // double x = p1.x + t * dx;
-    // double y = p1.y + t * dy;
+      for (int j = 0; j <= steps; ++j)
+      {
+        double t = static_cast<double>(j) / steps;
+        double x = p1.x + t * dx;
+        double y = p1.y + t * dy;
 
-    // geometry_msgs::msg::PoseStamped pose;
-    // pose.pose.position.x = x;
-    // pose.pose.position.y = y;
-    // pose.pose.position.z = 0.0;
-    // pose.pose.orientation.x = 0.0;
-    // pose.pose.orientation.y = 0.0;
-    // pose.pose.orientation.z = 0.0;
-    // pose.pose.orientation.w = 1.0;
-    // pose.header.stamp = node_->now();
-    // pose.header.frame_id = global_frame_;
-    // global_path.poses.push_back(pose);
-    // }
-    // }
+        geometry_msgs::msg::PoseStamped pose;
+        pose.pose.position.x = x;
+        pose.pose.position.y = y;
+        pose.pose.position.z = 0.0;
+        pose.pose.orientation.x = 0.0;
+        pose.pose.orientation.y = 0.0;
+        pose.pose.orientation.z = 0.0;
+        pose.pose.orientation.w = 1.0;
+        pose.header.stamp = node_->now();
+        pose.header.frame_id = global_frame_;
+        global_path.poses.push_back(pose);
+      }
+
+
+    }
     //---------------------------------------------------
 
+    // // dodawanie punktów z listy path do global path
+    // for (auto &point : path)
+    // {
+    //   geometry_msgs::msg::PoseStamped pose;
+    //   pose.pose.position.x = point.x;
+    //   pose.pose.position.y = point.y;
+    //   pose.pose.position.z = 0.0;
+    //   pose.pose.orientation.x = 0.0;
+    //   pose.pose.orientation.y = 0.0;
+    //   pose.pose.orientation.z = 0.0;
+    //   pose.pose.orientation.w = 1.0;
+    //   pose.header.stamp = node_->now();
+    //   pose.header.frame_id = global_frame_;
+    //   global_path.poses.push_back(pose);
+    // }
 
-
-
-    // dodawanie punktów z listy path do global path
-    for (auto &point : path)
-    {
-      geometry_msgs::msg::PoseStamped pose;
-      pose.pose.position.x = point.x;
-      pose.pose.position.y = point.y;
-      pose.pose.position.z = 0.0;
-      pose.pose.orientation.x = 0.0;
-      pose.pose.orientation.y = 0.0;
-      pose.pose.orientation.z = 0.0;
-      pose.pose.orientation.w = 1.0;
-      pose.header.stamp = node_->now();
-      pose.header.frame_id = global_frame_;
-      global_path.poses.push_back(pose);
-    }
-
-
-
-    dodawanie końcowej pozycji
-    geometry_msgs::msg::PoseStamped goal_pose = goal;
-    goal_pose.header.stamp = node_->now();
-    goal_pose.header.frame_id = global_frame_;
-    global_path.poses.push_back(goal_pose);
+    // dodawanie końcowej pozycji
+    // geometry_msgs::msg::PoseStamped goal_pose = goal;
+    // goal_pose.header.stamp = node_->now();
+    // goal_pose.header.frame_id = global_frame_;
+    // global_path.poses.push_back(goal_pose);
 
     return global_path;
   }
@@ -399,7 +428,7 @@ namespace nav2_straightline_planner
       }
 
       // jest przeszkoda
-       RCLCPP_INFO(node_->get_logger(), "Cost: %d", costmap_->getCost(mx, my));
+      //  RCLCPP_INFO(node_->get_logger(), "Cost: %d", costmap_->getCost(mx, my));
       if (costmap_->getCost(mx, my) >= 230) // 251
       {
         return false;

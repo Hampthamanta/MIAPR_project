@@ -91,6 +91,7 @@ class StraightLine : public nav2_core::GlobalPlanner
 public:
   std::vector<Point> path;
   Point goal_pt;
+  bool is_planned=false;
   StraightLine() = default;
   ~StraightLine() = default;
 
