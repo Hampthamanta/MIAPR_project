@@ -1,0 +1,92 @@
+[0.010s] Invoking command in '/root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/Shared/src/MIAPR_project/src/nav2-rrt-star -DCMAKE_INSTALL_PREFIX=/root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner
+[0.050s] -- The C compiler identification is GNU 11.4.0
+[0.090s] -- The CXX compiler identification is GNU 11.4.0
+[0.095s] -- Detecting C compiler ABI info
+[0.145s] -- Detecting C compiler ABI info - done
+[0.150s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.151s] -- Detecting C compile features
+[0.151s] -- Detecting C compile features - done
+[0.153s] -- Detecting CXX compiler ABI info
+[0.213s] -- Detecting CXX compiler ABI info - done
+[0.220s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.220s] -- Detecting CXX compile features
+[0.220s] -- Detecting CXX compile features - done
+[0.222s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.329s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.395s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.424s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.429s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.435s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.443s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.454s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.484s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.486s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.552s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.573s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.606s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.613s] -- Looking for pthread.h
+[0.663s] -- Looking for pthread.h - found
+[0.663s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.717s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.718s] -- Found Threads: TRUE  
+[0.763s] -- Found rclcpp_action: 16.0.12 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.788s] -- Found rclcpp_lifecycle: 16.0.12 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.801s] -- Found visualization_msgs: 4.8.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.835s] -- Found nav2_util: 1.1.18 (/opt/ros/humble/share/nav2_util/cmake)
+[0.921s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.921s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.921s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.944s] -- Found nav2_costmap_2d: 1.1.18 (/opt/ros/humble/share/nav2_costmap_2d/cmake)
+[1.000s] -- Found nav2_core: 1.1.18 (/opt/ros/humble/share/nav2_core/cmake)
+[1.078s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.114s] WARNING: Package name "nav2_RRTstar_planner" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[1.135s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.136s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.136s] -- Configured cppcheck include dirs: /root/Shared/src/MIAPR_project/src/nav2-rrt-star/include
+[1.137s] -- Configured cppcheck exclude dirs and/or files: 
+[1.137s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.137s] -- Configured cpplint exclude dirs and/or files: 
+[1.137s] -- Added test 'lint_cmake' to check CMake code style
+[1.138s] -- Added test 'uncrustify' to check C / C++ code style
+[1.138s] -- Configured uncrustify additional arguments: 
+[1.138s] -- Added test 'xmllint' to check XML markup files
+[1.140s] -- Configuring done
+[1.176s] -- Generating done
+[1.182s] -- Build files have been written to: /root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner
+[1.189s] Invoked command in '/root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/Shared/src/MIAPR_project/src/nav2-rrt-star -DCMAKE_INSTALL_PREFIX=/root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner
+[1.191s] Invoking command in '/root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner -- -j12 -l12
+[1.234s] [ 50%] [32mBuilding CXX object CMakeFiles/nav2_RRTstar_planner_plugin.dir/src/RRT_star_planner.cpp.o[0m
+[4.705s] [100%] [32m[1mLinking CXX shared library libnav2_RRTstar_planner_plugin.so[0m
+[4.951s] [100%] Built target nav2_RRTstar_planner_plugin
+[4.961s] Invoked command in '/root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner -- -j12 -l12
+[4.962s] Invoking command in '/root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner
+[4.968s] -- Install configuration: ""
+[4.968s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/global_planner_plugin.xml
+[4.968s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/lib/libnav2_RRTstar_planner_plugin.so
+[4.969s] -- Set runtime path of "/root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/lib/libnav2_RRTstar_planner_plugin.so" to ""
+[4.969s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/include/
+[4.969s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/include//nav2_RRTstar_planner
+[4.969s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/include//nav2_RRTstar_planner/RRT_star_planner.hpp
+[4.969s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/global_planner_plugin.xml
+[4.969s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/environment/library_path.sh
+[4.969s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/environment/library_path.dsv
+[4.969s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/ament_index/resource_index/package_run_dependencies/nav2_RRTstar_planner
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/ament_index/resource_index/parent_prefix_path/nav2_RRTstar_planner
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/environment/ament_prefix_path.sh
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/environment/ament_prefix_path.dsv
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/environment/path.sh
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/environment/path.dsv
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/local_setup.bash
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/local_setup.sh
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/local_setup.zsh
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/local_setup.dsv
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/package.dsv
+[4.970s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/ament_index/resource_index/packages/nav2_RRTstar_planner
+[4.971s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_RRTstar_planner
+[4.971s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.971s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/cmake/ament_cmake_export_libraries-extras.cmake
+[4.971s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.971s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/cmake/nav2_RRTstar_plannerConfig.cmake
+[4.971s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/cmake/nav2_RRTstar_plannerConfig-version.cmake
+[4.971s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_RRTstar_planner/share/nav2_RRTstar_planner/package.xml
+[4.973s] Invoked command in '/root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner
