@@ -54,6 +54,8 @@
 #include "nav2_util/node_utils.hpp"
 #include "nav2_straightline_planner/straight_line_planner.hpp"
 
+int BLACK_SCREEN = false;
+
 namespace nav2_straightline_planner
 {
 
@@ -80,6 +82,12 @@ namespace nav2_straightline_planner
     steps_pub_ = node_->create_publisher<nav_msgs::msg::Path>(name_ + "/planning_step", rclcpp::SystemDefaultsQoS());
     marker_pub_ = node_->create_publisher<visualization_msgs::msg::Marker>(name_ + "/planning_marker", rclcpp::SystemDefaultsQoS());
     image_pub_ = node_->create_publisher<sensor_msgs::msg::Image>(name_ + "/planning_image", rclcpp::SystemDefaultsQoS());
+
+    map_sub_ = node_->create_subscription<nav_msgs::msg::OccupancyGrid>(
+      "/map",
+      rclcpp::QoS(1).transient_local(),
+      std::bind(&StraightLine::mapCallback, this, std::placeholders::_1)
+    );
   }
 
   void StraightLine::cleanup()
@@ -102,6 +110,34 @@ namespace nav2_straightline_planner
         node_->get_logger(), "Deactivating plugin %s of type NavfnPlanner",
         name_.c_str());
   }
+
+  // callback do odczytu mapy do wizualizacji
+  void StraightLine::mapCallback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg)
+  {
+      int width = msg->info.width;
+      int height = msg->info.height;
+      map_image_ = cv::Mat(height, width, CV_8UC1);
+
+      for(int y = 0; y < height; ++y) {
+          for(int x = 0; x < width; ++x) {
+              int8_t value = msg->data[y * width + x];
+              uint8_t pixel;
+              if (value == 0) {
+                  pixel = 254;
+              } else if (value == 100) {
+                  pixel = 0;
+              } else {
+                  pixel = 205;
+              }
+              map_image_.at<uint8_t>(y, x) = pixel;
+          }
+      }
+      cv::cvtColor(map_image_, map_image_, cv::COLOR_GRAY2BGR);
+      map_info_ = msg->info;
+      map_received_ = true;
+  }
+
+
 
   nav_msgs::msg::Path StraightLine::createPlan(
       const geometry_msgs::msg::PoseStamped &start,
@@ -142,7 +178,12 @@ namespace nav2_straightline_planner
       planning_steps.clear();
       planning_markers.clear();
       playback_index_ = 0;
-      playback_image_ = cv::Mat::zeros(600 , 600 , CV_8UC3);
+
+      if (map_received_ && !BLACK_SCREEN) {
+          playback_image_ = map_image_.clone();
+      } else {
+          playback_image_ = cv::Mat::zeros(600, 600, CV_8UC3);
+      }
     }
     
 
@@ -598,13 +639,26 @@ namespace nav2_straightline_planner
       playback_timer_->cancel();
     }
 
-
-    auto mapToImg = [](double wx, double wy) {
-      int scale = 100; // 100 px per meter
-      int ix = static_cast<int>(300 - wy * scale);
-      int iy = 600 - static_cast<int>(300 + wx * scale);
-      return cv::Point(ix, iy);
-    };
+    std::function<cv::Point(double, double)> mapToImg;
+    if (BLACK_SCREEN) {
+      mapToImg = [](double wx, double wy) {
+        int scale = 100; // 100 px per meter
+        int ix = static_cast<int>(300 - wy * scale);
+        int iy = 600 - static_cast<int>(300 + wx * scale);
+        return cv::Point(ix, iy);
+      };
+    }
+    else {
+      mapToImg = [this](double wx, double wy) {
+        double resolution = map_info_.resolution;
+        double origin_x = map_info_.origin.position.x;
+        double origin_y = map_info_.origin.position.y;
+        int height = map_image_.rows;
+        int ix = static_cast<int>((wx - origin_x) / resolution);
+        int iy = height - static_cast<int>((wy - origin_y) / resolution);
+        return cv::Point(ix, iy);
+      };
+    }
 
     // pkt początkowy i końcowy
     cv::circle(playback_image_,mapToImg(start_marker.pose.position.x, start_marker.pose.position.y),6,cv::Scalar(0, 255, 0),-1);
@@ -647,7 +701,7 @@ namespace nav2_straightline_planner
           if (path.poses.size() >= 2) {
             auto p1 = mapToImg(path.poses[0].pose.position.x, path.poses[0].pose.position.y);
             auto p2 = mapToImg(path.poses[1].pose.position.x, path.poses[1].pose.position.y);
-            cv::line(playback_image_, p1, p2, cv::Scalar(255, 255, 255), 1);
+            cv::line(playback_image_, p1, p2, cv::Scalar(255, 0, 0), 1);
           }
           auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", playback_image_).toImageMsg();
           msg->header.stamp = node_->now();
@@ -660,6 +714,7 @@ namespace nav2_straightline_planner
             auto p2 = mapToImg(path[i + 1].x, path[i + 1].y);
             cv::line(playback_image_, p1, p2, cv::Scalar(0, 0, 255), 2);
           }
+          
           auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", playback_image_).toImageMsg();
           msg->header.stamp = node_->now();
           image_pub_->publish(*msg);

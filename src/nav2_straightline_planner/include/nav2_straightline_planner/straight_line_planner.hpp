@@ -129,6 +129,8 @@ public:
   visualization_msgs::msg::Marker goal_marker;
   const std::vector<visualization_msgs::msg::Marker> & getPlanningMarkers() const { return planning_markers; }
 
+  void mapCallback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg);
+
 private:
   // TF buffer
   std::shared_ptr<tf2_ros::Buffer> tf_;
@@ -177,6 +179,12 @@ private:
   double playback_delay_{0.5};
   cv::Mat playback_image_;
   void startPlayback();
+
+  // rysowanie na mapie
+  rclcpp::Subscription<nav_msgs::msg::OccupancyGrid>::SharedPtr map_sub_;
+  cv::Mat map_image_;
+  bool map_received_ = false;
+  nav_msgs::msg::MapMetaData map_info_;
 
 
 };
