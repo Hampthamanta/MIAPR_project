@@ -42,6 +42,9 @@
 #include <string>
 #include <memory>
 #include <cstdlib>
+#include <chrono>
+#include "nav2_straightline_planner/msg/planning_steps.hpp"
+#include "visualization_msgs/msg/marker.hpp"
 #include "nav2_util/node_utils.hpp"
 #include "nav2_straightline_planner/straight_line_planner.hpp"
 
@@ -63,6 +66,11 @@ namespace nav2_straightline_planner
     nav2_util::declare_parameter_if_not_declared(
         node_, name_ + ".interpolation_resolution", rclcpp::ParameterValue(0.1));
     node_->get_parameter(name_ + ".interpolation_resolution", interpolation_resolution_);
+
+    plan_publisher_ = node_->create_publisher<nav_msgs::msg::Path>(
+        name_ + "/plan", rclcpp::SystemDefaultsQoS());
+    steps_pub_ = node_->create_publisher<nav2_straightline_planner::msg::PlanningSteps>(
+        name_ + "/recorded_steps", rclcpp::SystemDefaultsQoS());
   }
 
   void StraightLine::cleanup()
@@ -112,6 +120,8 @@ namespace nav2_straightline_planner
     global_path.poses.clear();
     global_path.header.stamp = node_->now();
     global_path.header.frame_id = global_frame_;
+    planning_steps.clear();
+    planning_markers.clear();
 
     //----------------------------- RRT - CONNECT ---------------------------------
     auto new_goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
@@ -128,6 +138,31 @@ namespace nav2_straightline_planner
       // wyciągnięcie punktów: startowy i końcowy
       auto start_pt = Point{start.pose.position.x, start.pose.position.y};
       goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
+
+      // prepare markers for start and goal
+      start_marker.header.frame_id = global_frame_;
+      start_marker.header.stamp = node_->now();
+      start_marker.ns = name_ + "_markers";
+      start_marker.id = 0;
+      start_marker.type = visualization_msgs::msg::Marker::SPHERE;
+      start_marker.action = visualization_msgs::msg::Marker::ADD;
+      start_marker.scale.x = 0.08;
+      start_marker.scale.y = 0.08;
+      start_marker.scale.z = 0.08;
+      start_marker.color.r = 0.0f;
+      start_marker.color.g = 1.0f;
+      start_marker.color.b = 0.0f;
+      start_marker.color.a = 1.0f;
+      start_marker.pose.orientation.w = 1.0;
+      start_marker.pose.position.x = start_pt.x;
+      start_marker.pose.position.y = start_pt.y;
+
+      goal_marker = start_marker;
+      goal_marker.id = 1;
+      goal_marker.color.r = 1.0f;
+      goal_marker.color.g = 0.0f;
+      goal_marker.pose.position.x = goal_pt.x;
+      goal_marker.pose.position.y = goal_pt.y;
 
 
 
@@ -164,6 +199,38 @@ namespace nav2_straightline_planner
 
         parent_start[new_pt] = closest_pt;
 
+        // store step for later visualisation
+        nav_msgs::msg::Path step_path;
+        step_path.header.stamp = node_->now();
+        step_path.header.frame_id = global_frame_;
+        geometry_msgs::msg::PoseStamped p1;
+        p1.header = step_path.header;
+        p1.pose.position.x = closest_pt.x;
+        p1.pose.position.y = closest_pt.y;
+        p1.pose.orientation.w = 1.0;
+        geometry_msgs::msg::PoseStamped p2 = p1;
+        p2.pose.position.x = new_pt.x;
+        p2.pose.position.y = new_pt.y;
+        step_path.poses.push_back(p1);
+        step_path.poses.push_back(p2);
+        planning_steps.push_back(step_path);
+
+        visualization_msgs::msg::Marker rand_marker;
+        rand_marker.header = step_path.header;
+        rand_marker.ns = name_ + "_markers";
+        rand_marker.id = planning_markers.size() + 2;
+        rand_marker.type = visualization_msgs::msg::Marker::SPHERE;
+        rand_marker.action = visualization_msgs::msg::Marker::ADD;
+        rand_marker.scale.x = 0.05;
+        rand_marker.scale.y = 0.05;
+        rand_marker.scale.z = 0.05;
+        rand_marker.color.b = 1.0f;
+        rand_marker.color.a = 1.0f;
+        rand_marker.pose.orientation.w = 1.0;
+        rand_marker.pose.position.x = rand_pt.x;
+        rand_marker.pose.position.y = rand_pt.y;
+        planning_markers.push_back(rand_marker);
+
         // wyswietlanie ------------------------!!!
         // RCLCPP_INFO(node_->get_logger(), "Closest point: %f %f", closest_pt.x,closest_pt.y);
         // RCLCPP_INFO(node_->get_logger(), "Random point: %f %f", rand_pt.x,rand_pt.y);
@@ -189,6 +256,40 @@ namespace nav2_straightline_planner
         closest_in_tree = find_closest(new_pt, parent_goal);
         if (check_if_valid(new_pt, closest_in_tree))
         {
+          // store the final connection between the two trees
+          nav_msgs::msg::Path connection;
+          connection.header.stamp = node_->now();
+          connection.header.frame_id = global_frame_;
+          geometry_msgs::msg::PoseStamped cp1;
+          cp1.header = connection.header;
+          cp1.pose.position.x = new_pt.x;
+          cp1.pose.position.y = new_pt.y;
+          cp1.pose.orientation.w = 1.0;
+          geometry_msgs::msg::PoseStamped cp2 = cp1;
+          cp2.pose.position.x = closest_in_tree.x;
+          cp2.pose.position.y = closest_in_tree.y;
+          connection.poses.push_back(cp1);
+          connection.poses.push_back(cp2);
+          planning_steps.push_back(connection);
+
+          visualization_msgs::msg::Marker conn_marker;
+          conn_marker.header = connection.header;
+          conn_marker.ns = name_ + "_markers";
+          conn_marker.id = planning_markers.size() + 2;
+          conn_marker.type = visualization_msgs::msg::Marker::SPHERE;
+          conn_marker.action = visualization_msgs::msg::Marker::ADD;
+          conn_marker.scale.x = 0.05;
+          conn_marker.scale.y = 0.05;
+          conn_marker.scale.z = 0.05;
+          conn_marker.color.r = 1.0f;
+          conn_marker.color.g = 1.0f;
+          conn_marker.color.b = 0.0f;
+          conn_marker.color.a = 1.0f;
+          conn_marker.pose.orientation.w = 1.0;
+          conn_marker.pose.position.x = new_pt.x;
+          conn_marker.pose.position.y = new_pt.y;
+          planning_markers.push_back(conn_marker);
+
           RCLCPP_INFO(node_->get_logger(), "\n===========PLANNING ENDED SUCCESFULLY===========\n");
           if (swaps % 2 == 1)
           {
@@ -351,6 +452,11 @@ namespace nav2_straightline_planner
     // goal_pose.header.frame_id = global_frame_;
     // global_path.poses.push_back(goal_pose);
 
+    plan_publisher_->publish(global_path);
+    nav2_straightline_planner::msg::PlanningSteps msg;
+    msg.steps = planning_steps;
+    msg.markers = planning_markers;
+    steps_pub_->publish(msg);
     return global_path;
   }
   //---------FUNKCJE---------
@@ -463,6 +569,8 @@ namespace nav2_straightline_planner
 
     return linspaced;
   }
+
+
 
 } // namespace nav2_straightline_planner
 

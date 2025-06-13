@@ -50,6 +50,8 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
+#include "visualization_msgs/msg/marker.hpp"
+#include "nav2_straightline_planner/msg/planning_steps.hpp"
 
 #include "nav2_core/global_planner.hpp"
 #include "nav_msgs/msg/path.hpp"
@@ -90,6 +92,16 @@ class StraightLine : public nav2_core::GlobalPlanner
 {
 public:
   std::vector<Point> path;
+  // Every iteration of the planning algorithm will store a line segment
+  // representing the expansion of the tree. These segments can later be
+  // published one by one in order to visualise how the RRT-Connect algorithm
+  // built the final trajectory.
+  std::vector<nav_msgs::msg::Path> planning_steps;
+  // Random sample used to generate each step
+  std::vector<visualization_msgs::msg::Marker> planning_markers;
+  // Markers for start and goal points
+  visualization_msgs::msg::Marker start_marker;
+  visualization_msgs::msg::Marker goal_marker;
   Point goal_pt;
   bool is_planned=false;
   StraightLine() = default;
@@ -115,6 +127,10 @@ public:
     const geometry_msgs::msg::PoseStamped & start,
     const geometry_msgs::msg::PoseStamped & goal) override;
 
+  // Returns stored planning steps for visualisation purposes
+  const std::vector<nav_msgs::msg::Path> & getPlanningSteps() const { return planning_steps; }
+  const std::vector<visualization_msgs::msg::Marker> & getPlanningMarkers() const { return planning_markers; }
+
 private:
   // TF buffer
   std::shared_ptr<tf2_ros::Buffer> tf_;
@@ -129,6 +145,12 @@ private:
   std::string global_frame_, name_;
 
   double interpolation_resolution_;
+
+  // trajektoria z planera
+  rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr plan_publisher_;
+
+  // Publish all recorded steps at once for an external playback node
+  rclcpp::Publisher<nav2_straightline_planner::msg::PlanningSteps>::SharedPtr steps_pub_;
 
   // -------------MY FUNCTIONS-------------------
   // <key = punkt, value = parent_of_pt> 

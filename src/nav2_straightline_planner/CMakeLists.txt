@@ -24,6 +24,7 @@ find_package(tf2_ros REQUIRED)
 find_package(nav2_costmap_2d REQUIRED)
 find_package(nav2_core REQUIRED)
 find_package(pluginlib REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
 include_directories(
   include
@@ -46,10 +47,26 @@ set(dependencies
   nav2_costmap_2d
   nav2_core
   pluginlib
+  rosidl_default_runtime
 )
 
 add_library(${library_name} SHARED
   src/straight_line_planner.cpp
+)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  msg/PlanningSteps.msg
+  DEPENDENCIES builtin_interfaces nav_msgs visualization_msgs
+)
+
+rosidl_target_interfaces(${library_name}
+  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+
+add_executable(playback_node src/playback_node.cpp)
+ament_target_dependencies(playback_node ${dependencies})
+rosidl_target_interfaces(playback_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
+install(TARGETS playback_node
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_target_dependencies(${library_name}
@@ -90,4 +107,5 @@ endif()
 ament_export_include_directories(include)
 ament_export_libraries(${library_name})
 ament_export_dependencies(${dependencies})
+ament_export_dependencies(rosidl_default_runtime)
 ament_package()
