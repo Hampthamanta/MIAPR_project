@@ -50,6 +50,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
+#include "visualization_msgs/msg/marker.hpp"
 
 #include "nav2_core/global_planner.hpp"
 #include "nav_msgs/msg/path.hpp"
@@ -119,6 +120,11 @@ public:
   std::vector<nav_msgs::msg::Path> planning_steps;
   const std::vector<nav_msgs::msg::Path> & getPlanningSteps() const { return planning_steps; }
 
+  std::vector<visualization_msgs::msg::Marker> planning_markers;
+  visualization_msgs::msg::Marker start_marker;
+  visualization_msgs::msg::Marker goal_marker;
+  const std::vector<visualization_msgs::msg::Marker> & getPlanningMarkers() const { return planning_markers; }
+
 private:
   // TF buffer
   std::shared_ptr<tf2_ros::Buffer> tf_;
@@ -160,6 +166,7 @@ private:
 
   // wizualizacja planera
   rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr steps_pub_;
+  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr marker_pub_;
   rclcpp::TimerBase::SharedPtr playback_timer_;
   std::size_t playback_index_{0};
   double playback_delay_{0.5};

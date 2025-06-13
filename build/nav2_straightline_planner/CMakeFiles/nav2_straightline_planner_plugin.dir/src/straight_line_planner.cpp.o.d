@@ -175,10 +175,85 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
- /opt/ros/humble/include/nav2_util/node_utils.hpp \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp \
+ /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/bits/algorithmfwd.h \
+ /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/uniform_int_dist.h \
+ /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/unordered_map.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
+ /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
+ /usr/include/c++/11/stdexcept \
+ /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+ /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__struct.hpp \
+ /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__struct.hpp \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/mesh_file__struct.hpp \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__builder.hpp \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__traits.hpp \
+ /usr/include/c++/11/sstream /usr/include/c++/11/istream \
+ /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/bits/locale_classes.h \
+ /usr/include/c++/11/bits/locale_classes.tcc \
+ /usr/include/c++/11/system_error \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+ /usr/include/c++/11/streambuf /usr/include/c++/11/bits/streambuf.tcc \
+ /usr/include/c++/11/bits/basic_ios.h \
+ /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+ /usr/include/c++/11/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+ /usr/include/c++/11/bits/locale_facets.tcc \
+ /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/ostream \
+ /usr/include/c++/11/bits/ostream.tcc \
+ /usr/include/c++/11/bits/istream.tcc \
+ /usr/include/c++/11/bits/sstream.tcc \
+ /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
+ /usr/include/c++/11/codecvt /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/iomanip /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h \
+ /usr/include/c++/11/bits/quoted_string.h \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+ /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__traits.hpp \
+ /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__traits.hpp \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/mesh_file__traits.hpp \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__type_support.hpp \
+ /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+ /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/message_type_support.hpp \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
+ /opt/ros/humble/include/nav2_util/node_utils.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -211,48 +286,19 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
  /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp \
  /usr/include/c++/11/future /usr/include/c++/11/mutex \
- /usr/include/c++/11/system_error \
- /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
- /usr/include/c++/11/stdexcept /usr/include/c++/11/bits/std_mutex.h \
+ /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/atomic \
  /usr/include/c++/11/bits/atomic_futex.h \
- /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/bits/std_thread.h \
  /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
- /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/stl_set.h \
- /usr/include/c++/11/bits/stl_multiset.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/thread \
+ /usr/include/c++/11/bits/stl_multiset.h /usr/include/c++/11/thread \
  /usr/include/c++/11/bits/this_thread_sleep.h \
- /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h \
- /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/unordered_map.h \
  /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp \
- /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
- /usr/include/c++/11/bits/algorithmfwd.h \
- /usr/include/c++/11/bits/stl_heap.h \
- /usr/include/c++/11/bits/uniform_int_dist.h \
- /usr/include/c++/11/pstl/glue_algorithm_defs.h \
- /usr/include/c++/11/functional /usr/include/c++/11/cassert \
- /usr/include/assert.h /usr/include/c++/11/iostream \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/bits/ios_base.h \
- /usr/include/c++/11/bits/locale_classes.h \
- /usr/include/c++/11/bits/locale_classes.tcc \
- /usr/include/c++/11/streambuf /usr/include/c++/11/bits/streambuf.tcc \
- /usr/include/c++/11/bits/basic_ios.h \
- /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
- /usr/include/c++/11/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
- /usr/include/c++/11/bits/locale_facets.tcc \
- /usr/include/c++/11/bits/basic_ios.tcc \
- /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/list \
+ /usr/include/c++/11/cassert /usr/include/assert.h \
+ /usr/include/c++/11/iostream /usr/include/c++/11/list \
  /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
@@ -311,8 +357,6 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /opt/ros/humble/include/rcl/rcl/wait.h \
  /opt/ros/humble/include/rcl/rcl/client.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
- /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /opt/ros/humble/include/rcl/rcl/event_callback.h \
  /opt/ros/humble/include/rmw/rmw/event_callback_type.h \
  /opt/ros/humble/include/rcl/rcl/node.h \
@@ -320,7 +364,6 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /opt/ros/humble/include/rcl/rcl/domain_id.h \
  /opt/ros/humble/include/rcl/rcl/service.h \
  /opt/ros/humble/include/rcl/rcl/subscription.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
  /opt/ros/humble/include/rmw/rmw/message_sequence.h \
  /opt/ros/humble/include/rcl/rcl/timer.h \
  /opt/ros/humble/include/rcl/rcl/time.h \
@@ -347,8 +390,7 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/client.hpp \
- /usr/include/c++/11/optional /usr/include/c++/11/sstream \
- /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/variant \
+ /usr/include/c++/11/optional /usr/include/c++/11/variant \
  /opt/ros/humble/include/rcl/rcl/error_handling.h \
  /opt/ros/humble/include/rclcpp/rclcpp/detail/cpp_callback_trampoline.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/exceptions.hpp \
@@ -373,24 +415,9 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /opt/ros/humble/include/rclcpp/rclcpp/qos.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/duration.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
- /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp \
- /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
- /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp \
- /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp \
- /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
- /usr/include/c++/11/codecvt /usr/include/c++/11/bits/codecvt.h \
- /usr/include/c++/11/iomanip /usr/include/c++/11/locale \
- /usr/include/c++/11/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/11/bits/locale_facets_nonio.tcc \
- /usr/include/c++/11/bits/locale_conv.h \
- /usr/include/c++/11/bits/quoted_string.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__type_support.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
- /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/message_type_support.hpp \
  /opt/ros/humble/include/rcl/rcl/logging_rosout.h \
  /opt/ros/humble/include/rmw/rmw/incompatible_qos_events_statuses.h \
  /opt/ros/humble/include/rclcpp/rclcpp/type_support_decl.hpp \
@@ -441,9 +468,7 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /opt/ros/humble/include/rclcpp/rclcpp/clock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/time.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
- /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__builder.hpp \
- /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__type_support.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/rate.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface.hpp \
@@ -625,21 +650,13 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
  /usr/include/c++/11/bits/random.tcc \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__type_support.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__builder.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__type_support.hpp \
  /opt/ros/humble/include/nav2_core/global_planner.hpp \
  /opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp \
@@ -766,10 +783,8 @@ CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o:
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__type_support.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__struct.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__builder.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__type_support.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp \

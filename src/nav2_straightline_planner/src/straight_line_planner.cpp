@@ -43,6 +43,9 @@
 #include <memory>
 #include <cstdlib>
 #include <chrono>
+
+#include "visualization_msgs/msg/marker.hpp"
+
 #include "nav2_util/node_utils.hpp"
 #include "nav2_straightline_planner/straight_line_planner.hpp"
 
@@ -70,6 +73,7 @@ namespace nav2_straightline_planner
     nav2_util::declare_parameter_if_not_declared(node_, name_ + ".playback_delay", rclcpp::ParameterValue(0.5));
     node_->get_parameter(name_ + ".playback_delay", playback_delay_);
     steps_pub_ = node_->create_publisher<nav_msgs::msg::Path>(name_ + "/planning_step", rclcpp::SystemDefaultsQoS());
+    marker_pub_ = node_->create_publisher<visualization_msgs::msg::Marker>(name_ + "/planning_marker", rclcpp::SystemDefaultsQoS());
   }
 
   void StraightLine::cleanup()
@@ -121,6 +125,7 @@ namespace nav2_straightline_planner
     global_path.header.frame_id = global_frame_;
 
     planning_steps.clear();
+    planning_markers.clear();
 
     //----------------------------- RRT - CONNECT ---------------------------------
     auto new_goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
@@ -138,6 +143,31 @@ namespace nav2_straightline_planner
       auto start_pt = Point{start.pose.position.x, start.pose.position.y};
       goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
 
+
+      // wizualizacja planera
+      start_marker.header.frame_id = global_frame_;
+      start_marker.header.stamp = node_->now();
+      start_marker.ns = name_ + "_markers";
+      start_marker.id = 0;
+      start_marker.type = visualization_msgs::msg::Marker::SPHERE;
+      start_marker.action = visualization_msgs::msg::Marker::ADD;
+      start_marker.scale.x = 0.08;
+      start_marker.scale.y = 0.08;
+      start_marker.scale.z = 0.08;
+      start_marker.color.r = 0.0f;
+      start_marker.color.g = 1.0f;
+      start_marker.color.b = 0.0f;
+      start_marker.color.a = 1.0f;
+      start_marker.pose.orientation.w = 1.0;
+      start_marker.pose.position.x = start_pt.x;
+      start_marker.pose.position.y = start_pt.y;
+
+      goal_marker = start_marker;
+      goal_marker.id = 1;
+      goal_marker.color.r = 1.0f;
+      goal_marker.color.g = 0.0f;
+      goal_marker.pose.position.x = goal_pt.x;
+      goal_marker.pose.position.y = goal_pt.y;
 
 
       RCLCPP_INFO(node_->get_logger(), "============INIT PLANNING=============");
@@ -189,6 +219,23 @@ namespace nav2_straightline_planner
         step_path.poses.push_back(p2);
         planning_steps.push_back(step_path);
 
+        visualization_msgs::msg::Marker rand_marker;
+        rand_marker.header = step_path.header;
+        rand_marker.ns = name_ + "_markers";
+        rand_marker.id = planning_markers.size() + 2;
+        rand_marker.type = visualization_msgs::msg::Marker::SPHERE;
+        rand_marker.action = visualization_msgs::msg::Marker::ADD;
+        rand_marker.scale.x = 0.05;
+        rand_marker.scale.y = 0.05;
+        rand_marker.scale.z = 0.05;
+        rand_marker.color.b = 1.0f;
+        rand_marker.color.a = 1.0f;
+        rand_marker.pose.orientation.w = 1.0;
+        rand_marker.pose.position.x = rand_pt.x;
+        rand_marker.pose.position.y = rand_pt.y;
+        planning_markers.push_back(rand_marker);
+
+
         // wyswietlanie ------------------------!!!
         // RCLCPP_INFO(node_->get_logger(), "Closest point: %f %f", closest_pt.x,closest_pt.y);
         // RCLCPP_INFO(node_->get_logger(), "Random point: %f %f", rand_pt.x,rand_pt.y);
@@ -214,6 +261,7 @@ namespace nav2_straightline_planner
         closest_in_tree = find_closest(new_pt, parent_goal);
         if (check_if_valid(new_pt, closest_in_tree))
         {
+
           // wizualizacja planera
           nav_msgs::msg::Path connection;
           connection.header.stamp = node_->now();
@@ -230,7 +278,23 @@ namespace nav2_straightline_planner
           connection.poses.push_back(cp2);
           planning_steps.push_back(connection);
 
-
+          visualization_msgs::msg::Marker conn_marker;
+          conn_marker.header = connection.header;
+          conn_marker.ns = name_ + "_markers";
+          conn_marker.id = planning_markers.size() + 2;
+          conn_marker.type = visualization_msgs::msg::Marker::SPHERE;
+          conn_marker.action = visualization_msgs::msg::Marker::ADD;
+          conn_marker.scale.x = 0.05;
+          conn_marker.scale.y = 0.05;
+          conn_marker.scale.z = 0.05;
+          conn_marker.color.r = 1.0f;
+          conn_marker.color.g = 1.0f;
+          conn_marker.color.b = 0.0f;
+          conn_marker.color.a = 1.0f;
+          conn_marker.pose.orientation.w = 1.0;
+          conn_marker.pose.position.x = new_pt.x;
+          conn_marker.pose.position.y = new_pt.y;
+          planning_markers.push_back(conn_marker);
 
 
           RCLCPP_INFO(node_->get_logger(), "\n===========PLANNING ENDED SUCCESFULLY===========\n");
@@ -515,7 +579,7 @@ namespace nav2_straightline_planner
 
   void StraightLine::startPlayback()
   {
-    if (!steps_pub_) {
+    if (!steps_pub_ || !marker_pub_) {
       return;
     }
 
@@ -524,11 +588,16 @@ namespace nav2_straightline_planner
     }
 
     playback_index_ = 0;
+    marker_pub_->publish(start_marker);
+    marker_pub_->publish(goal_marker);
     auto period = std::chrono::duration<double>(playback_delay_);
     playback_timer_ = node_->create_wall_timer(
       period, [this]() {
         if (playback_index_ < planning_steps.size()) {
           steps_pub_->publish(planning_steps[playback_index_]);
+          if (playback_index_ < planning_markers.size()) {
+            marker_pub_->publish(planning_markers[playback_index_]);
+          }
           playback_index_++;
         } else {
           playback_timer_->cancel();
