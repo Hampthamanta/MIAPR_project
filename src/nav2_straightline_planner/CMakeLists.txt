@@ -57,6 +57,7 @@ add_library(${library_name} SHARED
 rosidl_generate_interfaces(${PROJECT_NAME}
   msg/PlanningSteps.msg
   DEPENDENCIES builtin_interfaces nav_msgs visualization_msgs
+  SKIP_INSTALL
 )
 
 rosidl_target_interfaces(${library_name}
