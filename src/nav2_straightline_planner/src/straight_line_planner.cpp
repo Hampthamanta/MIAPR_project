@@ -43,8 +43,13 @@
 #include <memory>
 #include <cstdlib>
 #include <chrono>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
 #include "visualization_msgs/msg/marker.hpp"
+#include "sensor_msgs/msg/image.hpp"
+#include "cv_bridge/cv_bridge.h"
 
 #include "nav2_util/node_utils.hpp"
 #include "nav2_straightline_planner/straight_line_planner.hpp"
@@ -70,10 +75,11 @@ namespace nav2_straightline_planner
 
     plan_publisher_ = node_->create_publisher<nav_msgs::msg::Path>(name_ + "/plan", rclcpp::SystemDefaultsQoS());
 
-    nav2_util::declare_parameter_if_not_declared(node_, name_ + ".playback_delay", rclcpp::ParameterValue(0.5));
+    nav2_util::declare_parameter_if_not_declared(node_, name_ + ".playback_delay", rclcpp::ParameterValue(0.2));
     node_->get_parameter(name_ + ".playback_delay", playback_delay_);
     steps_pub_ = node_->create_publisher<nav_msgs::msg::Path>(name_ + "/planning_step", rclcpp::SystemDefaultsQoS());
     marker_pub_ = node_->create_publisher<visualization_msgs::msg::Marker>(name_ + "/planning_marker", rclcpp::SystemDefaultsQoS());
+    image_pub_ = node_->create_publisher<sensor_msgs::msg::Image>(name_ + "/planning_image", rclcpp::SystemDefaultsQoS());
   }
 
   void StraightLine::cleanup()
@@ -124,8 +130,6 @@ namespace nav2_straightline_planner
     global_path.header.stamp = node_->now();
     global_path.header.frame_id = global_frame_;
 
-    planning_steps.clear();
-    planning_markers.clear();
 
     //----------------------------- RRT - CONNECT ---------------------------------
     auto new_goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
@@ -134,6 +138,11 @@ namespace nav2_straightline_planner
     {
       goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
       is_planned = false;
+
+      planning_steps.clear();
+      planning_markers.clear();
+      playback_index_ = 0;
+      playback_image_ = cv::Mat::zeros(600 , 600 , CV_8UC3);
     }
     
 
@@ -168,7 +177,9 @@ namespace nav2_straightline_planner
       goal_marker.color.g = 0.0f;
       goal_marker.pose.position.x = goal_pt.x;
       goal_marker.pose.position.y = goal_pt.y;
-
+      
+      marker_pub_->publish(start_marker);
+      marker_pub_->publish(goal_marker);
 
       RCLCPP_INFO(node_->get_logger(), "============INIT PLANNING=============");
       RCLCPP_INFO(node_->get_logger(), "Point start: %f %f", start_pt.x, start_pt.y);
@@ -292,8 +303,8 @@ namespace nav2_straightline_planner
           conn_marker.color.b = 0.0f;
           conn_marker.color.a = 1.0f;
           conn_marker.pose.orientation.w = 1.0;
-          conn_marker.pose.position.x = new_pt.x;
-          conn_marker.pose.position.y = new_pt.y;
+          conn_marker.pose.position.x = new_pt.y;
+          conn_marker.pose.position.y = new_pt.x;
           planning_markers.push_back(conn_marker);
 
 
@@ -579,7 +590,7 @@ namespace nav2_straightline_planner
 
   void StraightLine::startPlayback()
   {
-    if (!steps_pub_ || !marker_pub_) {
+    if (!image_pub_) {
       return;
     }
 
@@ -587,19 +598,71 @@ namespace nav2_straightline_planner
       playback_timer_->cancel();
     }
 
-    playback_index_ = 0;
-    marker_pub_->publish(start_marker);
-    marker_pub_->publish(goal_marker);
+
+    auto mapToImg = [](double wx, double wy) {
+      int scale = 100; // 100 px per meter
+      int ix = static_cast<int>(300 - wy * scale);
+      int iy = 600 - static_cast<int>(300 + wx * scale);
+      return cv::Point(ix, iy);
+    };
+
+    // pkt początkowy i końcowy
+    cv::circle(playback_image_,mapToImg(start_marker.pose.position.x, start_marker.pose.position.y),6,cv::Scalar(0, 255, 0),-1);
+    cv::circle(playback_image_,mapToImg(goal_marker.pose.position.x, goal_marker.pose.position.y),6,cv::Scalar(0, 0, 255),-1);
+
+    
     auto period = std::chrono::duration<double>(playback_delay_);
     playback_timer_ = node_->create_wall_timer(
-      period, [this]() {
+      period, [this, mapToImg]() {
         if (playback_index_ < planning_steps.size()) {
-          steps_pub_->publish(planning_steps[playback_index_]);
           if (playback_index_ < planning_markers.size()) {
-            marker_pub_->publish(planning_markers[playback_index_]);
+            const auto &m = planning_markers[playback_index_];
+            cv::circle(playback_image_, mapToImg(m.pose.position.x, m.pose.position.y), 3, cv::Scalar(0, 255, 255), -1);
+
+
+            visualization_msgs::msg::Marker marker;
+            marker.header.frame_id = global_frame_;
+            marker.header.stamp = node_->now();
+            marker.ns = name_ + "_steps";
+            marker.id = playback_index_+2;
+            marker.type = visualization_msgs::msg::Marker::SPHERE;
+            marker.action = visualization_msgs::msg::Marker::ADD;
+            marker.scale.x = 0.1;
+            marker.scale.y = 0.1;
+            marker.scale.z = 0.1;
+            marker.color.r = 1.0;
+            marker.color.g = 1.0;
+            marker.color.b = 0.0;
+            marker.color.a = 1.0;
+            marker.pose.orientation.w = 1.0;
+            marker.pose.position.x = m.pose.position.x;
+            marker.pose.position.y = m.pose.position.y;
+            marker.pose.position.z = 0.0;
+
+            marker_pub_->publish(marker);
+
+
           }
+          const auto &path = planning_steps[playback_index_];
+          if (path.poses.size() >= 2) {
+            auto p1 = mapToImg(path.poses[0].pose.position.x, path.poses[0].pose.position.y);
+            auto p2 = mapToImg(path.poses[1].pose.position.x, path.poses[1].pose.position.y);
+            cv::line(playback_image_, p1, p2, cv::Scalar(255, 255, 255), 1);
+          }
+          auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", playback_image_).toImageMsg();
+          msg->header.stamp = node_->now();
+          image_pub_->publish(*msg);
           playback_index_++;
-        } else {
+        } 
+        else {
+          for (size_t i = 0; i + 1 < path.size(); ++i) {
+            auto p1 = mapToImg(path[i].x, path[i].y);
+            auto p2 = mapToImg(path[i + 1].x, path[i + 1].y);
+            cv::line(playback_image_, p1, p2, cv::Scalar(0, 0, 255), 2);
+          }
+          auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", playback_image_).toImageMsg();
+          msg->header.stamp = node_->now();
+          image_pub_->publish(*msg);
           playback_timer_->cancel();
         }
       });

@@ -46,11 +46,15 @@
 #include <limits>
 #include <map>
 #include <random>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include "cv_bridge/cv_bridge.h"
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "visualization_msgs/msg/marker.hpp"
+#include "sensor_msgs/msg/image.hpp"
 
 #include "nav2_core/global_planner.hpp"
 #include "nav_msgs/msg/path.hpp"
@@ -167,10 +171,13 @@ private:
   // wizualizacja planera
   rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr steps_pub_;
   rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr marker_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr image_pub_;
   rclcpp::TimerBase::SharedPtr playback_timer_;
   std::size_t playback_index_{0};
   double playback_delay_{0.5};
+  cv::Mat playback_image_;
   void startPlayback();
+
 
 };
 

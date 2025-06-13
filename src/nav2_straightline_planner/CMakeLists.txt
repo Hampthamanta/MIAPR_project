@@ -24,6 +24,9 @@ find_package(tf2_ros REQUIRED)
 find_package(nav2_costmap_2d REQUIRED)
 find_package(nav2_core REQUIRED)
 find_package(pluginlib REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 include_directories(
   include
@@ -46,6 +49,9 @@ set(dependencies
   nav2_costmap_2d
   nav2_core
   pluginlib
+  OpenCV
+  cv_bridge
+  sensor_msgs
 )
 
 add_library(${library_name} SHARED
