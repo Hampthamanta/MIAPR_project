@@ -1,0 +1,37 @@
+[0.013s] Invoking command in '/root/Shared/src/MIAPR_project/build/nav2_straightline_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/MIAPR_project/build/nav2_straightline_planner -- -j8 -l8
+[0.115s] [35m[1mConsolidate compiler generated dependencies of target nav2_straightline_planner_plugin[0m
+[0.162s] [ 50%] [32mBuilding CXX object CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o[0m
+[5.981s] [100%] [32m[1mLinking CXX shared library libnav2_straightline_planner_plugin.so[0m
+[6.469s] [100%] Built target nav2_straightline_planner_plugin
+[6.480s] Invoked command in '/root/Shared/src/MIAPR_project/build/nav2_straightline_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/MIAPR_project/build/nav2_straightline_planner -- -j8 -l8
+[6.488s] Invoking command in '/root/Shared/src/MIAPR_project/build/nav2_straightline_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /root/Shared/src/MIAPR_project/build/nav2_straightline_planner
+[6.495s] -- Install configuration: ""
+[6.495s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/global_planner_plugin.xml
+[6.495s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/lib/libnav2_straightline_planner_plugin.so
+[6.497s] -- Set runtime path of "/root/Shared/src/MIAPR_project/install/nav2_straightline_planner/lib/libnav2_straightline_planner_plugin.so" to ""
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/include/
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/include//nav2_straightline_planner
+[6.497s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/include//nav2_straightline_planner/straight_line_planner.hpp
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/global_planner_plugin.xml
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/library_path.sh
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/library_path.dsv
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/ament_index/resource_index/package_run_dependencies/nav2_straightline_planner
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/ament_index/resource_index/parent_prefix_path/nav2_straightline_planner
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/ament_prefix_path.sh
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/ament_prefix_path.dsv
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/path.sh
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/path.dsv
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/local_setup.bash
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/local_setup.sh
+[6.497s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/local_setup.zsh
+[6.498s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/local_setup.dsv
+[6.498s] -- Installing: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/package.dsv
+[6.498s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/ament_index/resource_index/packages/nav2_straightline_planner
+[6.498s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_straightline_planner
+[6.498s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.498s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/ament_cmake_export_libraries-extras.cmake
+[6.498s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.498s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/nav2_straightline_plannerConfig.cmake
+[6.498s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/nav2_straightline_plannerConfig-version.cmake
+[6.498s] -- Up-to-date: /root/Shared/src/MIAPR_project/install/nav2_straightline_planner/share/nav2_straightline_planner/package.xml
+[6.500s] Invoked command in '/root/Shared/src/MIAPR_project/build/nav2_straightline_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /root/Shared/src/MIAPR_project/build/nav2_straightline_planner

@@ -1,0 +1,57 @@
+[0.014s] Invoking command in '/root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner -- -j8 -l8
+[0.093s] [35m[1mConsolidate compiler generated dependencies of target nav2_RRTstar_planner_plugin[0m
+[0.125s] [ 50%] [32mBuilding CXX object CMakeFiles/nav2_RRTstar_planner_plugin.dir/src/RRT_star_planner.cpp.o[0m
+[2.672s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:[m[K In member function ‘[01m[Kvirtual void nav2_RRTstar_planner::RRTstar::configure(const WeakPtr&, std::string, std::shared_ptr<tf2_ros::Buffer>, std::shared_ptr<nav2_costmap_2d::Costmap2DROS>)[m[K’:
+[2.672s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:32:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree_pub_[m[K’ was not declared in this scope
+[2.672s]    32 |     [01;31m[Ktree_pub_[m[K = node_->create_publisher<visualization_msgs::msg::Marker>("~/rrt_tree", 1);
+[2.672s]       |     [01;31m[K^~~~~~~~~[m[K
+[2.680s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:32:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisualization_msgs[m[K’ was not declared in this scope
+[2.680s]    32 |     tree_pub_ = node_->create_publisher<[01;31m[Kvisualization_msgs[m[K::msg::Marker>("~/rrt_tree", 1);
+[2.680s]       |                                         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.680s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:32:24:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[2.680s]    32 |     tree_pub_ = node_->[01;31m[Kcreate_publisher<visualization_msgs::msg::Marker>[m[K("~/rrt_tree", 1);
+[2.680s]       |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.680s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:32:73:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp_lifecycle::LifecycleNode::create_publisher<<expression error> >(const char [11], int)[m[K’
+[2.680s]    32 |     tree_pub_ = [01;31m[Knode_->create_publisher<visualization_msgs::msg::Marker>("~/rrt_tree", 1)[m[K;
+[2.680s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[2.680s] In file included from [01m[K/opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:996[m[K,
+[2.680s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_publisher.hpp:46[m[K,
+[2.680s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp:48[m[K,
+[2.680s]                  from [01m[K/opt/ros/humble/include/nav2_core/global_planner.hpp:21[m[K,
+[2.680s]                  from [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/include/nav2_RRTstar_planner/RRT_star_planner.hpp:14[m[K,
+[2.680s]                  from [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:6[m[K:
+[2.680s] [01m[K/opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node_impl.hpp:46:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT> std::shared_ptr<rclcpp_lifecycle::LifecyclePublisher<MessageT, Alloc> > rclcpp_lifecycle::LifecycleNode::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[2.680s]    46 | [01;36m[KLifecycleNode[m[K::create_publisher(
+[2.680s]       | [01;36m[K^~~~~~~~~~~~~[m[K
+[2.680s] [01m[K/opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node_impl.hpp:46:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.680s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:32:73:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.680s]    32 |     tree_pub_ = [01;31m[Knode_->create_publisher<visualization_msgs::msg::Marker>("~/rrt_tree", 1)[m[K;
+[2.681s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[2.686s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:[m[K In member function ‘[01m[Kvirtual void nav2_RRTstar_planner::RRTstar::activate()[m[K’:
+[2.686s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:46:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree_pub_[m[K’ was not declared in this scope
+[2.686s]    46 |     [01;31m[Ktree_pub_[m[K->on_activate();
+[2.686s]       |     [01;31m[K^~~~~~~~~[m[K
+[2.692s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:[m[K In member function ‘[01m[Kvirtual void nav2_RRTstar_planner::RRTstar::deactivate()[m[K’:
+[2.692s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:54:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree_pub_[m[K’ was not declared in this scope
+[2.692s]    54 |     [01;31m[Ktree_pub_[m[K->on_deactivate();
+[2.692s]       |     [01;31m[K^~~~~~~~~[m[K
+[2.736s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:[m[K In member function ‘[01m[Kvirtual nav_msgs::msg::Path nav2_RRTstar_planner::RRTstar::createPlan(const PoseStamped&, const PoseStamped&)[m[K’:
+[2.736s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:212:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisualization_msgs[m[K’ has not been declared
+[2.736s]   212 |     [01;31m[Kvisualization_msgs[m[K::msg::Marker marker;
+[2.736s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.742s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:213:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmarker[m[K’ was not declared in this scope
+[2.742s]   213 |     [01;31m[Kmarker[m[K.header.frame_id = global_frame_;
+[2.742s]       |     [01;31m[K^~~~~~[m[K
+[2.742s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:217:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisualization_msgs[m[K’ has not been declared
+[2.742s]   217 |     marker.type = [01;31m[Kvisualization_msgs[m[K::msg::Marker::LINE_LIST;
+[2.742s]       |                   [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.742s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:218:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisualization_msgs[m[K’ has not been declared
+[2.742s]   218 |     marker.action = [01;31m[Kvisualization_msgs[m[K::msg::Marker::ADD;
+[2.742s]       |                     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.748s] [01m[K/root/Shared/src/MIAPR_project/src/nav2-rrt-star/src/RRT_star_planner.cpp:242:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree_pub_[m[K’ was not declared in this scope
+[2.748s]   242 |     [01;31m[Ktree_pub_[m[K->publish(marker);
+[2.748s]       |     [01;31m[K^~~~~~~~~[m[K
+[4.084s] gmake[2]: *** [CMakeFiles/nav2_RRTstar_planner_plugin.dir/build.make:76: CMakeFiles/nav2_RRTstar_planner_plugin.dir/src/RRT_star_planner.cpp.o] Error 1
+[4.084s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/nav2_RRTstar_planner_plugin.dir/all] Error 2
+[4.084s] gmake: *** [Makefile:146: all] Error 2
+[4.086s] Invoked command in '/root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/Shared/src/MIAPR_project/build/nav2_RRTstar_planner -- -j8 -l8

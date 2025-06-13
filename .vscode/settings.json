@@ -122,5 +122,6 @@
     "cinttypes": "cpp",
     "typeindex": "cpp",
     "typeinfo": "cpp"
-  }
+  },
+  "ros.distro": "humble"
 }

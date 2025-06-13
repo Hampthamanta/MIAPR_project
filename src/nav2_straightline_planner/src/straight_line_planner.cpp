@@ -42,6 +42,7 @@
 #include <string>
 #include <memory>
 #include <cstdlib>
+#include <chrono>
 #include "nav2_util/node_utils.hpp"
 #include "nav2_straightline_planner/straight_line_planner.hpp"
 
@@ -63,6 +64,12 @@ namespace nav2_straightline_planner
     nav2_util::declare_parameter_if_not_declared(
         node_, name_ + ".interpolation_resolution", rclcpp::ParameterValue(0.1));
     node_->get_parameter(name_ + ".interpolation_resolution", interpolation_resolution_);
+
+    plan_publisher_ = node_->create_publisher<nav_msgs::msg::Path>(name_ + "/plan", rclcpp::SystemDefaultsQoS());
+
+    nav2_util::declare_parameter_if_not_declared(node_, name_ + ".playback_delay", rclcpp::ParameterValue(0.5));
+    node_->get_parameter(name_ + ".playback_delay", playback_delay_);
+    steps_pub_ = node_->create_publisher<nav_msgs::msg::Path>(name_ + "/planning_step", rclcpp::SystemDefaultsQoS());
   }
 
   void StraightLine::cleanup()
@@ -112,6 +119,8 @@ namespace nav2_straightline_planner
     global_path.poses.clear();
     global_path.header.stamp = node_->now();
     global_path.header.frame_id = global_frame_;
+
+    planning_steps.clear();
 
     //----------------------------- RRT - CONNECT ---------------------------------
     auto new_goal_pt = Point{goal.pose.position.x, goal.pose.position.y};
@@ -164,6 +173,22 @@ namespace nav2_straightline_planner
 
         parent_start[new_pt] = closest_pt;
 
+        // wizualizacja planera
+        nav_msgs::msg::Path step_path;
+        step_path.header.stamp = node_->now();
+        step_path.header.frame_id = global_frame_;
+        geometry_msgs::msg::PoseStamped p1;
+        p1.header = step_path.header;
+        p1.pose.position.x = closest_pt.x;
+        p1.pose.position.y = closest_pt.y;
+        p1.pose.orientation.w = 1.0;
+        geometry_msgs::msg::PoseStamped p2 = p1;
+        p2.pose.position.x = new_pt.x;
+        p2.pose.position.y = new_pt.y;
+        step_path.poses.push_back(p1);
+        step_path.poses.push_back(p2);
+        planning_steps.push_back(step_path);
+
         // wyswietlanie ------------------------!!!
         // RCLCPP_INFO(node_->get_logger(), "Closest point: %f %f", closest_pt.x,closest_pt.y);
         // RCLCPP_INFO(node_->get_logger(), "Random point: %f %f", rand_pt.x,rand_pt.y);
@@ -189,6 +214,25 @@ namespace nav2_straightline_planner
         closest_in_tree = find_closest(new_pt, parent_goal);
         if (check_if_valid(new_pt, closest_in_tree))
         {
+          // wizualizacja planera
+          nav_msgs::msg::Path connection;
+          connection.header.stamp = node_->now();
+          connection.header.frame_id = global_frame_;
+          geometry_msgs::msg::PoseStamped cp1;
+          cp1.header = connection.header;
+          cp1.pose.position.x = new_pt.x;
+          cp1.pose.position.y = new_pt.y;
+          cp1.pose.orientation.w = 1.0;
+          geometry_msgs::msg::PoseStamped cp2 = cp1;
+          cp2.pose.position.x = closest_in_tree.x;
+          cp2.pose.position.y = closest_in_tree.y;
+          connection.poses.push_back(cp1);
+          connection.poses.push_back(cp2);
+          planning_steps.push_back(connection);
+
+
+
+
           RCLCPP_INFO(node_->get_logger(), "\n===========PLANNING ENDED SUCCESFULLY===========\n");
           if (swaps % 2 == 1)
           {
@@ -351,6 +395,10 @@ namespace nav2_straightline_planner
     // goal_pose.header.frame_id = global_frame_;
     // global_path.poses.push_back(goal_pose);
 
+    
+    plan_publisher_->publish(global_path);
+    startPlayback();
+
     return global_path;
   }
   //---------FUNKCJE---------
@@ -463,6 +511,31 @@ namespace nav2_straightline_planner
 
     return linspaced;
   }
+
+
+  void StraightLine::startPlayback()
+  {
+    if (!steps_pub_) {
+      return;
+    }
+
+    if (playback_timer_) {
+      playback_timer_->cancel();
+    }
+
+    playback_index_ = 0;
+    auto period = std::chrono::duration<double>(playback_delay_);
+    playback_timer_ = node_->create_wall_timer(
+      period, [this]() {
+        if (playback_index_ < planning_steps.size()) {
+          steps_pub_->publish(planning_steps[playback_index_]);
+          playback_index_++;
+        } else {
+          playback_timer_->cancel();
+        }
+      });
+  }
+
 
 } // namespace nav2_straightline_planner
 
