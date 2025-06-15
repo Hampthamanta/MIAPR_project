@@ -50,13 +50,19 @@ cp ~/Shared/src/MIAPR_project/nav2_params.yaml /opt/ros/humble/share/nav2_bringu
 cd ~/Shared/src/MIAPR_project & ./build_env.sh
 ```
 
-#### 3. Uruchomienie plannera w RVIZ
+#### 3. konfiguracja widoku w RViz
+
+```
+cp ~/Shared/src/MIAPR_project/nav2_namespaced_view.rviz /opt/ros/humble/share/nav2_bringup/rviz/nav2_namespaced_view.rviz
+```
+
+#### 4. Uruchomienie plannera w RVIZ
 
 ```
 ./run_navi.sh
 ```
 
-## 3. Algorytm RRT-connect w pseudokodzie
+## 5. Algorytm RRT-connect w pseudokodzie
 
 ![image](https://github.com/user-attachments/assets/2bf54f19-0fb6-48a2-bb3b-e90bb6979d0d)
 
