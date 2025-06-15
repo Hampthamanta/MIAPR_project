@@ -133,6 +133,7 @@ namespace nav2_straightline_planner
           }
       }
       cv::cvtColor(map_image_, map_image_, cv::COLOR_GRAY2BGR);
+      cv::rotate(map_image_, map_image_, cv::ROTATE_90_COUNTERCLOCKWISE);
       map_info_ = msg->info;
       map_received_ = true;
   }
@@ -642,7 +643,7 @@ namespace nav2_straightline_planner
     std::function<cv::Point(double, double)> mapToImg;
     if (BLACK_SCREEN) {
       mapToImg = [](double wx, double wy) {
-        int scale = 100; // 100 px per meter
+        int scale = 100;
         int ix = static_cast<int>(300 - wy * scale);
         int iy = 600 - static_cast<int>(300 + wx * scale);
         return cv::Point(ix, iy);
@@ -654,15 +655,19 @@ namespace nav2_straightline_planner
         double origin_x = map_info_.origin.position.x;
         double origin_y = map_info_.origin.position.y;
         int height = map_image_.rows;
+        int width = map_image_.cols;
         int ix = static_cast<int>((wx - origin_x) / resolution);
-        int iy = height - static_cast<int>((wy - origin_y) / resolution);
-        return cv::Point(ix, iy);
+        int iy = static_cast<int>((wy - origin_y) / resolution);
+        int offset = 13;
+        int rot_x = height - 1 - iy + offset;
+        int rot_y = width - 1 - ix;
+        return cv::Point(rot_x, rot_y);
       };
     }
 
     // pkt początkowy i końcowy
-    cv::circle(playback_image_,mapToImg(start_marker.pose.position.x, start_marker.pose.position.y),6,cv::Scalar(0, 255, 0),-1);
-    cv::circle(playback_image_,mapToImg(goal_marker.pose.position.x, goal_marker.pose.position.y),6,cv::Scalar(0, 0, 255),-1);
+    cv::circle(playback_image_,mapToImg(start_marker.pose.position.x, start_marker.pose.position.y), 3, cv::Scalar(0, 255, 0),-1);
+    cv::circle(playback_image_,mapToImg(goal_marker.pose.position.x, goal_marker.pose.position.y),   3, cv::Scalar(0, 0, 255),-1);
 
     
     auto period = std::chrono::duration<double>(playback_delay_);
@@ -671,7 +676,7 @@ namespace nav2_straightline_planner
         if (playback_index_ < planning_steps.size()) {
           if (playback_index_ < planning_markers.size()) {
             const auto &m = planning_markers[playback_index_];
-            cv::circle(playback_image_, mapToImg(m.pose.position.x, m.pose.position.y), 3, cv::Scalar(0, 255, 255), -1);
+            cv::circle(playback_image_, mapToImg(m.pose.position.x, m.pose.position.y), 1, cv::Scalar(0, 255, 255), -1);
 
 
             visualization_msgs::msg::Marker marker;
@@ -681,9 +686,9 @@ namespace nav2_straightline_planner
             marker.id = playback_index_+2;
             marker.type = visualization_msgs::msg::Marker::SPHERE;
             marker.action = visualization_msgs::msg::Marker::ADD;
-            marker.scale.x = 0.1;
-            marker.scale.y = 0.1;
-            marker.scale.z = 0.1;
+            marker.scale.x = 0.08;
+            marker.scale.y = 0.08;
+            marker.scale.z = 0.08;
             marker.color.r = 1.0;
             marker.color.g = 1.0;
             marker.color.b = 0.0;
@@ -703,9 +708,30 @@ namespace nav2_straightline_planner
             auto p2 = mapToImg(path.poses[1].pose.position.x, path.poses[1].pose.position.y);
             cv::line(playback_image_, p1, p2, cv::Scalar(255, 0, 0), 1);
           }
-          auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", playback_image_).toImageMsg();
-          msg->header.stamp = node_->now();
-          image_pub_->publish(*msg);
+          int h = playback_image_.rows;
+          int w = playback_image_.cols;
+          int roi_x = w / 3;
+          int roi_y = h / 3;
+          int roi_w = w / 3;
+          int roi_h = h / 3;
+
+          if (roi_x + roi_w > w) roi_w = w - roi_x;
+          if (roi_y + roi_h > h) roi_h = h - roi_y;
+
+          cv::Mat cropped = playback_image_(cv::Rect(roi_x, roi_y, roi_w, roi_h)).clone();
+          cv::Mat cropped_resized;
+          cv::resize(cropped, cropped_resized, playback_image_.size(), 0, 0, cv::INTER_LINEAR);
+
+          if (BLACK_SCREEN){
+            auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", playback_image_).toImageMsg();
+            msg->header.stamp = node_->now();
+            image_pub_->publish(*msg);
+          } else {
+            auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", cropped_resized).toImageMsg();
+            msg->header.stamp = node_->now();
+            image_pub_->publish(*msg);
+          }
+
           playback_index_++;
         } 
         else {
@@ -715,9 +741,30 @@ namespace nav2_straightline_planner
             cv::line(playback_image_, p1, p2, cv::Scalar(0, 0, 255), 2);
           }
           
-          auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", playback_image_).toImageMsg();
-          msg->header.stamp = node_->now();
-          image_pub_->publish(*msg);
+          int h = playback_image_.rows;
+          int w = playback_image_.cols;
+          int roi_x = w / 3;
+          int roi_y = h / 3;
+          int roi_w = w / 3;
+          int roi_h = h / 3;
+
+          if (roi_x + roi_w > w) roi_w = w - roi_x;
+          if (roi_y + roi_h > h) roi_h = h - roi_y;
+
+          cv::Mat cropped = playback_image_(cv::Rect(roi_x, roi_y, roi_w, roi_h)).clone();
+          cv::Mat cropped_resized;
+          cv::resize(cropped, cropped_resized, playback_image_.size(), 0, 0, cv::INTER_LINEAR);
+
+          if (BLACK_SCREEN){
+            auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", playback_image_).toImageMsg();
+            msg->header.stamp = node_->now();
+            image_pub_->publish(*msg);
+          } else {
+            auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", cropped_resized).toImageMsg();
+            msg->header.stamp = node_->now();
+            image_pub_->publish(*msg);
+          }
+
           playback_timer_->cancel();
         }
       });
