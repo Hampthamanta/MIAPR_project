@@ -68,7 +68,7 @@ cd ~/Shared/src/MIAPR_project & ./build_env.sh
 #### 3. konfiguracja widoku w RViz
 
 ```
-cp ~/Shared/src/MIAPR_project/nav2_namespaced_view.rviz /opt/ros/humble/share/nav2_bringup/rviz/nav2_namespaced_view.rviz
+cp ~/Shared/src/MIAPR_project/nav2_default_view.rviz /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz
 ```
 
 #### 4. Uruchomienie plannera w RVIZ
