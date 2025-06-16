@@ -3,7 +3,22 @@
 
 ![animiertes-gif-von-online-umwandeln-de](https://github.com/user-attachments/assets/6dafc032-8cc8-4407-b606-a7caca9b72e2)
 
-![animiertes-gif-von-online-umwandeln-de (1)](https://github.com/user-attachments/assets/adf54bae-3a67-4637-a015-720bf37a7c7f)
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/nav_img.gif" width="100%"/>
+    </td>
+    <td align="center">
+      <img src="assets/nav_black.gif" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <b>Wizualizacja RRT-Connect</b>
+    </td>
+  </tr>
+</table>
+
 
 
 ## 1. Instalacja środowiska z Dockerem
