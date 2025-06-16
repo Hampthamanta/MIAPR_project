@@ -1,6 +1,11 @@
 # Algorytm planowania ścieżki RRT-Connect dla TurtleBot
 
 
+Bartosz Kapski 151170  
+Szymon Jankowski 151180  
+
+
+
 ![animiertes-gif-von-online-umwandeln-de](https://github.com/user-attachments/assets/6dafc032-8cc8-4407-b606-a7caca9b72e2)
 
 <table>
